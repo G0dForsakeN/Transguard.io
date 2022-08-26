@@ -1,0 +1,393 @@
+package com.example.mdp_android_grp01;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.bluetooth.BluetoothDevice;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.viewpager.widget.ViewPager;
+import com.example.mdp_android_grp01.ui.main.MapTabFragmentController;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+
+import com.example.mdp_android_grp01.ui.main.SectionsPagerAdapterController;
+import com.example.mdp_android_grp01.ui.main.SettingFragmentView;
+import com.google.android.material.tabs.TabLayout;
+import com.example.mdp_android_grp01.ui.main.BluetoothConnectServiceController;
+import com.example.mdp_android_grp01.ui.main.CommunicationFragmentController;
+import com.example.mdp_android_grp01.ui.main.ManualFragmentController;
+import com.example.mdp_android_grp01.ui.main.GridMapView;
+
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.math.BigInteger;
+import java.nio.charset.Charset;
+import java.util.UUID;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    private static GridMapView gridMapViewDescriptor;
+    static TextView xAxisTextView, yAxisTextView, directionTextView, roboStatusTextView;
+
+    // Declaration Variables
+    private static SharedPreferences sharedPreferencesInterface;
+    private static SharedPreferences.Editor editorSharedPreferences;
+    private static Context context;
+
+    BluetoothDevice btDevice;
+    ProgressDialog progressDialogBox;
+    private static final String TAG = "Main Activity";
+    private int[] tabIcons = {
+            android.R.drawable.ic_menu_call,
+            android.R.drawable.sym_contact_card,
+            R.drawable.ic_baseline_control_camera_24,
+            R.drawable.ic_baseline_settings_24
+    };
+    private TabLayout tabLayouts;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        SectionsPagerAdapterController sectionsPagerAdapterController = new SectionsPagerAdapterController(this, getSupportFragmentManager());
+        ViewPager viewPager = findViewById(R.id.view_pager);
+        ((SectionsPagerAdapterController) sectionsPagerAdapterController).addFragment(new CommunicationFragmentController(), "Command");
+        ((SectionsPagerAdapterController) sectionsPagerAdapterController).addFragment(new MapTabFragmentController(), "Map");
+        ((SectionsPagerAdapterController) sectionsPagerAdapterController).addFragment(new ManualFragmentController(), "Automation");
+        ((SectionsPagerAdapterController) sectionsPagerAdapterController).addFragment(new SettingFragmentView(), "Bluetooth");
+        viewPager.setAdapter(sectionsPagerAdapterController);
+        viewPager.setOffscreenPageLimit(9999);
+        tabLayouts = findViewById(R.id.tabs);
+        tabLayouts.setupWithViewPager(viewPager);
+        setupTabIcons();
+        LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, new IntentFilter("incomingMessage"));
+
+        MainActivity.context = getApplicationContext();
+        this.sharedPreferences();
+        editorSharedPreferences.putString("message", "");
+        editorSharedPreferences.putString("direction","None");
+        editorSharedPreferences.putString("connStatus", "Disconnected");
+        editorSharedPreferences.commit();
+
+        gridMapViewDescriptor = new GridMapView(this);
+        gridMapViewDescriptor = findViewById(R.id.mapView);
+        xAxisTextView = findViewById(R.id.xAxisTextView);
+        yAxisTextView = findViewById(R.id.yAxisTextView);
+        directionTextView = findViewById(R.id.directionAxisTextView);
+
+        roboStatusTextView = findViewById(R.id.robotStatusTextView);
+
+        progressDialogBox = new ProgressDialog(MainActivity.this);
+        progressDialogBox.setMessage("Reconnecting");
+        progressDialogBox.setCancelable(false);
+        progressDialogBox.setButton(DialogInterface.BUTTON_NEGATIVE, "Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+
+    }
+
+    private void setupTabIcons() {
+        tabLayouts.getTabAt(0).setIcon(tabIcons[0]);
+        tabLayouts.getTabAt(1).setIcon(tabIcons[1]);
+        tabLayouts.getTabAt(2).setIcon(tabIcons[2]);
+        tabLayouts.getTabAt(3).setIcon(tabIcons[3]);
+    }
+
+
+
+    public static TextView getRoboStatusTextView() {  return roboStatusTextView; }
+
+    public static void sharedPreferences() {
+        sharedPreferencesInterface = MainActivity.getSharedPreferences(MainActivity.context);
+        editorSharedPreferences = sharedPreferencesInterface.edit();
+    }
+
+    // Send message to bluetooth
+    public static void sendMessageToBlueTooth(String message) {
+        showLog("Entering sendMessageToBlueTooth");
+        editorSharedPreferences = sharedPreferencesInterface.edit();
+
+        if (BluetoothConnectServiceController.BluetoothConnectionStatus) {
+            byte[] bytes = message.getBytes(Charset.defaultCharset());
+            BluetoothConnectServiceController.write(bytes);
+        }
+        showLog(message);
+        editorSharedPreferences.putString("message", CommunicationFragmentController.getMessage().getText() + "\n" + message);
+        editorSharedPreferences.apply();
+        refreshBlueToothMessage();
+    }
+
+    public static void sendMessageToBlueTooth(String message, int x, int y) throws JSONException {
+        sharedPreferences();
+
+        JSONObject jsonObjects = new JSONObject();
+        String message1;
+
+        if ("waypoint".equals(message)) {
+            jsonObjects.put(message, message);
+            jsonObjects.put("x", x);
+            jsonObjects.put("y", y);
+            message1 = "ALG|" + message + " (" + x + "," + y + ")";
+        } else {
+            message1 = "Unexpected message: " + message;
+        }
+        editorSharedPreferences.putString("message", CommunicationFragmentController.getMessage().getText() + "\n" + message1);
+        editorSharedPreferences.commit();
+        if (BluetoothConnectServiceController.BluetoothConnectionStatus) {
+            byte[] bytes = message1.getBytes(Charset.defaultCharset());
+            BluetoothConnectServiceController.write(bytes);
+        }
+        showLog("Exiting sendMessageToBlueTooth");
+    }
+
+    public static void refreshBlueToothMessage() {
+        CommunicationFragmentController.getMessage().setText(sharedPreferencesInterface.getString("message", ""));
+        CommunicationFragmentController.getMessage().append(" ");
+    }
+
+
+    public void updateDirection(String direction) {
+        gridMapViewDescriptor.setDirectionOfRobot(direction);
+        directionTextView.setText(sharedPreferencesInterface.getString("direction",""));
+        sendMessageToBlueTooth("Direction is set to " + direction);
+    }
+
+    public static void updateText() {
+        xAxisTextView.setText(String.valueOf(gridMapViewDescriptor.getCurrentCoordinates()[0]-1));
+        yAxisTextView.setText(String.valueOf(gridMapViewDescriptor.getCurrentCoordinates()[1]-1));
+        directionTextView.setText(sharedPreferencesInterface.getString("direction",""));
+    }
+
+    public static void receiveMessage(String message) {
+        sharedPreferences();
+        editorSharedPreferences.putString("message", sharedPreferencesInterface.getString("message", "") + "\n" + message);
+        editorSharedPreferences.commit();
+    }
+
+    private static void showLog(String message) {
+        Log.d(TAG, message);
+    }
+
+    private static SharedPreferences getSharedPreferences(Context context) {
+        return context.getSharedPreferences("Shared Preferences", Context.MODE_PRIVATE);
+    }
+
+    private BroadcastReceiver FifthBroadcastReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            BluetoothDevice mDevice = intent.getParcelableExtra("Device");
+            String status = intent.getStringExtra("Status");
+            sharedPreferences();
+
+            if(status.equals("connected")){
+                try {
+                    progressDialogBox.dismiss();
+                } catch(NullPointerException e){
+                    e.printStackTrace();
+                }
+                Toast.makeText(MainActivity.this, "Device now connected to "+mDevice.getName(), Toast.LENGTH_LONG).show();
+                editorSharedPreferences.putString("connStatus", "Connected to " + mDevice.getName());
+            }
+            else if(status.equals("disconnected")){
+                Toast.makeText(MainActivity.this, "Disconnected from "+mDevice.getName(), Toast.LENGTH_LONG).show();
+
+                editorSharedPreferences.putString("connStatus", "Disconnected");
+                progressDialogBox.show();
+            }
+            editorSharedPreferences.commit();
+        }
+    };
+
+    BroadcastReceiver messageReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String message = intent.getStringExtra("receivedMessage");
+            // From AMDTOOL
+            try {
+                if (message.length() > 7 && message.substring(2,6).equals("grid")) {
+                    StringBuilder resultString = new StringBuilder();
+                    String amdString = message.substring(11,message.length()-2);
+                     BigInteger hexBigIntegerExplored = new BigInteger(amdString, 16);
+                    StringBuilder exploredString = new StringBuilder(hexBigIntegerExplored.toString(2));
+
+                    /*
+                    while (exploredString.length() < 300)
+                        exploredString.insert(0, "0");
+                    */
+
+                    for(int i = exploredString.length() ; i < 300; i++)
+                    {
+                        exploredString.insert(0, "0");
+                    }
+
+                    /*
+                    for (int i=0; i<exploredString.length(); i=i+15) {
+                        int j=0;
+                        StringBuilder subString = new StringBuilder();
+                        while (j<15) {
+                            subString.append(exploredString.charAt(j + i));
+                            j++;
+                        }
+                        resultString.insert(0, subString.toString());
+                    }
+                    */
+
+                    int i = 0;
+                    while(i<exploredString.length())
+                    {
+
+                        StringBuilder subString = new StringBuilder();
+                        for(int j=0; j<15; j++)
+                        {
+                            subString.append(exploredString.charAt(j + i));
+                        }
+                        resultString.insert(0, subString.toString());
+                        i = i+15;
+                    }
+
+                    hexBigIntegerExplored = new BigInteger(resultString.toString(), 2);
+                    resultString = new StringBuilder(hexBigIntegerExplored.toString(16));
+
+                    JSONObject amd = new JSONObject();
+                    amd.put("explored", "fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+                    amd.put("length", amdString.length()*4);
+                    amd.put("obstacle", resultString.toString());
+                    JSONArray amdArray = new JSONArray();
+                    amdArray.put(amd);
+                    JSONObject amdM = new JSONObject();
+                    amdM.put("map", amdArray);
+                    message = String.valueOf(amdM);
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            // IMAGE
+            try {
+
+                String regexpStr = "\\[(.*?)\\]";
+                Pattern pattern = Pattern.compile(regexpStr);
+                Matcher m = pattern.matcher(message);
+                String imageString ="{imageID,x,y} = ";
+                boolean hasImage = false;
+                while(m.find()) {
+                    String found = m.group();
+                    found = found.replaceAll("[^\\d]", " ");
+                    found = found.trim();
+                    found = found.replaceAll("\\s+", " ");
+                    String[] arrOfDigits = found.split(" ");
+                    int x = 1, y = 1, id = 1;
+                    if(arrOfDigits.length==3){
+                        x = Integer.parseInt(arrOfDigits[0]);
+                        y = Integer.parseInt(arrOfDigits[1]);
+                        id = Integer.parseInt(arrOfDigits[2]);
+                        gridMapViewDescriptor.displayNumberInCell(x,y,id);
+                        showLog("Image Added for index: " + x + "," +y);
+                        imageString = imageString + "("+id+","+x+","+y+")," ;
+                        hasImage=true;
+                    }
+                }
+                if(hasImage){
+                    editorSharedPreferences = sharedPreferencesInterface.edit();
+                    editorSharedPreferences.putString("message", CommunicationFragmentController.getMessage().getText() + "\n" + imageString);
+                    editorSharedPreferences.apply();
+                    refreshBlueToothMessage();
+                }
+
+            } catch (Exception e) {
+                showLog("Adding Image Failed");
+            }
+
+            if (gridMapViewDescriptor.getAutomatedUpdate() || MapTabFragmentController.isUpdateRequestManual) {
+                try {
+                    gridMapViewDescriptor.setReceivedJsonObject(new JSONObject(message));
+                    gridMapViewDescriptor.updateMap();
+                    MapTabFragmentController.isUpdateRequestManual = false;
+                    showLog("Decode successful");
+                } catch (JSONException e) {
+                    showLog("Decode unsuccessful");
+                }
+            }
+            sharedPreferences();
+            String receivedText = sharedPreferencesInterface.getString("message", "") + "\n" + message;
+            editorSharedPreferences.putString("message", receivedText);
+            editorSharedPreferences.commit();
+            refreshBlueToothMessage();
+        }
+    };
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 1) {
+            if (resultCode == Activity.RESULT_OK) {
+                btDevice = (BluetoothDevice) data.getExtras().getParcelable("btDevice");
+                UUID myUUID = (UUID) data.getSerializableExtra("myUUID");
+            }
+        }
+    }
+    public static GridMapView getGridMapDescriptor() {
+        return gridMapViewDescriptor;
+    }
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        try{
+            LocalBroadcastManager.getInstance(this).unregisterReceiver(messageReceiver);
+            LocalBroadcastManager.getInstance(this).unregisterReceiver(FifthBroadcastReceiver);
+        } catch(IllegalArgumentException e){
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        try{
+            LocalBroadcastManager.getInstance(this).unregisterReceiver(FifthBroadcastReceiver);
+        } catch(IllegalArgumentException e){
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        try{
+            IntentFilter filter2 = new IntentFilter("ConnectionStatus");
+            LocalBroadcastManager.getInstance(this).registerReceiver(FifthBroadcastReceiver, filter2);
+        } catch(IllegalArgumentException e){
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        showLog("Entering onSaveInstanceState");
+        super.onSaveInstanceState(outState);
+
+        outState.putString(TAG, "onSaveInstanceState");
+        showLog("Exiting onSaveInstanceState");
+    }
+}
