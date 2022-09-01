@@ -16,7 +16,7 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/exploreTimeTextView"
+        app:layout_constraintStart_toStartOf="@+id/fastestTimeTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -28,11 +28,11 @@
         android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/fastestTimeTextView"
+        app:layout_constraintStart_toStartOf="@+id/exploreTimeTextView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/exploreTimeTextView"
+        android:id="@+id/fastestTimeTextView"
         android:layout_width="180dp"
         android:layout_height="70dp"
         android:layout_marginStart="144dp"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
-        android:id="@+id/fastestTimeTextView"
+        android:id="@+id/exploreTimeTextView"
         android:layout_width="180dp"
         android:layout_height="70dp"
         android:layout_marginStart="116dp"
@@ -60,11 +60,11 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="26sp"
-        app:layout_constraintStart_toEndOf="@+id/exploreTimeTextView"
+        app:layout_constraintStart_toEndOf="@+id/fastestTimeTextView"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <ToggleButton
-        android:id="@+id/exploreToggleBtn"
+        android:id="@+id/fastestToggleBtn"
         android:layout_width="200dp"
         android:layout_height="52dp"
         android:layout_marginTop="24dp"
@@ -76,11 +76,11 @@
         android:textOn="STOP"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/exploreTimeTextView"
-        app:layout_constraintTop_toBottomOf="@+id/exploreTimeTextView" />
+        app:layout_constraintStart_toStartOf="@+id/fastestTimeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/fastestTimeTextView" />
 
     <ToggleButton
-        android:id="@+id/fastestToggleBtn"
+        android:id="@+id/exploreToggleBtn"
         android:layout_width="200dp"
         android:layout_height="52dp"
         android:layout_marginStart="4dp"
@@ -94,8 +94,8 @@
         android:textOn="STOP"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/fastestTimeTextView"
-        app:layout_constraintTop_toBottomOf="@+id/fastestTimeTextView" />
+        app:layout_constraintStart_toStartOf="@+id/exploreTimeTextView"
+        app:layout_constraintTop_toBottomOf="@+id/exploreTimeTextView" />
 
     <ImageButton
         android:id="@+id/fastestResetImageBtn"
@@ -106,8 +106,8 @@
         android:background="@drawable/c_control_background"
         android:paddingBottom="10dp"
         android:src="@drawable/reset_image"
-        app:layout_constraintStart_toEndOf="@+id/exploreToggleBtn"
-        app:layout_constraintTop_toTopOf="@+id/exploreToggleBtn" />
+        app:layout_constraintStart_toEndOf="@+id/fastestToggleBtn"
+        app:layout_constraintTop_toTopOf="@+id/fastestToggleBtn" />
 
     <ImageButton
         android:id="@+id/exploreResetImageBtn"
@@ -117,8 +117,8 @@
         android:background="@drawable/c_control_background"
         android:paddingBottom="10dp"
         android:src="@drawable/reset_image"
-        app:layout_constraintStart_toEndOf="@+id/fastestToggleBtn"
-        app:layout_constraintTop_toTopOf="@+id/fastestToggleBtn" />
+        app:layout_constraintStart_toEndOf="@+id/exploreToggleBtn"
+        app:layout_constraintTop_toTopOf="@+id/exploreToggleBtn" />
 
     <Button
         android:id="@+id/calibrateButton"
@@ -136,8 +136,8 @@
         android:textColor="@color/colorWhite"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/exploreToggleBtn"
-        app:layout_constraintTop_toBottomOf="@+id/exploreToggleBtn" />
+        app:layout_constraintStart_toStartOf="@+id/fastestToggleBtn"
+        app:layout_constraintTop_toBottomOf="@+id/fastestToggleBtn" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

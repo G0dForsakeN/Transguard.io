@@ -53,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
     ProgressDialog progressDialogBox;
     private static final String TAG = "Main Activity";
     private int[] tabIcons = {
-            android.R.drawable.ic_menu_call,
-            android.R.drawable.sym_contact_card,
-            R.drawable.ic_baseline_control_camera_24,
-            R.drawable.ic_baseline_settings_24
+            R.drawable.tab_comm_image,
+            R.drawable.tab_map_image,
+            R.drawable.tab_automation_image,
+            R.drawable.tab_bluetooth_image
     };
     private TabLayout tabLayouts;
 

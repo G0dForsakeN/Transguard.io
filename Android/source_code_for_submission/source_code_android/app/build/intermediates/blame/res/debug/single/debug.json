@@ -308,6 +308,10 @@
         "source": "/Users/jingyen/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/res/drawable/common_google_signin_btn_icon_light_focused.xml"
     },
     {
+        "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-v25_tab_bluetooth_image.xml.flat",
+        "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/drawable-v25/tab_bluetooth_image.xml"
+    },
+    {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_baseline_settings_24.png.flat",
         "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_baseline_settings_24.png"
     },
@@ -640,6 +644,10 @@
         "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_baseline_compass_calibration_24.png"
     },
     {
+        "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-v25_tab_comm_image.xml.flat",
+        "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/drawable-v25/tab_comm_image.xml"
+    },
+    {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_black_36dp.png.flat",
         "source": "/Users/jingyen/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-xxxhdpi-v4/abc_ic_star_black_36dp.png"
     },
@@ -798,6 +806,10 @@
     {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
         "source": "/Users/jingyen/.gradle/caches/transforms-2/files-2.1/77c2fc448e2bd0738fd67dce062b1efd/play-services-base-17.0.0/res/drawable-hdpi-v4/common_google_signin_btn_icon_dark_normal_background.9.png"
+    },
+    {
+        "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-v25_tab_map_image.xml.flat",
+        "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/drawable-v25/tab_map_image.xml"
     },
     {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-mdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
@@ -1026,6 +1038,10 @@
     {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
         "source": "/Users/jingyen/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-xxxhdpi-v4/abc_ic_star_black_48dp.png"
+    },
+    {
+        "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-hdpi_tab_automation_image.png.flat",
+        "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/generated/res/pngs/debug/drawable-hdpi/tab_automation_image.png"
     },
     {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable_button_background.xml.flat",
@@ -1418,6 +1434,10 @@
     {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
         "source": "/Users/jingyen/.gradle/caches/transforms-2/files-2.1/e9dab9c67c1ee3668e0bbf86c6d8cbd8/core-1.1.0/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-anydpi-v21_tab_automation_image.xml.flat",
+        "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/generated/res/pngs/debug/drawable-anydpi-v21/tab_automation_image.xml"
     },
     {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_abc_list_selector_disabled_holo_dark.9.png.flat",
@@ -2080,6 +2100,10 @@
         "source": "/Users/jingyen/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
     },
     {
+        "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-ldpi_tab_automation_image.png.flat",
+        "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/generated/res/pngs/debug/drawable-ldpi/tab_automation_image.png"
+    },
+    {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable_abc_list_selector_background_transition_holo_dark.xml.flat",
         "source": "/Users/jingyen/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
     },
@@ -2186,6 +2210,10 @@
     {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "/Users/jingyen/.gradle/caches/transforms-2/files-2.1/6119d746697059b7e1b74aab4d181f56/appcompat-1.1.0/res/drawable-xxxhdpi-v4/abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-xxhdpi_tab_automation_image.png.flat",
+        "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/generated/res/pngs/debug/drawable-xxhdpi/tab_automation_image.png"
     },
     {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_ic_menu_cut_mtrl_alpha.png.flat",
@@ -2560,6 +2588,10 @@
         "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_map_info.png"
     },
     {
+        "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-mdpi_tab_automation_image.png.flat",
+        "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/generated/res/pngs/debug/drawable-mdpi/tab_automation_image.png"
+    },
+    {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_baseline_add_location_24.png.flat",
         "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/generated/res/pngs/debug/drawable-hdpi/ic_baseline_add_location_24.png"
     },
@@ -2598,6 +2630,10 @@
     {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_baseline_arrow_forward_24.png.flat",
         "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_baseline_arrow_forward_24.png"
+    },
+    {
+        "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_tab_automation_image.png.flat",
+        "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/generated/res/pngs/debug/drawable-xxxhdpi/tab_automation_image.png"
     },
     {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-xxhdpi-v4_abc_btn_check_to_on_mtrl_000.png.flat",
@@ -2654,6 +2690,10 @@
     {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-xhdpi_tab_automation_image.png.flat",
+        "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/generated/res/pngs/debug/drawable-xhdpi/tab_automation_image.png"
     },
     {
         "merged": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",

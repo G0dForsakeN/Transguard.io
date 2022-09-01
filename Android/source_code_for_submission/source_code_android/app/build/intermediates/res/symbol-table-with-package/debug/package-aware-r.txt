@@ -1211,6 +1211,10 @@ drawable send_button
 drawable shapes
 drawable south_obstacle
 drawable southobstaclebtn
+drawable tab_automation_image
+drawable tab_bluetooth_image
+drawable tab_comm_image
+drawable tab_map_image
 drawable textborder
 drawable timer_box
 drawable tooltip_frame_dark

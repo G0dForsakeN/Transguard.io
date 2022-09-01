@@ -5565,13 +5565,17 @@ public final class R {
     public static final int shapes=0x7f0800d6;
     public static final int south_obstacle=0x7f0800d7;
     public static final int southobstaclebtn=0x7f0800d8;
-    public static final int textborder=0x7f0800d9;
-    public static final int timer_box=0x7f0800da;
-    public static final int tooltip_frame_dark=0x7f0800db;
-    public static final int tooltip_frame_light=0x7f0800dc;
-    public static final int update_image=0x7f0800dd;
-    public static final int west_obstacle=0x7f0800de;
-    public static final int westobstaclebtn=0x7f0800df;
+    public static final int tab_automation_image=0x7f0800d9;
+    public static final int tab_bluetooth_image=0x7f0800da;
+    public static final int tab_comm_image=0x7f0800db;
+    public static final int tab_map_image=0x7f0800dc;
+    public static final int textborder=0x7f0800dd;
+    public static final int timer_box=0x7f0800de;
+    public static final int tooltip_frame_dark=0x7f0800df;
+    public static final int tooltip_frame_light=0x7f0800e0;
+    public static final int update_image=0x7f0800e1;
+    public static final int west_obstacle=0x7f0800e2;
+    public static final int westobstaclebtn=0x7f0800e3;
   }
   public static final class id {
     public static final int ALT=0x7f090000;
