@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/jingyen/Documents/NTU/MDP/Android_Projects/Android/source_code_for_submission/source_code_android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml",
+            "outputFile": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-uk/values-uk.xml",
             "map": [
                 {
                     "source": "/Users/jingyen/.gradle/caches/transforms-2/files-2.1/c325693f17a138c0d8b2785dc97b8416/jetified-play-services-basement-17.0.0/res/values-uk/values.xml",
