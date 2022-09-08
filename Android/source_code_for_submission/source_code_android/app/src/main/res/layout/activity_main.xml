@@ -14,7 +14,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="550dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/robotStatusTitleTextView"
@@ -135,8 +135,8 @@
                 class="com.example.mdp_android_grp01.ui.main.GridMapView"
                 android:layout_width="469dp"
                 android:layout_height="469dp"
-                android:layout_marginStart="148dp"
-                android:layout_marginLeft="148dp"
+                android:layout_marginStart="130dp"
+                android:layout_marginLeft="130dp"
                 android:layout_marginTop="24dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/directionAxisTextView" />
@@ -144,22 +144,27 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.viewpager.widget.ViewPager
+        <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            android:layout_height="300dp"
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                app:tabGravity="fill"
-                app:tabTextAppearance="@style/TextAppearance.AppCompat.Large"
-                app:tabTextColor="#FFFFFF"
-                android:layout_marginBottom="-4dp"/>
-        </androidx.viewpager.widget.ViewPager>
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lt_beige"
+            app:tabBackground="@color/lt_beige"
+            app:tabGravity="fill"
+            app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+            app:tabTextColor="@color/black"
+
+            />
+
+
+
+
 
     </LinearLayout>
 

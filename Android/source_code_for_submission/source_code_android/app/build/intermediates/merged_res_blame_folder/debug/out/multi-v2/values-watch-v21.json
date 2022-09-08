@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.mdp_android_grp01.app-mergeDebugResources-30:/values-watch-v21/values-watch-v21.xml",
+            "map": [
+                {
+                    "source": "/Users/jingyen/.gradle/caches/transforms-3/5d9cbdf48930a41ad4c3177ea1826393/transformed/appcompat-1.5.0/res/values-watch-v21/values-watch-v21.xml",
+                    "from": {
+                        "startLines": "2,6,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,271,499",
+                        "endLines": "5,9,13",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "266,494,724"
+                    }
+                }
+            ]
+        }
+    ]
+}

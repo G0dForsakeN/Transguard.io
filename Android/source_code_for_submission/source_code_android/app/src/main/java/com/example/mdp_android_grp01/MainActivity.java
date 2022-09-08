@@ -14,18 +14,21 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.viewpager.widget.ViewPager;
+//import androidx.viewpager.widget.ViewPager;
+import androidx.annotation.NonNull;
+import androidx.viewpager2.widget.ViewPager2;
 import com.example.mdp_android_grp01.ui.main.MapTabFragmentController;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import com.example.mdp_android_grp01.ui.main.SectionsPagerAdapterController;
+import com.example.mdp_android_grp01.ui.main.SectionsStateAdapterController;
 import com.example.mdp_android_grp01.ui.main.SettingFragmentView;
 import com.google.android.material.tabs.TabLayout;
 import com.example.mdp_android_grp01.ui.main.BluetoothConnectServiceController;
 import com.example.mdp_android_grp01.ui.main.CommunicationFragmentController;
 import com.example.mdp_android_grp01.ui.main.ManualFragmentController;
 import com.example.mdp_android_grp01.ui.main.GridMapView;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 
 import org.json.JSONArray;
@@ -66,17 +69,32 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        SectionsPagerAdapterController sectionsPagerAdapterController = new SectionsPagerAdapterController(this, getSupportFragmentManager());
-        ViewPager viewPager = findViewById(R.id.view_pager);
-        ((SectionsPagerAdapterController) sectionsPagerAdapterController).addFragment(new CommunicationFragmentController(), "Command");
-        ((SectionsPagerAdapterController) sectionsPagerAdapterController).addFragment(new MapTabFragmentController(), "Map");
-        ((SectionsPagerAdapterController) sectionsPagerAdapterController).addFragment(new ManualFragmentController(), "Automation");
-        ((SectionsPagerAdapterController) sectionsPagerAdapterController).addFragment(new SettingFragmentView(), "Bluetooth");
-        viewPager.setAdapter(sectionsPagerAdapterController);
+        SectionsStateAdapterController SectionsStateAdapterController = new SectionsStateAdapterController(this, getSupportFragmentManager(), getLifecycle());
+        ViewPager2 viewPager = findViewById(R.id.view_pager);
+        ((SectionsStateAdapterController) SectionsStateAdapterController).addFragment(new CommunicationFragmentController(), "Command");
+        ((SectionsStateAdapterController) SectionsStateAdapterController).addFragment(new MapTabFragmentController(), "Map");
+        ((SectionsStateAdapterController) SectionsStateAdapterController).addFragment(new ManualFragmentController(), "Automation");
+        ((SectionsStateAdapterController) SectionsStateAdapterController).addFragment(new SettingFragmentView(), "Bluetooth");
+        viewPager.setAdapter(SectionsStateAdapterController);
         viewPager.setOffscreenPageLimit(9999);
         tabLayouts = findViewById(R.id.tabs);
-        tabLayouts.setupWithViewPager(viewPager);
+        new TabLayoutMediator(tabLayouts,viewPager,
+                new TabLayoutMediator.TabConfigurationStrategy(){
+                    @Override
+                    public  void onConfigureTab(@NonNull TabLayout.Tab tab, int position){
+                        switch(position){
+                            case 0 : tab.setText("Command");
+                            case 1 : tab.setText("Map");
+                            case 2 : tab.setText("Automation");
+                            case 3 : tab.setText("Bluetooth");
+                        };
+                    };
+                            }).attach();
+
+//        tabLayouts.setupWithViewPager(viewPager);
+
         setupTabIcons();
+
         LocalBroadcastManager.getInstance(this).registerReceiver(messageReceiver, new IntentFilter("incomingMessage"));
 
         MainActivity.context = getApplicationContext();
@@ -109,9 +127,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupTabIcons() {
         tabLayouts.getTabAt(0).setIcon(tabIcons[0]);
+        tabLayouts.getTabAt(0).setText("Command");
         tabLayouts.getTabAt(1).setIcon(tabIcons[1]);
+        tabLayouts.getTabAt(1).setText("Map");
         tabLayouts.getTabAt(2).setIcon(tabIcons[2]);
+        tabLayouts.getTabAt(2).setText("Automation");
         tabLayouts.getTabAt(3).setIcon(tabIcons[3]);
+        tabLayouts.getTabAt(3).setText("Bluetooth");
     }
 
 

@@ -9,9 +9,8 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
         android:text="Fastest Path Timer"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -23,7 +22,7 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="4dp"
         android:text="Image Recognition Timer"
         android:textColor="@color/black"
         android:textSize="16sp"
@@ -35,8 +34,7 @@
         android:id="@+id/fastestTimeTextView"
         android:layout_width="180dp"
         android:layout_height="70dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginLeft="144dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/timer_box"
         android:gravity="center"
@@ -44,15 +42,14 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="26sp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fastestToggleBtn"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/exploreTimeTextView"
         android:layout_width="180dp"
         android:layout_height="70dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginLeft="116dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/timer_box"
         android:gravity="center"
@@ -60,13 +57,14 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="26sp"
-        app:layout_constraintStart_toEndOf="@+id/fastestTimeTextView"
+        app:layout_constraintStart_toStartOf="@+id/exploreToggleBtn"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <ToggleButton
         android:id="@+id/fastestToggleBtn"
         android:layout_width="200dp"
         android:layout_height="52dp"
+        android:layout_marginStart="110dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/control_background"
         android:elevation="2dp"
@@ -76,15 +74,14 @@
         android:textOn="STOP"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/fastestTimeTextView"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fastestTimeTextView" />
 
     <ToggleButton
         android:id="@+id/exploreToggleBtn"
         android:layout_width="200dp"
         android:layout_height="52dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
+        android:layout_marginStart="140dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/control_background"
         android:elevation="2dp"
@@ -94,7 +91,7 @@
         android:textOn="STOP"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/exploreTimeTextView"
+        app:layout_constraintStart_toEndOf="@+id/fastestTimeTextView"
         app:layout_constraintTop_toBottomOf="@+id/exploreTimeTextView" />
 
     <ImageButton
@@ -124,7 +121,7 @@
         android:id="@+id/calibrateButton"
         android:layout_width="200dp"
         android:layout_height="52dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/control_background"
         android:drawableLeft="@drawable/calibrate_image"
         android:drawablePadding="-40dp"
