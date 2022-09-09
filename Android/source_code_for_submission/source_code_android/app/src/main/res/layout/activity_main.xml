@@ -65,8 +65,7 @@
                 android:id="@+id/robotStatusTextView"
                 android:layout_width="200dp"
                 android:layout_height="52dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginLeft="32dp"
+
                 android:layout_marginTop="8dp"
                 android:background="@drawable/c_status"
                 android:gravity="center"
@@ -83,8 +82,7 @@
                 android:id="@+id/directionAxisTextView"
                 android:layout_width="200dp"
                 android:layout_height="52dp"
-                android:layout_marginStart="45dp"
-                android:layout_marginLeft="45dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/c_direction"
                 android:gravity="center"
@@ -94,6 +92,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/colorWhite"
                 android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/xAxisTextView"
                 app:layout_constraintStart_toEndOf="@+id/robotStatusTextView"
                 app:layout_constraintTop_toBottomOf="@+id/directionLabelTextView" />
 
@@ -101,8 +100,6 @@
                 android:id="@+id/xAxisTextView"
                 android:layout_width="79dp"
                 android:layout_height="52dp"
-                android:layout_marginStart="60dp"
-                android:layout_marginLeft="60dp"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/c_position1"
                 android:gravity="center"
@@ -112,7 +109,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/colorWhite"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/directionAxisTextView"
+
+                app:layout_constraintEnd_toStartOf="@+id/yAxisTextView"
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
             <TextView
@@ -127,7 +125,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/colorWhite"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/xAxisTextView"
+
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/xAxisTextView" />
 
             <view
@@ -135,9 +134,8 @@
                 class="com.example.mdp_android_grp01.ui.main.GridMapView"
                 android:layout_width="469dp"
                 android:layout_height="469dp"
-                android:layout_marginStart="130dp"
-                android:layout_marginLeft="130dp"
                 android:layout_marginTop="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/directionAxisTextView" />
 
@@ -159,7 +157,7 @@
             app:tabGravity="fill"
             app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
             app:tabTextColor="@color/black"
-
+            app:tabSelectedTextColor="@color/selected_color"
             />
 
 

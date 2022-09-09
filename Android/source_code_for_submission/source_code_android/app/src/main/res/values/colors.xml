@@ -13,5 +13,6 @@
     <color name="brown">#BF7B71</color>
     <color name="lt_beige">#F9ECE3</color>
     <color name="lt_brown">#DAD2D2</color>
+    <color name="selected_color">#DBA8A1</color>
     <color name="black">#000000</color>
 </resources>

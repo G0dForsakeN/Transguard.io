@@ -82,16 +82,45 @@ public class MainActivity extends AppCompatActivity {
                 new TabLayoutMediator.TabConfigurationStrategy(){
                     @Override
                     public  void onConfigureTab(@NonNull TabLayout.Tab tab, int position){
-                        switch(position){
-                            case 0 : tab.setText("Command");
-                            case 1 : tab.setText("Map");
-                            case 2 : tab.setText("Automation");
-                            case 3 : tab.setText("Bluetooth");
-                        };
                     };
                             }).attach();
+        tabLayouts.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+//                super.onTabSelected(tab);
+                switch(tab.getPosition()){
+                    case 0:     tabLayouts.getTabAt(0).setIcon(R.drawable.tab_comm_selected);
+                                break;
+                    case 1:     tabLayouts.getTabAt(1).setIcon(R.drawable.tab_map_selected);
+                                break;
+                    case 2:     tabLayouts.getTabAt(2).setIcon(R.drawable.tab_automation_selected);
+                                break;
+                    case 3:     tabLayouts.getTabAt(3).setIcon(R.drawable.tab_bluetooth_selected);
+                                break;
+                }
+            }
 
-//        tabLayouts.setupWithViewPager(viewPager);
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+//                super.onTabUnselected(tab);
+                switch(tab.getPosition()){
+                    case 0:     tabLayouts.getTabAt(0).setIcon(R.drawable.tab_comm_image);
+                                break;
+                    case 1:     tabLayouts.getTabAt(1).setIcon(R.drawable.tab_map_image);
+                                break;
+                    case 2:     tabLayouts.getTabAt(2).setIcon(R.drawable.tab_automation_image);
+                                break;
+                    case 3:     tabLayouts.getTabAt(3).setIcon(R.drawable.tab_bluetooth_image);
+                                break;
+                }
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+//                super.onTabReselected(tab);
+            }
+        });
+
 
         setupTabIcons();
 
@@ -126,13 +155,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupTabIcons() {
-        tabLayouts.getTabAt(0).setIcon(tabIcons[0]);
-        tabLayouts.getTabAt(0).setText("Command");
+        tabLayouts.getTabAt(0).setIcon(R.drawable.tab_comm_selected);
+//        tabLayouts.getTabAt(0).setIcon(tabIcons[0]);
         tabLayouts.getTabAt(1).setIcon(tabIcons[1]);
-        tabLayouts.getTabAt(1).setText("Map");
         tabLayouts.getTabAt(2).setIcon(tabIcons[2]);
-        tabLayouts.getTabAt(2).setText("Automation");
         tabLayouts.getTabAt(3).setIcon(tabIcons[3]);
+        tabLayouts.getTabAt(0).setText("Command");
+        tabLayouts.getTabAt(1).setText("Map");
+        tabLayouts.getTabAt(2).setText("Automation");
         tabLayouts.getTabAt(3).setText("Bluetooth");
     }
 

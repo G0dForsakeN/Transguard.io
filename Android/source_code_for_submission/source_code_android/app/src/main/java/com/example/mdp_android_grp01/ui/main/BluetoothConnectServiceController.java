@@ -22,7 +22,7 @@ public class BluetoothConnectServiceController {
 
     private static final String TAG = "BluetoothConnection";
 
-    private static final String group_name = "MDP_Group_01";
+    private static final String group_name = "MDP_Group_21";
     public static final UUID deviceUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
     private final BluetoothAdapter btAdapter;
