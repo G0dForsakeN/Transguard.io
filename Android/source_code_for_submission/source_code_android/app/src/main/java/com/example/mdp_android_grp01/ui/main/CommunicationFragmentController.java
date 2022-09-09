@@ -128,7 +128,7 @@ public class CommunicationFragmentController extends Fragment implements SensorE
                         updaterobotStatus("moving forward");
                     else
                         updaterobotStatus("Unable to move forward");
-                    MainActivity.sendMessageToBlueTooth("w");
+                    MainActivity.sendMessageToBlueTooth("w010");
                 }
                 else
                     updaterobotStatus("Please press 'STARTING POINT'");
@@ -167,7 +167,7 @@ public class CommunicationFragmentController extends Fragment implements SensorE
                         updaterobotStatus("moving backward");
                     else
                         updaterobotStatus("Unable to move backward");
-                    MainActivity.sendMessageToBlueTooth("s");
+                    MainActivity.sendMessageToBlueTooth("s010");
                 }
                 else
                     updaterobotStatus("Please press 'STARTING POINT'");
