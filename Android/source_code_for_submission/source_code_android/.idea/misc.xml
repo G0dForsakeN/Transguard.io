@@ -4,6 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../../../../../layout/custom_preview.xml" value="0.25389688249400477" />
+        <entry key="..\:/Users/dhruv/Documents/GitHub/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/layout/activity_comms.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/dhruv/Documents/GitHub/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/layout/activity_control.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/dhruv/Documents/GitHub/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/layout/activity_direction.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/dhruv/Documents/GitHub/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/dhruv/Documents/GitHub/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/layout/activity_map.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/dhruv/Documents/GitHub/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/layout/activity_setting.xml" value="0.176" />
+        <entry key="..\:/Users/dhruv/Documents/GitHub/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/layout/bluetooth_pop_up_window.xml" value="0.4" />
+        <entry key="..\:/Users/dhruv/Documents/GitHub/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/layout/main_page.xml" value="0.3625" />
+        <entry key="..\:/Users/dhruv/Documents/GitHub/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/layout/map_page.xml" value="0.22826086956521738" />
         <entry key="app/src/main/res/drawable-v25/bluetooth_image.xml" value="0.3775" />
         <entry key="app/src/main/res/drawable-v25/calibrate_image.xml" value="0.403" />
         <entry key="app/src/main/res/drawable-v25/change_direction_image.xml" value="0.403" />
