@@ -64,7 +64,6 @@
         android:id="@+id/fastestToggleBtn"
         android:layout_width="200dp"
         android:layout_height="52dp"
-        android:layout_marginStart="110dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/control_background"
         android:elevation="2dp"
@@ -74,6 +73,8 @@
         android:textOn="STOP"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fastestTimeTextView" />
 
@@ -81,7 +82,6 @@
         android:id="@+id/exploreToggleBtn"
         android:layout_width="200dp"
         android:layout_height="52dp"
-        android:layout_marginStart="140dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/control_background"
         android:elevation="2dp"
@@ -91,7 +91,8 @@
         android:textOn="STOP"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/fastestTimeTextView"
+
+        app:layout_constraintEnd_toStartOf="@+id/exploreResetImageBtn"
         app:layout_constraintTop_toBottomOf="@+id/exploreTimeTextView" />
 
     <ImageButton
@@ -113,8 +114,9 @@
         android:layout_height="wrap_content"
         android:background="@drawable/c_control_background"
         android:paddingBottom="10dp"
+
         android:src="@drawable/reset_image"
-        app:layout_constraintStart_toEndOf="@+id/exploreToggleBtn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/exploreToggleBtn" />
 
     <Button

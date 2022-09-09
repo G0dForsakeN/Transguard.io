@@ -23,11 +23,11 @@
         <entry key="app/src/main/res/drawable-v25/update_image.xml" value="0.403" />
         <entry key="app/src/main/res/drawable/button_background.xml" value="0.225" />
         <entry key="app/src/main/res/drawable/ic_baseline_add_location_24.xml" value="0.225" />
-        <entry key="app/src/main/res/layout/activity_comms.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_comms.xml" value="0.23281249999999992" />
         <entry key="app/src/main/res/layout/activity_control.xml" value="0.2328842163085937" />
         <entry key="app/src/main/res/layout/activity_direction.xml" value="0.31858974358974357" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.27729644775390627" />
-        <entry key="app/src/main/res/layout/activity_map.xml" value="0.16901041666666666" />
+        <entry key="app/src/main/res/layout/activity_map.xml" value="0.3605906168619792" />
         <entry key="app/src/main/res/layout/activity_setting.xml" value="0.31858974358974357" />
         <entry key="app/src/main/res/layout/automation_page.xml" value="0.3823348999023438" />
         <entry key="app/src/main/res/layout/bluetooth_pop_up_window.xml" value="0.20458984375" />

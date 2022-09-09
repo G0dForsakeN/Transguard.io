@@ -36,7 +36,6 @@
         android:layout_width="393dp"
         android:layout_height="146dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="300dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/dailytasks"
         android:gravity="bottom"
@@ -48,15 +47,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/pairedDevicesTitleTextView" />
 
     <TextView
         android:id="@+id/TextView1"
         android:layout_width="233dp"
         android:layout_height="47dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginEnd="348dp"
-        android:layout_marginRight="348dp"
+        android:layout_marginEnd="360dp"
         android:foregroundGravity="center"
         android:gravity="center"
         android:text="Disconnected"
@@ -64,32 +61,35 @@
         android:textColor="#1B1A1A"
         android:textSize="30dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.171" />
 
     <TextView
         android:id="@+id/bluetoothTitleTextView"
-        android:layout_width="350dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:background="@drawable/pairingstatus"
         android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.446"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bluetoothSwitch"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toEndOf="@+id/backBtn"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/searchBtn"
         android:layout_width="255dp"
-        android:layout_height="67dp"
-        android:layout_marginTop="160dp"
+        android:layout_height="47dp"
         android:background="@drawable/group1"
         android:onClick="toggleButtonScan"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintHorizontal_bias="0.855"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.17"
         tools:ignore="MissingConstraints" />
 
     <Switch
@@ -110,12 +110,12 @@
         android:layout_width="201dp"
         android:layout_height="22dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="452dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/devicesfound"
+        app:layout_constraintBottom_toTopOf="@+id/dListView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/pairedDevicesListView" />
 
     <ListView
         android:id="@+id/dListView"
@@ -139,28 +139,30 @@
     <Button
         android:id="@+id/connectBtn"
         android:layout_width="195dp"
-        android:layout_height="34dp"
+        android:layout_height="50dp"
         android:background="@drawable/rect21"
         android:drawableLeft="@drawable/bluevector"
         android:drawableRight="@drawable/connecttextpage"
         android:paddingLeft="25dp"
         android:paddingRight="35dp"
+        android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintTop_toBottomOf="@+id/dListView"
+        app:layout_constraintVertical_bias="0.609" />
 
     <TextView
         android:id="@+id/pairedDevicesTitleTextView"
         android:layout_width="177dp"
         android:layout_height="21dp"
-        android:layout_marginTop="264dp"
+        android:layout_marginTop="20dp"
+
         android:background="@drawable/paireddev"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/TextView1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
