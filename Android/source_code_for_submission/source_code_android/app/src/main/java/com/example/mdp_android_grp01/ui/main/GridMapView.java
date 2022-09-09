@@ -93,8 +93,8 @@ public class GridMapView extends View {
         //end.setColor(Color.RED);
         start.setColor(Color.CYAN);
         waypoint.setColor(Color.YELLOW);
-        unExplored.setColor(Color.LTGRAY);
-        explored.setColor(Color.WHITE);
+        unExplored.setColor(Color.WHITE);
+        explored.setColor(Color.LTGRAY);
         sharedPreferences = getContext().getSharedPreferences("Shared Preferences", Context.MODE_PRIVATE);
     }
 

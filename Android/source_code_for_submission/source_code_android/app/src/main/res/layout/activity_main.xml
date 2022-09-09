@@ -159,7 +159,7 @@
             app:tabGravity="fill"
             app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
             app:tabTextColor="@color/black"
-
+            app:tabSelectedTextColor="@color/selected_color"
             />
 
 

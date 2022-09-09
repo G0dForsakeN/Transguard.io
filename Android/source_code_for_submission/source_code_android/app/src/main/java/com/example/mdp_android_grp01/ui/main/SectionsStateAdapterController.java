@@ -43,10 +43,10 @@ public class SectionsStateAdapterController extends FragmentStateAdapter {
         }
         return null;
     }
-//    public Fragment getItem(int position) {
-//        return fragmentsArray.get(position);
-//
-//    }
+    public Fragment getItem(int position) {
+        return fragmentsArray.get(position);
+
+    }
 //    @Override
 //    public CharSequence getPageTitle(int position) {
 //        return fragmentsTitle.get(position);
