@@ -8,6 +8,7 @@
 8    <uses-sdk
 <<<<<<< HEAD
 9        android:minSdkVersion="19"
+<<<<<<< Updated upstream
 9-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml
 =======
 9        android:minSdkVersion="15"
@@ -49,6 +50,45 @@
 24    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
 24-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:18:5-72
 24-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:18:22-70
+=======
+9-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml
+10        android:targetSdkVersion="29" />
+10-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml
+11
+12    <dist:module dist:instant="true" />
+12-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:6:5-40
+12-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:6:18-37
+13
+14    <!-- added permission for bluetotoh connection -->
+15    <uses-feature android:name="android.hardware.bluetooth" />
+15-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:9:5-63
+15-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:9:19-60
+16
+17    <uses-permission android:name="android.permission.BLUETOOTH" />
+17-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:11:5-68
+17-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:11:22-65
+18    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+18-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:12:5-74
+18-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:12:22-71
+19    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+19-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:13:5-75
+19-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:13:22-72
+20    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+20-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:14:5-80
+20-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:14:22-78
+21    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+21-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:15:5-78
+21-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:15:22-76
+22    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+22-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:16:5-77
+22-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:16:22-75
+23    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+23-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:17:5-75
+23-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:17:22-73
+24    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+24-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:18:5-72
+24-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:18:22-70
+>>>>>>> Stashed changes
 25
 26    <!-- Include required permissions for Google Maps API to run. -->
 27    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -76,47 +116,47 @@
 38    </queries>
 39
 40    <application
-40-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:20:5-39:19
+40-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:20:5-39:19
 41        android:allowBackup="true"
-41-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:21:9-35
+41-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:21:9-35
 42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 42-->[androidx.core:core:1.8.0] /Users/jingyen/.gradle/caches/transforms-3/663e836d9efcdc8e609cda38c1cd8a15/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
 43        android:debuggable="true"
 44        android:icon="@mipmap/ic_launcher"
-44-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:22:9-43
+44-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:22:9-43
 45        android:label="@string/app_name"
-45-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:23:9-41
+45-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:23:9-41
 46        android:roundIcon="@mipmap/ic_launcher_round"
-46-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:24:9-54
+46-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:24:9-54
 47        android:supportsRtl="true"
-47-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:25:9-35
+47-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:25:9-35
 48        android:testOnly="true"
 49        android:theme="@style/AppTheme" >
-49-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:26:9-40
+49-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:26:9-40
 50        <activity
-50-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:27:9-37:20
+50-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:27:9-37:20
 51            android:name="com.example.mdp_android_grp01.MainActivity"
-51-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:28:13-70
+51-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:28:13-70
 52            android:label="@string/app_name"
-52-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:29:13-45
+52-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:29:13-45
 53            android:theme="@style/AppTheme.NoActionBar"
-53-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:30:13-56
+53-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:30:13-56
 54            android:windowSoftInputMode="adjustPan" >
-54-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:31:13-52
+54-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:31:13-52
 55            <intent-filter>
-55-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:32:13-36:29
+55-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:32:13-36:29
 56                <action android:name="android.intent.action.MAIN" />
-56-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:33:17-69
-56-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:33:25-66
+56-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:33:17-69
+56-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:33:25-66
 57
 58                <category android:name="android.intent.category.LAUNCHER" />
-58-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:35:17-77
-58-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:35:27-74
+58-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:35:17-77
+58-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:35:27-74
 59            </intent-filter>
 60        </activity>
 61        <activity android:name="com.example.mdp_android_grp01.ui.main.BluetoothPopUpView" />
-61-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:38:9-102
-61-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:38:19-90
+61-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:38:9-102
+61-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:38:19-90
 62        <!-- Needs to be explicitly declared on P+ -->
 63        <uses-library
 63-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:39:9-41:40

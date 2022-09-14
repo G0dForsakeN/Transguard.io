@@ -8,7 +8,11 @@
 >>>>>>> 3edd1820000736931948c5aa04535a84dafa2703:Android/source_code_for_submission/source_code_android/app/build/intermediates/blame/res/debug/multi-v2/values-w820dp-v13.json
             "map": [
                 {
+<<<<<<< Updated upstream
                     "source": "C:\\Users\\dhruv\\Documents\\GitHub\\MDP_Project_21\\Android\\source_code_for_submission\\source_code_android\\app\\src\\main\\res\\values-w820dp\\dimens.xml",
+=======
+                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/res/values-w820dp/dimens.xml",
+>>>>>>> Stashed changes
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",
