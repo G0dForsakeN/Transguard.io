@@ -3,6 +3,7 @@ package com.example.mdp_android_grp01.ui.main;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -166,6 +167,13 @@ public class MapTabFragmentController extends Fragment {
                     setSouthObstacleDirectionButton.setVisibility(View.GONE);
                     setWestObstacleDirectionButton.setVisibility(View.GONE);
                 }
+            }
+        });
+
+        obstacleButton.setOnDragListener(new View.OnDragListener() {
+            @Override
+            public boolean onDrag(View v, DragEvent event) {
+                return false;
             }
         });
 

@@ -2609,8 +2609,10 @@ drawable abc_vector_test
 drawable automation_image
 drawable avd_hide_password
 drawable avd_show_password
+drawable backtext
 drawable bad_send
 drawable bluetooth_image
+drawable bluetooth_search_button
 drawable bluetoothbuttonrectangle
 drawable bluetoothsymbol
 drawable bluevector
@@ -2795,6 +2797,7 @@ drawable polygon2back
 drawable rect21
 drawable remove_image
 drawable reset_image
+drawable search_icon
 drawable send_button
 drawable shapes
 drawable south_obstacle

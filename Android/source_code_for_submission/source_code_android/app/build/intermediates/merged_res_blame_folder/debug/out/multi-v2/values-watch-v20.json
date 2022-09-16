@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD:Android/source_code_for_submission/source_code_android/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values-watch-v20.json
             "outputFile": "com.example.mdp_android_grp01.app-mergeDebugResources-30:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
                     "source": "/Users/jingyen/.gradle/caches/transforms-3/5d9cbdf48930a41ad4c3177ea1826393/transformed/appcompat-1.5.0/res/values-watch-v20/values-watch-v20.xml",
-=======
-            "outputFile": "C:\\Users\\dhruv\\Documents\\GitHub\\MDP_Project_21\\Android\\source_code_for_submission\\source_code_android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-watch-v20\\values-watch-v20.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\dhruv\\.gradle\\caches\\transforms-2\\files-2.1\\6119d746697059b7e1b74aab4d181f56\\appcompat-1.1.0\\res\\values-watch-v20\\values-watch-v20.xml",
->>>>>>> 3edd1820000736931948c5aa04535a84dafa2703:Android/source_code_for_submission/source_code_android/app/build/intermediates/blame/res/debug/multi-v2/values-watch-v20.json
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

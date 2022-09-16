@@ -4234,25 +4234,6 @@
                     }
                 },
                 {
-                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "3,15,10,17",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "54,525,374,617",
-                        "endLines": "8,15,13,17",
-                        "endColumns": "12,90,12,80",
-                        "endOffsets": "368,611,519,693"
-                    },
-                    "to": {
-                        "startLines": "1901,1907,1908,1912",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "128766,129050,129140,129290",
-                        "endLines": "1906,1907,1911,1912",
-                        "endColumns": "12,89,12,79",
-                        "endOffsets": "129045,129135,129285,129365"
-                    }
-                },
-                {
                     "source": "/Users/jingyen/.gradle/caches/transforms-3/b3a7565c1b6ab39d992aa82493370f07/transformed/cardview-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,35,36,37,38,45,47,50,7",
@@ -4272,22 +4253,22 @@
                     }
                 },
                 {
-                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/res/values/array.xml",
+                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/values/styles.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "7",
-                        "endColumns": "19",
-                        "endOffsets": "213"
+                        "startLines": "3,15,10,17",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "54,525,374,617",
+                        "endLines": "8,15,13,17",
+                        "endColumns": "12,90,12,80",
+                        "endOffsets": "368,611,519,693"
                     },
                     "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "150",
-                        "endLines": "7",
-                        "endColumns": "19",
-                        "endOffsets": "308"
+                        "startLines": "1901,1907,1908,1912",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "128766,129050,129140,129290",
+                        "endLines": "1906,1907,1911,1912",
+                        "endColumns": "12,89,12,79",
+                        "endOffsets": "129045,129135,129285,129365"
                     }
                 },
                 {
@@ -4307,40 +4288,6 @@
                         "endLines": "12791",
                         "endColumns": "24",
                         "endOffsets": "727602"
-                    }
-                },
-                {
-                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "39,1,24,20,9,31,34,10,17,15,11,18,16,23,26,25,14,19,8,30,33,2,3,4,5,28,29,36,27",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "1374,16,851,749,318,1155,1272,368,597,517,402,654,557,809,923,889,457,711,280,1097,1212,74,123,168,211,1007,1053,1331,959",
-                        "endColumns": "59,57,37,41,49,55,57,33,56,39,33,56,39,41,35,33,59,37,37,57,59,48,44,42,46,45,43,40,47",
-                        "endOffsets": "1429,69,884,786,363,1206,1325,397,649,552,431,706,592,846,954,918,512,744,313,1150,1267,118,163,206,253,1048,1092,1367,1002"
-                    },
-                    "to": {
-                        "startLines": "1691,1720,1722,1729,1752,1753,1754,1760,1761,1762,1763,1764,1765,1782,1866,1867,1873,1874,1876,1877,1878,1880,1881,1882,1883,1884,1885,1886,1887",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "104893,106902,107110,108237,110989,111039,111095,111467,111501,111558,111598,111632,111689,113815,126149,126185,127021,127081,127172,127210,127268,127399,127448,127493,127536,127583,127629,127673,127714",
-                        "endColumns": "59,57,37,41,49,55,57,33,56,39,33,56,39,41,35,33,59,37,37,57,59,48,44,42,46,45,43,40,47",
-                        "endOffsets": "104948,106955,107143,108274,111034,111090,111148,111496,111553,111593,111627,111684,111724,113852,126180,126214,127076,127114,127205,127263,127323,127443,127488,127531,127578,127624,127668,127709,127757"
-                    }
-                },
-                {
-                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "16,6,12,4,9,2,3,8,7,10,13,14,15",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "610,200,435,153,335,55,102,292,247,380,475,518,561",
-                        "endColumns": "39,46,39,45,44,46,50,42,44,49,42,42,48",
-                        "endOffsets": "645,242,470,194,375,97,148,330,287,425,513,556,605"
-                    },
-                    "to": {
-                        "startLines": "617,618,625,632,633,634,635,636,637,687,692,693,866",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "31269,31309,31882,32286,32332,32377,32424,32475,32518,36058,36388,36431,48907",
-                        "endColumns": "39,46,39,45,44,46,50,42,44,49,42,42,48",
-                        "endOffsets": "31304,31351,31917,32327,32372,32419,32470,32513,32558,36103,36426,36469,48951"
                     }
                 },
                 {
@@ -4416,7 +4363,7 @@
                     }
                 },
                 {
-                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/res/values/dimens.xml",
+                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/values/dimens.xml",
                     "from": {
                         "startLines": "2,3,4,6,7,5",
                         "startColumns": "4,4,4,4,4,4",
@@ -4449,6 +4396,23 @@
                         "endLines": "11029",
                         "endColumns": "20",
                         "endOffsets": "663529"
+                    }
+                },
+                {
+                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "39,1,24,20,9,31,34,10,17,15,11,18,16,23,26,25,14,19,8,30,33,2,3,4,5,28,29,36,27",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1374,16,851,749,318,1155,1272,368,597,517,402,654,557,809,923,889,457,711,280,1097,1212,74,123,168,211,1007,1053,1331,959",
+                        "endColumns": "59,57,37,41,49,55,57,33,56,39,33,56,39,41,35,33,59,37,37,57,59,48,44,42,46,45,43,40,47",
+                        "endOffsets": "1429,69,884,786,363,1206,1325,397,649,552,431,706,592,846,954,918,512,744,313,1150,1267,118,163,206,253,1048,1092,1367,1002"
+                    },
+                    "to": {
+                        "startLines": "1691,1720,1722,1729,1752,1753,1754,1760,1761,1762,1763,1764,1765,1782,1866,1867,1873,1874,1876,1877,1878,1880,1881,1882,1883,1884,1885,1886,1887",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "104893,106902,107110,108237,110989,111039,111095,111467,111501,111558,111598,111632,111689,113815,126149,126185,127021,127081,127172,127210,127268,127399,127448,127493,127536,127583,127629,127673,127714",
+                        "endColumns": "59,57,37,41,49,55,57,33,56,39,33,56,39,41,35,33,59,37,37,57,59,48,44,42,46,45,43,40,47",
+                        "endOffsets": "104948,106955,107143,108274,111034,111090,111148,111496,111553,111593,111627,111684,111724,113852,126180,126214,127076,127114,127205,127263,127323,127443,127488,127531,127578,127624,127668,127709,127757"
                     }
                 },
                 {
@@ -4526,6 +4490,23 @@
                     }
                 },
                 {
+                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "16,6,12,4,9,2,3,8,7,10,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "610,200,435,153,335,55,102,292,247,380,475,518,561",
+                        "endColumns": "39,46,39,45,44,46,50,42,44,49,42,42,48",
+                        "endOffsets": "645,242,470,194,375,97,148,330,287,425,513,556,605"
+                    },
+                    "to": {
+                        "startLines": "617,618,625,632,633,634,635,636,637,687,692,693,866",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "31269,31309,31882,32286,32332,32377,32424,32475,32518,36058,36388,36431,48907",
+                        "endColumns": "39,46,39,45,44,46,50,42,44,49,42,42,48",
+                        "endOffsets": "31304,31351,31917,32327,32372,32419,32470,32513,32558,36103,36426,36469,48951"
+                    }
+                },
+                {
                     "source": "/Users/jingyen/.gradle/caches/transforms-3/31d7130bfe91945d8644c8636ebfde23/transformed/jetified-startup-runtime-1.1.1/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -4557,6 +4538,25 @@
                         "startOffsets": "96136,96176,97308,97490,97545,99041,99095,99147,99196,99257",
                         "endColumns": "39,46,42,54,46,53,51,48,60,49",
                         "endOffsets": "96171,96218,97346,97540,97587,99090,99142,99191,99252,99302"
+                    }
+                },
+                {
+                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/values/array.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "7",
+                        "endColumns": "19",
+                        "endOffsets": "213"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "150",
+                        "endLines": "7",
+                        "endColumns": "19",
+                        "endOffsets": "308"
                     }
                 }
             ]
@@ -5611,7 +5611,7 @@
             "outputFile": "com.example.mdp_android_grp01.app-merged_res-32:/values-w820dp-v13_values-w820dp-v13.arsc.flat",
             "map": [
                 {
-                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/res/values-w820dp/dimens.xml",
+                    "source": "/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/res/values-w820dp/dimens.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "4",

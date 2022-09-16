@@ -37,8 +37,6 @@ public class SectionsStateAdapterController extends FragmentStateAdapter {
             case 1:
                 return new MapTabFragmentController();
             case 2:
-                return new ManualFragmentController();
-            case 3:
                 return new SettingFragmentView();
         }
         return null;

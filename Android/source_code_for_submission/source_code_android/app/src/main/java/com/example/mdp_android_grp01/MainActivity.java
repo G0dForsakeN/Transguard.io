@@ -26,7 +26,7 @@ import com.example.mdp_android_grp01.ui.main.SettingFragmentView;
 import com.google.android.material.tabs.TabLayout;
 import com.example.mdp_android_grp01.ui.main.BluetoothConnectServiceController;
 import com.example.mdp_android_grp01.ui.main.CommunicationFragmentController;
-import com.example.mdp_android_grp01.ui.main.ManualFragmentController;
+//import com.example.mdp_android_grp01.ui.main.ManualFragmentController;
 import com.example.mdp_android_grp01.ui.main.GridMapView;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -73,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         ViewPager2 viewPager = findViewById(R.id.view_pager);
         ((SectionsStateAdapterController) SectionsStateAdapterController).addFragment(new CommunicationFragmentController(), "Command");
         ((SectionsStateAdapterController) SectionsStateAdapterController).addFragment(new MapTabFragmentController(), "Map");
-        ((SectionsStateAdapterController) SectionsStateAdapterController).addFragment(new ManualFragmentController(), "Automation");
         ((SectionsStateAdapterController) SectionsStateAdapterController).addFragment(new SettingFragmentView(), "Bluetooth");
         viewPager.setAdapter(SectionsStateAdapterController);
         viewPager.setOffscreenPageLimit(9999);
@@ -84,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     public  void onConfigureTab(@NonNull TabLayout.Tab tab, int position){
                     };
                             }).attach();
-        tabLayouts.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        tabLayouts.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() { //tab elements
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
 //                super.onTabSelected(tab);
@@ -156,14 +155,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupTabIcons() {
         tabLayouts.getTabAt(0).setIcon(R.drawable.tab_comm_selected);
-//        tabLayouts.getTabAt(0).setIcon(tabIcons[0]);
         tabLayouts.getTabAt(1).setIcon(tabIcons[1]);
-        tabLayouts.getTabAt(2).setIcon(tabIcons[2]);
-        tabLayouts.getTabAt(3).setIcon(tabIcons[3]);
+        tabLayouts.getTabAt(2).setIcon(tabIcons[3]);
         tabLayouts.getTabAt(0).setText("Command");
         tabLayouts.getTabAt(1).setText("Map");
-        tabLayouts.getTabAt(2).setText("Automation");
-        tabLayouts.getTabAt(3).setText("Bluetooth");
+        tabLayouts.getTabAt(2).setText("Bluetooth");
     }
 
 
