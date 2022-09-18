@@ -266,12 +266,95 @@ public class MainActivity extends AppCompatActivity {
             editorSharedPreferences.commit();
         }
     };
+    public static boolean isNumeric(String string) {
+        int intValue;
+
+        System.out.println(String.format("Parsing string: \"%s\"", string));
+
+        if(string == null || string.equals("")) {
+            System.out.println("String cannot be parsed, it is null or empty.");
+            return false;
+        }
+
+        try {
+            intValue = Integer.parseInt(string);
+            return true;
+        } catch (NumberFormatException e) {
+            System.out.println("Input String cannot be parsed to Integer.");
+        }
+        return false;
+    }
 
     BroadcastReceiver messageReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             String message = intent.getStringExtra("receivedMessage");
             // From AMDTOOL
+            try {
+                String direction = "";
+                Boolean flag = false;
+                if (message.substring(message.length()-1).equals("N")){
+                    flag = true;
+                    direction = "up";
+                }
+                if (message.substring(message.length()-1).equals("S")){
+                    flag = true;
+                    direction = "down";
+                }
+                if (message.substring(message.length()-1).equals("W")){
+                    flag = true;
+                    direction = "left";
+                }
+                if (message.substring(message.length()-1).equals("E")){
+                    flag = true;
+                    direction = "right";
+                }
+                if (message.substring(0,5).equals("ROBOT")&&flag){
+
+                    if (message.length()==11){
+                        if(isNumeric(message.substring(6,7))&&isNumeric(message.substring(8,9))){
+                            int x1 = Integer.parseInt(message.substring(6,7));
+                            int y1 = Integer.parseInt(message.substring(8,9));
+                            if (x1>1 && y1>1 && x1<20 && y1<20){
+                                gridMapViewDescriptor.setCurrentCoordinates(x1,y1,direction);
+                            }
+                        }
+                    }
+
+                    if (message.length()==13){
+                        if(isNumeric(message.substring(6,8))&&isNumeric(message.substring(9,11))){
+                            int x1 = Integer.parseInt(message.substring(6,8));
+                            int y1 = Integer.parseInt(message.substring(9,11));
+                            if (x1>1 && y1>1 && x1<20 && y1<20){
+                                gridMapViewDescriptor.setCurrentCoordinates(x1,y1,direction);
+                            }
+                        }
+                    }
+
+                    if (message.length()==12){
+                        if(isNumeric(message.substring(6,7))&&isNumeric(message.substring(8,10))){
+                            int x1 = Integer.parseInt(message.substring(6,7));
+                            int y1 = Integer.parseInt(message.substring(8,10));
+                            if (x1>1 && y1>1 && x1<20 && y1<20){
+                                gridMapViewDescriptor.setCurrentCoordinates(x1,y1,direction);
+                            }
+                        }
+                    }
+
+                    if (message.length()==12){
+                        if(isNumeric(message.substring(6,8))&&isNumeric(message.substring(9,10))){
+                            int x1 = Integer.parseInt(message.substring(6,8));
+                            int y1 = Integer.parseInt(message.substring(9,10));
+                            if (x1>1 && y1>1 && x1<20 && y1<20){
+                                gridMapViewDescriptor.setCurrentCoordinates(x1,y1,direction);
+                            }
+                        }
+                    }
+
+                }
+            } catch (Exception e) {
+                showLog("Updating Position Failed");
+            }
             try {
                 if (message.length() > 7 && message.substring(2,6).equals("grid")) {
                     StringBuilder resultString = new StringBuilder();

@@ -7,154 +7,154 @@
 7
 8    <uses-sdk
 9        android:minSdkVersion="19"
-9-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml
+9-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml
 10        android:targetSdkVersion="29" />
-10-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml
+10-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml
 11
 12    <dist:module dist:instant="true" />
-12-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:6:5-40
-12-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:6:18-37
+12-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:6:5-40
+12-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:6:18-37
 13
 14    <!-- added permission for bluetotoh connection -->
 15    <uses-feature android:name="android.hardware.bluetooth" />
-15-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:9:5-63
-15-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:9:19-60
+15-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:9:5-63
+15-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:9:19-60
 16
 17    <uses-permission android:name="android.permission.BLUETOOTH" />
-17-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:11:5-68
-17-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:11:22-65
+17-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:11:5-68
+17-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:11:22-65
 18    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
-18-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:12:5-74
-18-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:12:22-71
+18-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:12:5-74
+18-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:12:22-71
 19    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-19-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:13:5-75
-19-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:13:22-72
+19-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:13:5-75
+19-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:13:22-72
 20    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-20-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:14:5-80
-20-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:14:22-78
+20-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:14:5-80
+20-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:14:22-78
 21    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-21-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:15:5-78
-21-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:15:22-76
+21-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:15:5-78
+21-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:15:22-76
 22    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
-22-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:16:5-77
-22-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:16:22-75
+22-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:16:5-77
+22-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:16:22-75
 23    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
-23-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:17:5-75
-23-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:17:22-73
+23-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:17:5-75
+23-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:17:22-73
 24    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
-24-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:18:5-72
-24-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:18:22-70
+24-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:18:5-72
+24-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:18:22-70
 25
 26    <!-- Include required permissions for Google Maps API to run. -->
 27    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-27-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:23:5-79
-27-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:23:22-76
+27-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:23:5-79
+27-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:23:22-76
 28    <uses-permission android:name="android.permission.INTERNET" />
-28-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:24:5-67
-28-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:24:22-64
+28-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:24:5-67
+28-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:24:22-64
 29
 30    <uses-feature
-30-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:26:5-28:35
+30-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:26:5-28:35
 31        android:glEsVersion="0x00020000"
-31-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:27:9-41
+31-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:27:9-41
 32        android:required="true" />
-32-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:28:9-32
+32-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:28:9-32
 33
 34    <queries>
-34-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:30:5-34:15
+34-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:30:5-34:15
 35
 36        <!-- Needs to be explicitly declared on Android R+ -->
 37        <package android:name="com.google.android.apps.maps" />
-37-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:33:9-64
-37-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:33:18-61
+37-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:9-64
+37-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:33:18-61
 38    </queries>
 39
 40    <application
-40-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:20:5-39:19
+40-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:20:5-39:19
 41        android:allowBackup="true"
-41-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:21:9-35
+41-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:21:9-35
 42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-42-->[androidx.core:core:1.8.0] /Users/jingyen/.gradle/caches/transforms-3/663e836d9efcdc8e609cda38c1cd8a15/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+42-->[androidx.core:core:1.8.0] C:\Users\dhruv\.gradle\caches\transforms-3\663e836d9efcdc8e609cda38c1cd8a15\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 43        android:debuggable="true"
 44        android:icon="@mipmap/ic_launcher"
-44-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:22:9-43
+44-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:22:9-43
 45        android:label="@string/app_name"
-45-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:23:9-41
+45-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:23:9-41
 46        android:roundIcon="@mipmap/ic_launcher_round"
-46-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:24:9-54
+46-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:24:9-54
 47        android:supportsRtl="true"
-47-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:25:9-35
+47-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:25:9-35
 48        android:testOnly="true"
 49        android:theme="@style/AppTheme" >
-49-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:26:9-40
+49-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:26:9-40
 50        <activity
-50-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:27:9-37:20
+50-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:27:9-37:20
 51            android:name="com.example.mdp_android_grp01.MainActivity"
-51-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:28:13-70
+51-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:28:13-70
 52            android:label="@string/app_name"
-52-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:29:13-45
+52-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:29:13-45
 53            android:theme="@style/AppTheme.NoActionBar"
-53-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:30:13-56
+53-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:30:13-56
 54            android:windowSoftInputMode="adjustPan" >
-54-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:31:13-52
+54-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:31:13-52
 55            <intent-filter>
-55-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:32:13-36:29
+55-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:32:13-36:29
 56                <action android:name="android.intent.action.MAIN" />
-56-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:33:17-69
-56-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:33:25-66
+56-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:33:17-69
+56-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:33:25-66
 57
 58                <category android:name="android.intent.category.LAUNCHER" />
-58-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:35:17-77
-58-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:35:27-74
+58-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:35:17-77
+58-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:35:27-74
 59            </intent-filter>
 60        </activity>
 61        <activity android:name="com.example.mdp_android_grp01.ui.main.BluetoothPopUpView" />
-61-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:38:9-102
-61-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/MDP_Project_21/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:38:19-90
+61-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:38:9-102
+61-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:38:19-90
 62        <!-- Needs to be explicitly declared on P+ -->
 63        <uses-library
-63-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:39:9-41:40
+63-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:39:9-41:40
 64            android:name="org.apache.http.legacy"
-64-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:40:13-50
+64-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:40:13-50
 65            android:required="false" />
-65-->[com.google.android.gms:play-services-maps:18.1.0] /Users/jingyen/.gradle/caches/transforms-3/6bdd14ab185753253864092aefc146b3/transformed/jetified-play-services-maps-18.1.0/AndroidManifest.xml:41:13-37
+65-->[com.google.android.gms:play-services-maps:18.1.0] C:\Users\dhruv\.gradle\caches\transforms-3\6bdd14ab185753253864092aefc146b3\transformed\jetified-play-services-maps-18.1.0\AndroidManifest.xml:41:13-37
 66
 67        <activity
-67-->[com.google.android.gms:play-services-base:18.0.1] /Users/jingyen/.gradle/caches/transforms-3/e37ad56a0ed8dadde24292a3b96a8bcd/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+67-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\dhruv\.gradle\caches\transforms-3\e37ad56a0ed8dadde24292a3b96a8bcd\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
 68            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-68-->[com.google.android.gms:play-services-base:18.0.1] /Users/jingyen/.gradle/caches/transforms-3/e37ad56a0ed8dadde24292a3b96a8bcd/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+68-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\dhruv\.gradle\caches\transforms-3\e37ad56a0ed8dadde24292a3b96a8bcd\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
 69            android:exported="false"
-69-->[com.google.android.gms:play-services-base:18.0.1] /Users/jingyen/.gradle/caches/transforms-3/e37ad56a0ed8dadde24292a3b96a8bcd/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+69-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\dhruv\.gradle\caches\transforms-3\e37ad56a0ed8dadde24292a3b96a8bcd\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
 70            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-70-->[com.google.android.gms:play-services-base:18.0.1] /Users/jingyen/.gradle/caches/transforms-3/e37ad56a0ed8dadde24292a3b96a8bcd/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+70-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\dhruv\.gradle\caches\transforms-3\e37ad56a0ed8dadde24292a3b96a8bcd\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
 71
 72        <meta-data
-72-->[com.google.android.gms:play-services-basement:18.0.0] /Users/jingyen/.gradle/caches/transforms-3/42b6505b4187f56d2a33aff3756f31b2/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+72-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\dhruv\.gradle\caches\transforms-3\42b6505b4187f56d2a33aff3756f31b2\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
 73            android:name="com.google.android.gms.version"
-73-->[com.google.android.gms:play-services-basement:18.0.0] /Users/jingyen/.gradle/caches/transforms-3/42b6505b4187f56d2a33aff3756f31b2/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+73-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\dhruv\.gradle\caches\transforms-3\42b6505b4187f56d2a33aff3756f31b2\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
 74            android:value="@integer/google_play_services_version" />
-74-->[com.google.android.gms:play-services-basement:18.0.0] /Users/jingyen/.gradle/caches/transforms-3/42b6505b4187f56d2a33aff3756f31b2/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+74-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\dhruv\.gradle\caches\transforms-3\42b6505b4187f56d2a33aff3756f31b2\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
 75
 76        <provider
-76-->[androidx.emoji2:emoji2:1.2.0] /Users/jingyen/.gradle/caches/transforms-3/3b7ca7498197530ed3b226737d3e77e8/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+76-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhruv\.gradle\caches\transforms-3\3b7ca7498197530ed3b226737d3e77e8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 77            android:name="androidx.startup.InitializationProvider"
-77-->[androidx.emoji2:emoji2:1.2.0] /Users/jingyen/.gradle/caches/transforms-3/3b7ca7498197530ed3b226737d3e77e8/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+77-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhruv\.gradle\caches\transforms-3\3b7ca7498197530ed3b226737d3e77e8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
 78            android:authorities="com.example.mdp_android_grp01.androidx-startup"
-78-->[androidx.emoji2:emoji2:1.2.0] /Users/jingyen/.gradle/caches/transforms-3/3b7ca7498197530ed3b226737d3e77e8/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhruv\.gradle\caches\transforms-3\3b7ca7498197530ed3b226737d3e77e8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
 79            android:exported="false" >
-79-->[androidx.emoji2:emoji2:1.2.0] /Users/jingyen/.gradle/caches/transforms-3/3b7ca7498197530ed3b226737d3e77e8/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhruv\.gradle\caches\transforms-3\3b7ca7498197530ed3b226737d3e77e8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
 80            <meta-data
-80-->[androidx.emoji2:emoji2:1.2.0] /Users/jingyen/.gradle/caches/transforms-3/3b7ca7498197530ed3b226737d3e77e8/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+80-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhruv\.gradle\caches\transforms-3\3b7ca7498197530ed3b226737d3e77e8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 81                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-81-->[androidx.emoji2:emoji2:1.2.0] /Users/jingyen/.gradle/caches/transforms-3/3b7ca7498197530ed3b226737d3e77e8/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+81-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhruv\.gradle\caches\transforms-3\3b7ca7498197530ed3b226737d3e77e8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
 82                android:value="androidx.startup" />
-82-->[androidx.emoji2:emoji2:1.2.0] /Users/jingyen/.gradle/caches/transforms-3/3b7ca7498197530ed3b226737d3e77e8/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+82-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhruv\.gradle\caches\transforms-3\3b7ca7498197530ed3b226737d3e77e8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
 83            <meta-data
-83-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/jingyen/.gradle/caches/transforms-3/1dad5f2238efed84a538dcfee0c2c628/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+83-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dhruv\.gradle\caches\transforms-3\1dad5f2238efed84a538dcfee0c2c628\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
 84                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-84-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/jingyen/.gradle/caches/transforms-3/1dad5f2238efed84a538dcfee0c2c628/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+84-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dhruv\.gradle\caches\transforms-3\1dad5f2238efed84a538dcfee0c2c628\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 85                android:value="androidx.startup" />
-85-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/jingyen/.gradle/caches/transforms-3/1dad5f2238efed84a538dcfee0c2c628/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+85-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\dhruv\.gradle\caches\transforms-3\1dad5f2238efed84a538dcfee0c2c628\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 86        </provider>
 87    </application>
 88

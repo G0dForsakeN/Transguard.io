@@ -98,6 +98,7 @@ public class GridMapView extends View {
         sharedPreferences = getContext().getSharedPreferences("Shared Preferences", Context.MODE_PRIVATE);
     }
 
+
     private void initMap() {
         setWillNotDraw(false);
     }
@@ -306,15 +307,6 @@ public class GridMapView extends View {
             for (int y = 0; y <= Row; y++)
                 cellsDetail[x][y] = new Cell(x * sizeOfCell + (sizeOfCell / 30), y * sizeOfCell + (sizeOfCell / 30), (x + 1) * sizeOfCell, (y + 1) * sizeOfCell, unExplored, "unexplored");
         showLog("Exiting createGridCell");
-    }
-
-    public void setEndCoordinates(int col, int row) {
-        showLog("Entering setEndCoordinates");
-        row = this.convertRow(row);
-        for (int x = col - 1; x <= col + 1; x++)
-            for (int y = row - 1; y <= row + 1; y++)
-                cellsDetail[x][y].setType("end");
-        showLog("Exiting setEndCoordinates");
     }
 
     public void setStartCoordinates(int col, int row) {
