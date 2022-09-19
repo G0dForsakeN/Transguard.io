@@ -9,6 +9,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -119,7 +120,7 @@ public class GridMapView extends View {
         if (getCanDrawRobot())
             displayRobotOnGrid(canvas, currentPoint);
         drawObstacleWithDirection(canvas, directionOfObstacleCoordinates);
-
+        setObstacleText("2", 1 , 1);
         showLog("Exiting onDraw");
     }
 
@@ -969,11 +970,12 @@ public class GridMapView extends View {
 
     private void setObstacleDirectionCoordinate(int col, int row,String obstacleDirection) {
         showLog("Entering setDirectionCoord");
-        String[] directionCoord = new String[4];
+        String[] directionCoord = new String[5];
         directionCoord[0] = String.valueOf(col);
         directionCoord[1] = String.valueOf(row);
         directionCoord[2] = obstacleDirection;
-        directionCoord[3] = "nil";
+        directionCoord[3] = String.valueOf(this.getObstacleDirectionCoord().size());
+        directionCoord[4] = "F";
         this.getObstacleDirectionCoord().add(directionCoord);
 
         row = this.convertRow(row);
@@ -990,6 +992,7 @@ public class GridMapView extends View {
             String[] obstacle = (String[]) obstacleDirectionCoord.get(i);
             if(obstacle[0].equals(String.valueOf(col)) && obstacle[1].equals(String.valueOf(row))){
                 obstacle[3] = text;
+                obstacle[4] = "T";
                 return true;
             }
         }
@@ -1009,8 +1012,15 @@ public class GridMapView extends View {
             rect = new RectF(x * sizeOfCell, y * sizeOfCell, (x+1) * sizeOfCell, (y+1) * sizeOfCell);
             Paint white = new Paint();
             white.setColor(Color.WHITE);
-            white.setTextSize(30);
             white.setTextAlign(Paint.Align.CENTER);
+            if(obstacleDirectionCoord.get(i)[4].equals("T")){
+                white.setTextSize(30);
+                white.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD));
+            }
+            else {
+                white.setTextSize(20);
+                text = String.valueOf(i+1);
+            }
             switch(obstacleDirectionCoord.get(i)[2]){
                 case "0":
                     obstacleDirectionBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.north_obstacle);
