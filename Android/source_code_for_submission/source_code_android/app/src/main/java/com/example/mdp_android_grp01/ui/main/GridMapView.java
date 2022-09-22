@@ -577,14 +577,15 @@ public class GridMapView extends View {
 //        directionOfObstacleCoordinates.remove(len-1);
 //    }
 
-    public boolean isPositionInGrid( float x, float y, boolean isStartPoint){
+    public boolean isPositionInGrid( int x, int y, boolean isStartPoint){
         float left,bottom,right,top;
         if (!isStartPoint) {
-            left = this.getX() + sizeOfCell; bottom = this.getY(); right = this.getX() + this.getWidth(); top = bottom + this.getHeight();
+            left = sizeOfCell; bottom = 0; right = this.getWidth(); top = this.getHeight()-sizeOfCell;
         }
         else{
-            left = this.getX() + 2*sizeOfCell; bottom = this.getY()+ 2*sizeOfCell; right = this.getX() + this.getWidth()-sizeOfCell; top = bottom + this.getHeight()-sizeOfCell;
+            left = 2*sizeOfCell; bottom = sizeOfCell; right = this.getWidth()-sizeOfCell; top = this.getHeight()-2*sizeOfCell;
         }
+        showLog(String.format("grid:(%.2f,%.2f)(%d,%d) (left %.2f,bottom %.2f, right %.2f, top%.2f), cursor: (%d,%d)",this.getX(),this.getY(),this.getWidth(),this.getHeight(),left,bottom,right,top, x, y));
         if(left <= x && x <= right){
             if(bottom <= y && y <= top){
                 return true;
@@ -621,7 +622,7 @@ public class GridMapView extends View {
                         isLongpress=false;
                         //check if cell is occupied
 //                        removeDragShadow();
-                        if (!isPositionInGrid( event.getRawX(), event.getRawY(), false)) {
+                        if (!isPositionInGrid((int) event.getX(), (int) event.getY(), false)) {
                             isLongpress = false;
                             this.invalidate();
                             Toast.makeText(getContext(), "Obstacle removed!", Toast.LENGTH_SHORT).show();
@@ -660,13 +661,14 @@ public class GridMapView extends View {
                     break;
                 case MotionEvent.ACTION_DOWN:
                     float startX=event.getX(), startY=event.getY();
-                    if(!isPositionInGrid( event.getRawX(), event.getRawY(),false)){
+                    if(!isPositionInGrid((int) event.getX(),(int) event.getY(),false)){
+                        showLog("out of grid");
                         Toast.makeText(getContext(), "out of Grid!", Toast.LENGTH_SHORT).show();
                         return true;
                     }
-                    int column = (int) (startX/ sizeOfCell);
+                    int column = (int) (event.getX()/ sizeOfCell);
                     //MainActivity.sendMessageToBlueTooth("Y"+Integer.toString(column));
-                    int row = this.convertRow((int) (startY / sizeOfCell));
+                    int row = this.convertRow((int) (event.getY() / sizeOfCell));
                     ArrayList<int[]> obstacleCoord = this.getCoordinatesOfObstacle();
                     for (int i = 0; i < obstacleCoord.size(); i++)
                         if (obstacleCoord.get(i)[0] == column && obstacleCoord.get(i)[1] == row) {
@@ -684,7 +686,7 @@ public class GridMapView extends View {
                     ToggleButton waypointbtn = ((Activity) this.getContext()).findViewById(R.id.waypointbtn);
 
                     if (isStartCoordinatesSet) {
-                        if(!isPositionInGrid( event.getRawX(), event.getRawY(), true)){
+                        if(!isPositionInGrid((int) event.getX(),(int) event.getY(), true)){
                             Toast.makeText(getContext(), "invalid position for start point!", Toast.LENGTH_SHORT).show();
                             return true;
                         }

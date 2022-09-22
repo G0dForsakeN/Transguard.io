@@ -245,16 +245,6 @@ public class MapTabFragmentController extends Fragment {
             }
         });
 
-//        setNorthObstacleDirectionButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                showLog("Clicked setNorthObstacleDirectionButton");
-//                GridMapView.isObstacleDirectionCoordinatesSet = true;
-//               // GridMap.isAddObstacle = true;
-//                GridMapView.obstacleDirection = "0";
-//                showLog("Exiting setNorthObstacleDirectionButton");
-//            }
-//        });
 
 
 
@@ -287,19 +277,6 @@ public class MapTabFragmentController extends Fragment {
                 return true;
             }
         });
-//
-//        setNorthObstacleDirectionButton.setOnLongClickListener(v -> {
-//            ClipData.Item item = new ClipData.Item((CharSequence) "North");
-//
-//            ClipData dragData = new ClipData(
-//                    (CharSequence) "North",
-//                    new String[] {ClipDescription.MIMETYPE_TEXT_PLAIN},
-//            item
-//            );
-//            View.DragShadowBuilder shadow = new View.DragShadowBuilder(setNorthObstacleDirectionButton);
-//            v.startDragAndDrop(dragData, shadow, null, 0);
-//            return true;
-//        });
 
         setNorthObstacleDirectionButton.setOnDragListener(new View.OnDragListener() {
             @Override
@@ -347,43 +324,269 @@ public class MapTabFragmentController extends Fragment {
             }
         });
 
-        setSouthObstacleDirectionButton.setOnClickListener(new View.OnClickListener() {
+//        setSouthObstacleDirectionButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                showLog("Clicked setSouthObstacleDirectionButton");
+//                GridMapView.isObstacleDirectionCoordinatesSet = true;
+//                // GridMap.isAddObstacle = true;
+//                GridMapView.obstacleDirection = "2";
+//                showLog("Exiting setSouthObstacleDirectionButton");
+//            }
+//        });
+        setSouthObstacleDirectionButton.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public void onClick(View view) {
+            public boolean onTouch(View v, MotionEvent e) {
                 showLog("Clicked setSouthObstacleDirectionButton");
                 GridMapView.isObstacleDirectionCoordinatesSet = true;
                 // GridMap.isAddObstacle = true;
                 GridMapView.obstacleDirection = "2";
+                int x =  (int) e.getRawX();
+                int y = (int) e.getRawY();
+                if(e.getAction() == MotionEvent.ACTION_DOWN){
+                    ClipData.Item item = new ClipData.Item((CharSequence) "South");
+
+                    ClipData dragData = new ClipData(
+                            (CharSequence) "South",
+                            new String[]{ClipDescription.MIMETYPE_TEXT_PLAIN},
+                            item
+                    );
+                    View.DragShadowBuilder shadow = new View.DragShadowBuilder(setSouthObstacleDirectionButton);
+                    v.startDrag(dragData, shadow, null, 0);
+                    if(isViewInBounds(gridMapViewDescriptor, x, y)) {
+                        showLog("dragging setSouthObstacleDirectionButton");
+                        gridMapViewDescriptor.dispatchTouchEvent(e);
+                    }
+                }
                 showLog("Exiting setSouthObstacleDirectionButton");
+                return true;
             }
         });
 
-        setWestObstacleDirectionButton.setOnClickListener(new View.OnClickListener() {
+        setSouthObstacleDirectionButton.setOnDragListener(new View.OnDragListener() {
             @Override
-            public void onClick(View view) {
+            public boolean onDrag(View v, DragEvent event) {
+                switch (event.getAction()){
+                    case DragEvent.ACTION_DRAG_STARTED:
+                        ((ImageView) v).setColorFilter(Color.LTGRAY);
+                        return true;
+                    case DragEvent.ACTION_DRAG_ENTERED:
+
+                        ((ImageView) v).setColorFilter(Color.GRAY);
+                        v.invalidate();
+                        return true;
+
+                    case DragEvent.ACTION_DRAG_LOCATION:
+                        showLog("dragging..");
+                        if(isViewInBounds(gridMapViewDescriptor,(int) event.getX(),(int) event.getY())) {
+                            showLog("inside gridmapview");
+                        }
+                        return true;
+
+                    case DragEvent.ACTION_DRAG_EXITED:
+                        ((ImageView) v).setColorFilter(Color.LTGRAY);
+                        v.invalidate();
+                        return true;
+
+                    case DragEvent.ACTION_DROP:
+                        if(isViewInBounds(gridMapViewDescriptor,(int) event.getX(),(int) event.getY())){
+                            showLog("inside gridmapview");
+                            long downTime = SystemClock.uptimeMillis();
+                            long eventTime = SystemClock.uptimeMillis();
+                            int action = MotionEvent.ACTION_DOWN;
+                            MotionEvent e  = MotionEvent.obtain(downTime, eventTime, MotionEvent.ACTION_DOWN, event.getX(), event.getY(),0);
+                            gridMapViewDescriptor.dispatchTouchEvent(e);
+                        }
+                        return true;
+
+                    case DragEvent.ACTION_DRAG_ENDED:
+                        return true;
+
+                    default:
+                        break;
+                }
+                return false;
+            }
+        });
+
+//        setWestObstacleDirectionButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                showLog("Clicked setWestObstacleDirectionButton");
+//                GridMapView.isObstacleDirectionCoordinatesSet = true;
+//               // GridMap.isAddObstacle = true;
+//                GridMapView.obstacleDirection = "3";
+//                showLog("Exiting setWestObstacleDirectionButton");
+//            }
+//        });
+
+        setWestObstacleDirectionButton.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent e) {
                 showLog("Clicked setWestObstacleDirectionButton");
                 GridMapView.isObstacleDirectionCoordinatesSet = true;
-               // GridMap.isAddObstacle = true;
+                // GridMap.isAddObstacle = true;
                 GridMapView.obstacleDirection = "3";
+                int x =  (int) e.getRawX();
+                int y = (int) e.getRawY();
+                if(e.getAction() == MotionEvent.ACTION_DOWN){
+                    ClipData.Item item = new ClipData.Item((CharSequence) "West");
+
+                    ClipData dragData = new ClipData(
+                            (CharSequence) "West",
+                            new String[]{ClipDescription.MIMETYPE_TEXT_PLAIN},
+                            item
+                    );
+                    View.DragShadowBuilder shadow = new View.DragShadowBuilder(setWestObstacleDirectionButton);
+                    v.startDrag(dragData, shadow, null, 0);
+                    if(isViewInBounds(gridMapViewDescriptor, x, y)) {
+                        showLog("dragging setWestObstacleDirectionButton");
+                        gridMapViewDescriptor.dispatchTouchEvent(e);
+                    }
+                }
                 showLog("Exiting setWestObstacleDirectionButton");
+                return true;
             }
         });
 
-        setEastObstacleDirectionButton.setOnClickListener(new View.OnClickListener() {
+        setWestObstacleDirectionButton.setOnDragListener(new View.OnDragListener() {
             @Override
-            public void onClick(View view) {
-                showLog("Clicked setEastObstacleDirectionButton");
-                GridMapView.isObstacleDirectionCoordinatesSet = true;
-              //  GridMap.isAddObstacle = true;
-                GridMapView.obstacleDirection = "1";
-                showLog("Exiting setEastObstacleDirectionButton");
+            public boolean onDrag(View v, DragEvent event) {
+                switch (event.getAction()){
+                    case DragEvent.ACTION_DRAG_STARTED:
+                        ((ImageView) v).setColorFilter(Color.LTGRAY);
+                        return true;
+                    case DragEvent.ACTION_DRAG_ENTERED:
+
+                        ((ImageView) v).setColorFilter(Color.GRAY);
+                        v.invalidate();
+                        return true;
+
+                    case DragEvent.ACTION_DRAG_LOCATION:
+                        showLog("dragging..");
+                        if(isViewInBounds(gridMapViewDescriptor,(int) event.getX(),(int) event.getY())) {
+                            showLog("inside gridmapview");
+                        }
+                        return true;
+
+                    case DragEvent.ACTION_DRAG_EXITED:
+                        ((ImageView) v).setColorFilter(Color.LTGRAY);
+                        v.invalidate();
+                        return true;
+
+                    case DragEvent.ACTION_DROP:
+                        if(isViewInBounds(gridMapViewDescriptor,(int) event.getX(),(int) event.getY())){
+                            showLog("inside gridmapview");
+                            long downTime = SystemClock.uptimeMillis();
+                            long eventTime = SystemClock.uptimeMillis();
+                            int action = MotionEvent.ACTION_DOWN;
+                            MotionEvent e  = MotionEvent.obtain(downTime, eventTime, MotionEvent.ACTION_DOWN, event.getX(), event.getY(),0);
+                            gridMapViewDescriptor.dispatchTouchEvent(e);
+                        }
+                        return true;
+
+                    case DragEvent.ACTION_DRAG_ENDED:
+                        return true;
+
+                    default:
+                        break;
+                }
+                return false;
             }
         });
+
+//        setEastObstacleDirectionButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                showLog("Clicked setEastObstacleDirectionButton");
+//                GridMapView.isObstacleDirectionCoordinatesSet = true;
+//              //  GridMap.isAddObstacle = true;
+//                GridMapView.obstacleDirection = "1";
+//                showLog("Exiting setEastObstacleDirectionButton");
+//            }
+//        });
+
+        setEastObstacleDirectionButton.setOnTouchListener(new View.OnTouchListener() {
+
+        @Override
+        public boolean onTouch(View v, MotionEvent e) {
+            showLog("Clicked setEastObstacleDirectionButton");
+            GridMapView.isObstacleDirectionCoordinatesSet = true;
+            // GridMap.isAddObstacle = true;
+            GridMapView.obstacleDirection = "1";
+            int x =  (int) e.getRawX();
+            int y = (int) e.getRawY();
+            if(e.getAction() == MotionEvent.ACTION_DOWN){
+                ClipData.Item item = new ClipData.Item((CharSequence) "East");
+
+                ClipData dragData = new ClipData(
+                        (CharSequence) "East",
+                        new String[]{ClipDescription.MIMETYPE_TEXT_PLAIN},
+                        item
+                );
+                View.DragShadowBuilder shadow = new View.DragShadowBuilder(setEastObstacleDirectionButton);
+                v.startDrag(dragData, shadow, null, 0);
+                if(isViewInBounds(gridMapViewDescriptor, x, y)) {
+                    showLog("dragging setEastObstacleDirectionButton");
+                    gridMapViewDescriptor.dispatchTouchEvent(e);
+                }
+            }
+            showLog("Exiting setEastObstacleDirectionButton");
+            return true;
+        }
+    });
+
+        setWestObstacleDirectionButton.setOnDragListener(new View.OnDragListener() {
+        @Override
+        public boolean onDrag(View v, DragEvent event) {
+            switch (event.getAction()){
+                case DragEvent.ACTION_DRAG_STARTED:
+                    ((ImageView) v).setColorFilter(Color.LTGRAY);
+                    return true;
+                case DragEvent.ACTION_DRAG_ENTERED:
+
+                    ((ImageView) v).setColorFilter(Color.GRAY);
+                    v.invalidate();
+                    return true;
+
+                case DragEvent.ACTION_DRAG_LOCATION:
+                    showLog("dragging..");
+                    if(isViewInBounds(gridMapViewDescriptor,(int) event.getX(),(int) event.getY())) {
+                        showLog("inside gridmapview");
+                    }
+                    return true;
+
+                case DragEvent.ACTION_DRAG_EXITED:
+                    ((ImageView) v).setColorFilter(Color.LTGRAY);
+                    v.invalidate();
+                    return true;
+
+                case DragEvent.ACTION_DROP:
+                    if(isViewInBounds(gridMapViewDescriptor,(int) event.getX(),(int) event.getY())){
+                        showLog("inside gridmapview");
+                        long downTime = SystemClock.uptimeMillis();
+                        long eventTime = SystemClock.uptimeMillis();
+                        int action = MotionEvent.ACTION_DOWN;
+                        MotionEvent e  = MotionEvent.obtain(downTime, eventTime, MotionEvent.ACTION_DOWN, event.getX(), event.getY(),0);
+                        gridMapViewDescriptor.dispatchTouchEvent(e);
+                    }
+                    return true;
+
+                case DragEvent.ACTION_DRAG_ENDED:
+                    return true;
+
+                default:
+                    break;
+            }
+            return false;
+        }
+    });
 
 
         return root;
     }
-
     private void showLog(String message) {
         Log.d(TAG, message);
     }
