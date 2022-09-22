@@ -10,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.os.SystemClock;
@@ -106,8 +107,8 @@ public class GridMapView extends View {
         //end.setColor(Color.RED);
         start.setColor(Color.CYAN);
         waypoint.setColor(Color.YELLOW);
-        unExplored.setColor(Color.WHITE);
-        explored.setColor(Color.LTGRAY);
+        unExplored.setColor(Color.LTGRAY);
+        explored.setColor(Color.WHITE);
         sharedPreferences = getContext().getSharedPreferences("Shared Preferences", Context.MODE_PRIVATE);
     }
 
@@ -535,16 +536,16 @@ public class GridMapView extends View {
         return false;
     }
 
-    public class MyDragShadowBuilder extends View.DragShadowBuilder {
-        public MyDragShadowBuilder(View v){
-            super(v);
-        }
-        @Override
-        public void onProvideShadowMetrics(Point outShadowSize, Point outShadowTouchPoint) {
-            outShadowSize.set(1,1);
-            outShadowTouchPoint.set(0,0);
-        }
-    }
+//    public class MyDragShadowBuilder extends View.DragShadowBuilder {
+//        public MyDragShadowBuilder(View v){
+//            super(v);
+//        }
+//        @Override
+//        public void onProvideShadowMetrics(Point outShadowSize, Point outShadowTouchPoint) {
+//            outShadowSize.set(1,1);
+//            outShadowTouchPoint.set(0,0);
+//        }
+//    }
 
     final Handler handler = new Handler();
     Runnable mLongPressed = new Runnable() {
@@ -553,24 +554,37 @@ public class GridMapView extends View {
             int col = Integer.valueOf(clickedCell[0]), row = Integer.valueOf(clickedCell[1]);
             int i = Integer.valueOf(clickedCell[5]);
             cellsDetail[col][20 - row].setType("unexplored");
+            cellsDetail[col][20 - row].paint = unExplored;
             isLongpress = true;
             obstacleCoordinates.remove(i);
             directionOfObstacleCoordinates.remove(i);
-
-            // add shadow to drag
-            col =(int) (startX/ sizeOfCell);
-            row = GridMapView.convertRow((int) (startY / sizeOfCell));
-            clickedCell = new String[]{clickedCell[0], clickedCell[1], clickedCell[2], "drag"};
-            GridMapView.obstacleCoordinates.add(new int[]{col, row});
-            directionOfObstacleCoordinates.add(clickedCell);
+            Toast.makeText(getContext(), "Dragging obstacle!", Toast.LENGTH_SHORT).show();
             Log.i("", "Long press!");
+            // add shadow to drag
+//            col =(int) (startX/ sizeOfCell);
+//            row = GridMapView.convertRow((int) (startY / sizeOfCell));
+//            String[] celldata = new String[]{clickedCell[0], clickedCell[1], clickedCell[2], "drag",clickedCell[4]};
+//            GridMapView.obstacleCoordinates.add(new int[]{col, row});
+//            directionOfObstacleCoordinates.add(celldata);
+//            Log.i("", "Long press!");
         }
     };
 
-    private void removeDragShadow(){
-        int size = obstacleCoordinates.size();
-        obstacleCoordinates.remove(size-1);
-        directionOfObstacleCoordinates.remove(size-1);
+//    private void removeDragShadow(){
+//        showLog(String.valueOf(obstacleCoordinates.size()));
+//        int len = obstacleCoordinates.size();
+//        obstacleCoordinates.remove(len-1);
+//        directionOfObstacleCoordinates.remove(len-1);
+//    }
+
+    public boolean isDragInGrid( int x, int y){
+        float left= this.getX()+sizeOfCell, bottom=this.getY(), right=this.getX()+this.getWidth(),top=bottom+this.getHeight();
+        if(left <= x && x <= right){
+            if(bottom <= y && y <= top){
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
@@ -579,50 +593,71 @@ public class GridMapView extends View {
         showLog("Entering gridmapView onTouchEvent");
         if (!this.getAutomatedUpdate()) {
             switch (event.getAction()) {
+                case MotionEvent.ACTION_CANCEL:
+                    handler.removeCallbacks(mLongPressed);
+                    break;
                 case MotionEvent.ACTION_MOVE:
+                    handler.removeCallbacks(mLongPressed);
                     // update shadow position
                     positionX = event.getX() - sizeOfCell/2;
                     positionY = event.getY() - sizeOfCell/2;
+
+//                    if(isLongpress && !isDragInGrid((int) event.getRawX(), (int) event.getRawY())){
+//                        removeDragShadow();
+//                        isLongpress=false;
+//                        Toast.makeText(getContext(), "Obstacle removed!", Toast.LENGTH_SHORT).show();
+//                    }
+
                     break;
                 case MotionEvent.ACTION_UP:
+                    handler.removeCallbacks(mLongPressed);
                     if(isLongpress){
                         isLongpress=false;
                         //check if cell is occupied
-                        removeDragShadow();
+//                        removeDragShadow();
+                        if (!isDragInGrid((int) event.getRawX(), (int) event.getRawY())) {
+                            isLongpress = false;
+                            this.invalidate();
+                            Toast.makeText(getContext(), "Obstacle removed!", Toast.LENGTH_SHORT).show();
+                            return true;
+                        }
                         int column = (int) (event.getX()/ sizeOfCell);
                         int row = this.convertRow((int) (event.getY()/ sizeOfCell));
                         ArrayList<int[]> obstacleCoord = this.getCoordinatesOfObstacle();
+
                         for (int i = 0; i < obstacleCoord.size(); i++)
                             if (obstacleCoord.get(i)[0] == column && obstacleCoord.get(i)[1] == row) {
                                 //if occupied reject movement and move cell back
-                                showLog("existing obstacle at position");
+                                Toast.makeText(getContext(), "Obstacle at position!", Toast.LENGTH_SHORT).show();
                                 String[] temp = this.getObstacleDirectionCoord().get(i);
                                 String[] celldata = new String[]{clickedCell[0], clickedCell[1], clickedCell[2], clickedCell[3], clickedCell[4]};
                                 GridMapView.obstacleCoordinates.add(Integer.valueOf(clickedCell[5]), new int[]{Integer.valueOf(celldata[0]), Integer.valueOf(celldata[1])});
                                 this.getObstacleDirectionCoord().add(Integer.valueOf(clickedCell[5]), celldata);
                                 row = this.convertRow(row);
+                                cellsDetail[column][row].paint = obstacle;
                                 cellsDetail[column][row].setType("obstacleDirection");
                                 this.invalidate();
                                 return true;
                             }
                         //add obstacle if available
-                        showLog(String.valueOf(clickedCell.length));
+                        Toast.makeText(getContext(), "Obstacle placed!", Toast.LENGTH_SHORT).show();
                         String[] celldata = new String[]{String.valueOf(column), String.valueOf(row), clickedCell[2], clickedCell[3], clickedCell[4]};
                         GridMapView.obstacleCoordinates.add(Integer.valueOf(clickedCell[5]),new int[]{column, row});
                         this.getObstacleDirectionCoord().add(Integer.valueOf(clickedCell[5]),celldata);
                         row = this.convertRow(row);
+                        cellsDetail[column][row].paint = obstacle;
                         cellsDetail[column][row].setType("obstacleDirection");
                         this.invalidate();
                         return true;
 
                     }
+                    break;
                 case MotionEvent.ACTION_DOWN:
                     float startX=event.getX(), startY=event.getY();
 
                     int column = (int) (startX/ sizeOfCell);
                     //MainActivity.sendMessageToBlueTooth("Y"+Integer.toString(column));
                     int row = this.convertRow((int) (startY / sizeOfCell));
-
                     ArrayList<int[]> obstacleCoord = this.getCoordinatesOfObstacle();
                     for (int i = 0; i < obstacleCoord.size(); i++)
                         if (obstacleCoord.get(i)[0] == column && obstacleCoord.get(i)[1] == row) {
@@ -1177,14 +1212,12 @@ public class GridMapView extends View {
                     break;
 
             }
-            if (obstacleDirectionCoord.get(i)[4].equals("drag")){
-                canvas.drawText(text, positionX + sizeOfCell/ 2, positionY+sizeOfCell + sizeOfCell/4, white);
-                canvas.drawBitmap(obstacleDirectionBitmap,null,rect,null);
-            }
-            else {
-                canvas.drawText(text, (cellsDetail[x][y].startX + cellsDetail[x][y].endX) / 2, cellsDetail[x][y].endY + (cellsDetail[x][y].startY - cellsDetail[x][y].endY) / 4, white);
-                canvas.drawBitmap(obstacleDirectionBitmap, null, rect, null);
-            }
+//            if (obstacleDirectionCoord.get(i)[4].equals("drag")){
+//                canvas.drawText(text, positionX + sizeOfCell/ 2, positionY+sizeOfCell + sizeOfCell/4, white);
+//                canvas.drawBitmap(obstacleDirectionBitmap,null,rect,null);
+//            }
+            canvas.drawText(text, (cellsDetail[x][y].startX + cellsDetail[x][y].endX) / 2, cellsDetail[x][y].endY + (cellsDetail[x][y].startY - cellsDetail[x][y].endY) / 4, white);
+            canvas.drawBitmap(obstacleDirectionBitmap, null, rect, null);
             showLog("Exiting drawObstacleWithDirection");
         }
         if(!obstacleDirectionCoord.isEmpty() && isAddObstacle == true){
