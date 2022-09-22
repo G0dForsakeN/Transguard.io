@@ -290,6 +290,36 @@ public class MainActivity extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             String message = intent.getStringExtra("receivedMessage");
             // From AMDTOOL
+            try{
+                if (message.substring(0,5).equals("ROBOT")){
+                    if (message.length()==9){
+                        if(isNumeric(message.substring(6,7))&&isNumeric(message.substring(8,9))) {
+                            sendMessageToBlueTooth("Updating Target ID");
+                            gridMapViewDescriptor.setObstacleText(message.substring(6,7), message.substring(8,9));
+                        }
+                    }
+                    if (message.length()==11){
+                        if(isNumeric(message.substring(6,8))&&isNumeric(message.substring(9,11))) {
+                            sendMessageToBlueTooth("Updating Target ID");
+                            gridMapViewDescriptor.setObstacleText(message.substring(6,8), message.substring(9,11));
+                        }
+                    }
+                    if (message.length()==10){
+                        if(isNumeric(message.substring(6,8))&&isNumeric(message.substring(9,10))) {
+                            sendMessageToBlueTooth("Updating Target ID");
+                            gridMapViewDescriptor.setObstacleText(message.substring(6,8), message.substring(9,10));
+                        }
+                    }
+                    if (message.length()==10){
+                        if(isNumeric(message.substring(6,7))&&isNumeric(message.substring(8,10))) {
+                            sendMessageToBlueTooth("Updating Target ID");
+                            gridMapViewDescriptor.setObstacleText(message.substring(6,7), message.substring(8,10));
+                        }
+                    }
+                }
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
             try {
                 String direction = "";
                 Boolean flag = false;
@@ -352,6 +382,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 }
+                flag = false;
             } catch (Exception e) {
                 showLog("Updating Position Failed");
             }
