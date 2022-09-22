@@ -1,6 +1,8 @@
 package com.example.mdp_android_grp01.ui.main;
 
+import android.content.ClipDescription;
 import android.graphics.Color;
+import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.DragEvent;
@@ -9,9 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+import android.content.ClipData;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -227,6 +231,7 @@ public class MapTabFragmentController extends Fragment {
                 }
             }
         });
+
         setNorthObstacleDirectionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -235,6 +240,54 @@ public class MapTabFragmentController extends Fragment {
                // GridMap.isAddObstacle = true;
                 GridMapView.obstacleDirection = "0";
                 showLog("Exiting setNorthObstacleDirectionButton");
+            }
+        });
+
+        setNorthObstacleDirectionButton.setOnLongClickListener(v -> {
+            ClipData.Item item = new ClipData.Item((CharSequence) "North");
+
+            ClipData dragData = new ClipData(
+                    (CharSequence) "North",
+                    new String[] {ClipDescription.MIMETYPE_TEXT_PLAIN},
+            item
+            );
+
+            View.DragShadowBuilder shadow = new View.DragShadowBuilder(setNorthObstacleDirectionButton);
+            v.startDragAndDrop(dragData, shadow, null, 0);
+            return true;
+        });
+
+        setNorthObstacleDirectionButton.setOnDragListener(new View.OnDragListener() {
+            @Override
+            public boolean onDrag(View v, DragEvent event) {
+                switch (event.getAction()){
+                    case DragEvent.ACTION_DRAG_STARTED:
+                        ((ImageView) v).setColorFilter(Color.LTGRAY);
+                        return true;
+                    case DragEvent.ACTION_DRAG_ENTERED:
+
+                        ((ImageView) v).setColorFilter(Color.GRAY);
+                        v.invalidate();
+                        return true;
+
+                    case DragEvent.ACTION_DRAG_LOCATION:
+                        return true;
+
+                    case DragEvent.ACTION_DRAG_EXITED:
+                        ((ImageView) v).setColorFilter(Color.LTGRAY);
+                        v.invalidate();
+                        return true;
+
+                    case DragEvent.ACTION_DROP:
+                        return true;
+
+                    case DragEvent.ACTION_DRAG_ENDED:
+                        return true;
+
+                    default:
+                        break;
+                }
+                return false;
             }
         });
 

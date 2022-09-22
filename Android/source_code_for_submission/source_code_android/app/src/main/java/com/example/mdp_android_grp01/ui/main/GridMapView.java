@@ -9,6 +9,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.RectF;
+import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -119,7 +120,7 @@ public class GridMapView extends View {
         if (getCanDrawRobot())
             displayRobotOnGrid(canvas, currentPoint);
         drawObstacleWithDirection(canvas, directionOfObstacleCoordinates);
-
+        setObstacleText("2", 1 , 1);
         showLog("Exiting onDraw");
     }
 
@@ -538,6 +539,16 @@ public class GridMapView extends View {
                 return true;
             }
             if (isObstacleDirectionCoordinatesSet) {
+                ArrayList<int[]> obstacleCoord = this.getCoordinatesOfObstacle();
+                cellsDetail[column][20 - row].setType("unexplored");
+                for (int i = 0; i < obstacleCoord.size(); i++)
+                    if (obstacleCoord.get(i)[0] == column && obstacleCoord.get(i)[1] == row)
+                    {
+                        obstacleCoord.remove(i);
+                        directionOfObstacleCoordinates.remove(i);
+                    }
+
+                this.invalidate();
                 this.setCoordinatesOfObstacle(column, row);
                 setObstacleDirectionCoordinate(column,row,obstacleDirection);
                 this.isObstacleDirectionCoordinatesSet = false;
@@ -955,18 +966,37 @@ public class GridMapView extends View {
     private ArrayList<String[]> getObstacleDirectionCoord(){
         return directionOfObstacleCoordinates;
     }
+
+
     private void setObstacleDirectionCoordinate(int col, int row,String obstacleDirection) {
         showLog("Entering setDirectionCoord");
-        String[] directionCoord = new String[3];
+        String[] directionCoord = new String[5];
         directionCoord[0] = String.valueOf(col);
         directionCoord[1] = String.valueOf(row);
         directionCoord[2] = obstacleDirection;
+        directionCoord[3] = String.valueOf(this.getObstacleDirectionCoord().size());
+        directionCoord[4] = "F";
         this.getObstacleDirectionCoord().add(directionCoord);
-
 
         row = this.convertRow(row);
         cellsDetail[col][row].setType("obstacleDirection");
         showLog("Exiting setDirectionCoord");
+    }
+
+    /*
+    set text on Obstacle, col refers to x axis, row refers to y axis
+    */
+    public boolean setObstacleText(String text, int col , int row){
+        ArrayList obstacleDirectionCoord = this.getObstacleDirectionCoord();
+        for(int i=0;i<obstacleDirectionCoord.size();i++){
+            String[] obstacle = (String[]) obstacleDirectionCoord.get(i);
+            if(obstacle[0].equals(String.valueOf(col)) && obstacle[1].equals(String.valueOf(row))){
+                obstacle[3] = text;
+                obstacle[4] = "T";
+                return true;
+            }
+        }
+        return false;
     }
 
     private void drawObstacleWithDirection(Canvas canvas,ArrayList<String[]> obstacleDirectionCoord){
@@ -976,24 +1006,37 @@ public class GridMapView extends View {
 
         for(int i =0; i<obstacleDirectionCoord.size(); i++){
             arrayIndex=i;
-            int col= Integer.parseInt(obstacleDirectionCoord.get(i)[0]);
-            int row= convertRow(Integer.parseInt(obstacleDirectionCoord.get(i)[1]));
-            rect = new RectF(col * sizeOfCell, row * sizeOfCell, (col+1) * sizeOfCell, (row+1) * sizeOfCell);
-
+            String text = obstacleDirectionCoord.get(i)[3];
+            int x= Integer.parseInt(obstacleDirectionCoord.get(i)[0]);
+            int y= convertRow(Integer.parseInt(obstacleDirectionCoord.get(i)[1]));
+            rect = new RectF(x * sizeOfCell, y * sizeOfCell, (x+1) * sizeOfCell, (y+1) * sizeOfCell);
+            Paint white = new Paint();
+            white.setColor(Color.WHITE);
+            white.setTextAlign(Paint.Align.CENTER);
+            if(obstacleDirectionCoord.get(i)[4].equals("T")){
+                white.setTextSize(30);
+                white.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD));
+            }
+            else {
+                white.setTextSize(20);
+                text = String.valueOf(i+1);
+            }
             switch(obstacleDirectionCoord.get(i)[2]){
                 case "0":
                     obstacleDirectionBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.north_obstacle);
+                    canvas.drawText(text, (cellsDetail[x][y].startX + cellsDetail[x][y].endX) / 2, cellsDetail[x][y].endY + (cellsDetail[x][y].startY - cellsDetail[x][y].endY) / 4, white);
                     break;
                 case "1":
                     obstacleDirectionBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.east_obstacle);
-
+                    canvas.drawText(text, (cellsDetail[x][y].startX + cellsDetail[x][y].endX) / 2, cellsDetail[x][y].endY + (cellsDetail[x][y].startY - cellsDetail[x][y].endY) / 4, white);
                     break;
                 case "2":
                     obstacleDirectionBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.south_obstacle);
-
+                    canvas.drawText(text, (cellsDetail[x][y].startX + cellsDetail[x][y].endX) / 2, cellsDetail[x][y].endY + (cellsDetail[x][y].startY - cellsDetail[x][y].endY) / 4, white);
                     break;
                 case "3":
                     obstacleDirectionBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.west_obstacle);
+                    canvas.drawText(text, (cellsDetail[x][y].startX + cellsDetail[x][y].endX) / 2, cellsDetail[x][y].endY + (cellsDetail[x][y].startY - cellsDetail[x][y].endY) / 4, white);
                     break;
                 default:
                     break;
