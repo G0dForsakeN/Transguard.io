@@ -640,9 +640,11 @@ public class GridMapView extends View {
                                 String[] celldata = new String[]{clickedCell[0], clickedCell[1], clickedCell[2], clickedCell[3], clickedCell[4]};
                                 GridMapView.obstacleCoordinates.add(Integer.valueOf(clickedCell[5]), new int[]{Integer.valueOf(celldata[0]), Integer.valueOf(celldata[1])});
                                 this.getObstacleDirectionCoord().add(Integer.valueOf(clickedCell[5]), celldata);
-                                row = this.convertRow(row);
-                                cellsDetail[column][row].paint = obstacle;
-                                cellsDetail[column][row].setType("obstacleDirection");
+                                int x = Integer.valueOf(clickedCell[0);
+                                int y = Integer.valueOf(clickedCell[1]);
+                                y = this.convertRow(y);
+                                cellsDetail[x][y].paint = obstacle;
+                                cellsDetail[x][y].setType("obstacleDirection");
                                 this.invalidate();
                                 return true;
                             }
