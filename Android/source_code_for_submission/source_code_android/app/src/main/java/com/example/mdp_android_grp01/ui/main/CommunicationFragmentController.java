@@ -128,7 +128,7 @@ public class CommunicationFragmentController extends Fragment implements SensorE
                         updaterobotStatus("moving forward");
                     else
                         updaterobotStatus("Unable to move forward");
-                    MainActivity.sendMessageToBlueTooth("w100");
+                    MainActivity.sendMessageToBlueTooth("w010");
                 }
                 else
                     updaterobotStatus("Please press 'STARTING POINT'");
@@ -146,7 +146,7 @@ public class CommunicationFragmentController extends Fragment implements SensorE
                     gridMapView.moveRobot("right");
                     updaterobotStatus("turning right");
                     MainActivity.updateText();
-                    MainActivity.sendMessageToBlueTooth("r");
+                    MainActivity.sendMessageToBlueTooth("d090");
                 }
                 else
                     updaterobotStatus("Please set startConnectionService point");
@@ -185,7 +185,7 @@ public class CommunicationFragmentController extends Fragment implements SensorE
                     gridMapView.moveRobot("left");
                     MainActivity.updateText();
                     updaterobotStatus("turning left");
-                    MainActivity.sendMessageToBlueTooth("l");
+                    MainActivity.sendMessageToBlueTooth("d090");
                 }
                 else
                     updaterobotStatus("Please press 'STARTING POINT'");

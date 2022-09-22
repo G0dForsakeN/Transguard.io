@@ -728,6 +728,7 @@ public class GridMapView extends View {
                         updateAxisOfRobot(column, row, direction);
                         if (startbtn.isChecked())
                             startbtn.toggle();
+                        printRobotStatus("Looking for Target 0");
                         this.invalidate();
                         return true;
                     }
@@ -1130,7 +1131,10 @@ public class GridMapView extends View {
         TextView robotStatusTextView = ((Activity) this.getContext()).findViewById(R.id.robotStatusTextView);
         robotStatusTextView.setText(message);
     }
-
+    public String getRobotStatus(){
+        TextView robotStatusTextView = ((Activity) this.getContext()).findViewById(R.id.robotStatusTextView);
+        return robotStatusTextView.getText().toString();
+    }
     public static void setMDF_Exploration_Details(String msg) {
         MDF_Exploration_Details = msg;
     }
