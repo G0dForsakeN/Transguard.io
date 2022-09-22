@@ -1,12 +1,15 @@
 package com.example.mdp_android_grp01.ui.main;
 
+import android.annotation.SuppressLint;
 import android.content.ClipDescription;
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.DragEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -16,6 +19,7 @@ import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 import android.content.ClipData;
+import android.os.SystemClock;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -56,6 +60,14 @@ public class MapTabFragmentController extends Fragment {
         return fragment;
     }
 
+    public boolean isViewInBounds(View view, int x, int y){
+        Rect outRect = new Rect();
+        int[] location = new int[2];
+        view.getDrawingRect(outRect);
+        view.getLocationOnScreen(location);
+        outRect.offset(location[0],location[1]);
+        return outRect.contains(x, y);
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,12 +80,13 @@ public class MapTabFragmentController extends Fragment {
         viewModel1.setIndex(index);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.activity_map, container, false);
-
+        View main = inflater.inflate(R.layout.activity_main, container, false);
         gridMapViewDescriptor = MainActivity.getGridMapDescriptor();
         final MapDirectionFragmentView mapDirectionFragmentView = new MapDirectionFragmentView();
 
@@ -232,30 +245,61 @@ public class MapTabFragmentController extends Fragment {
             }
         });
 
-        setNorthObstacleDirectionButton.setOnClickListener(new View.OnClickListener() {
+//        setNorthObstacleDirectionButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                showLog("Clicked setNorthObstacleDirectionButton");
+//                GridMapView.isObstacleDirectionCoordinatesSet = true;
+//               // GridMap.isAddObstacle = true;
+//                GridMapView.obstacleDirection = "0";
+//                showLog("Exiting setNorthObstacleDirectionButton");
+//            }
+//        });
+
+
+
+        setNorthObstacleDirectionButton.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
-            public void onClick(View view) {
+            public boolean onTouch(View v, MotionEvent e) {
                 showLog("Clicked setNorthObstacleDirectionButton");
                 GridMapView.isObstacleDirectionCoordinatesSet = true;
-               // GridMap.isAddObstacle = true;
+                // GridMap.isAddObstacle = true;
                 GridMapView.obstacleDirection = "0";
+                int x =  (int) e.getRawX();
+                int y = (int) e.getRawY();
+                if(e.getAction() == MotionEvent.ACTION_DOWN){
+                    ClipData.Item item = new ClipData.Item((CharSequence) "North");
+
+                    ClipData dragData = new ClipData(
+                            (CharSequence) "North",
+                            new String[]{ClipDescription.MIMETYPE_TEXT_PLAIN},
+                            item
+                    );
+                    View.DragShadowBuilder shadow = new View.DragShadowBuilder(setNorthObstacleDirectionButton);
+                    v.startDrag(dragData, shadow, null, 0);
+                    if(isViewInBounds(gridMapViewDescriptor, x, y)) {
+                        showLog("dragging setNorthObstacleDirectionButton");
+                        gridMapViewDescriptor.dispatchTouchEvent(e);
+                    }
+                }
                 showLog("Exiting setNorthObstacleDirectionButton");
+                return true;
             }
         });
-
-        setNorthObstacleDirectionButton.setOnLongClickListener(v -> {
-            ClipData.Item item = new ClipData.Item((CharSequence) "North");
-
-            ClipData dragData = new ClipData(
-                    (CharSequence) "North",
-                    new String[] {ClipDescription.MIMETYPE_TEXT_PLAIN},
-            item
-            );
-
-            View.DragShadowBuilder shadow = new View.DragShadowBuilder(setNorthObstacleDirectionButton);
-            v.startDragAndDrop(dragData, shadow, null, 0);
-            return true;
-        });
+//
+//        setNorthObstacleDirectionButton.setOnLongClickListener(v -> {
+//            ClipData.Item item = new ClipData.Item((CharSequence) "North");
+//
+//            ClipData dragData = new ClipData(
+//                    (CharSequence) "North",
+//                    new String[] {ClipDescription.MIMETYPE_TEXT_PLAIN},
+//            item
+//            );
+//            View.DragShadowBuilder shadow = new View.DragShadowBuilder(setNorthObstacleDirectionButton);
+//            v.startDragAndDrop(dragData, shadow, null, 0);
+//            return true;
+//        });
 
         setNorthObstacleDirectionButton.setOnDragListener(new View.OnDragListener() {
             @Override
@@ -271,6 +315,10 @@ public class MapTabFragmentController extends Fragment {
                         return true;
 
                     case DragEvent.ACTION_DRAG_LOCATION:
+                        showLog("dragging..");
+                        if(isViewInBounds(gridMapViewDescriptor,(int) event.getX(),(int) event.getY())) {
+                            showLog("inside gridmapview");
+                        }
                         return true;
 
                     case DragEvent.ACTION_DRAG_EXITED:
@@ -279,6 +327,14 @@ public class MapTabFragmentController extends Fragment {
                         return true;
 
                     case DragEvent.ACTION_DROP:
+                        if(isViewInBounds(gridMapViewDescriptor,(int) event.getX(),(int) event.getY())){
+                            showLog("inside gridmapview");
+                            long downTime = SystemClock.uptimeMillis();
+                            long eventTime = SystemClock.uptimeMillis();
+                            int action = MotionEvent.ACTION_DOWN;
+                            MotionEvent e  = MotionEvent.obtain(downTime, eventTime, MotionEvent.ACTION_DOWN, event.getX(), event.getY(),0);
+                            gridMapViewDescriptor.dispatchTouchEvent(e);
+                        }
                         return true;
 
                     case DragEvent.ACTION_DRAG_ENDED:
