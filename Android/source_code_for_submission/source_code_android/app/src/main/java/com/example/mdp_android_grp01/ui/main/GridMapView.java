@@ -1118,12 +1118,12 @@ public class GridMapView extends View {
     /*
     set text on Obstacle, col refers to x axis, row refers to y axis
     */
-    public boolean setObstacleText(String text, int col , int row){
+    public boolean setObstacleText(String obstacle_Number, String target_ID){
         ArrayList obstacleDirectionCoord = this.getObstacleDirectionCoord();
         for(int i=0;i<obstacleDirectionCoord.size();i++){
             String[] obstacle = (String[]) obstacleDirectionCoord.get(i);
-            if(obstacle[0].equals(String.valueOf(col)) && obstacle[1].equals(String.valueOf(row))){
-                obstacle[3] = text;
+            if(obstacle[3].equals(obstacle_Number)){
+                obstacle[3] = target_ID;
                 obstacle[4] = "T";
                 return true;
             }
