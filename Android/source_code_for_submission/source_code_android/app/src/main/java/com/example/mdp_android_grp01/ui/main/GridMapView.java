@@ -560,6 +560,7 @@ public class GridMapView extends View {
             directionOfObstacleCoordinates.remove(i);
             Toast.makeText(getContext(), "Dragging obstacle!", Toast.LENGTH_SHORT).show();
             Log.i("", "Long press!");
+            MainActivity.sendMessageToBlueTooth("Updated Obstacle: ");
             // add shadow to drag
 //            col =(int) (startX/ sizeOfCell);
 //            row = GridMapView.convertRow((int) (startY / sizeOfCell));
