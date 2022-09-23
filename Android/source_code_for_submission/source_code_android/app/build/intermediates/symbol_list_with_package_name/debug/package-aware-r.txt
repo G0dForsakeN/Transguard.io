@@ -3752,6 +3752,7 @@ string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string off
+string off1
 string on
 string password_toggle_content_description
 string path_password_eye
@@ -3772,7 +3773,7 @@ string tab_text_4
 string tilt_off
 string tilt_on
 string time00
-string toggledirection
+string toggleDirection
 string unavail
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light

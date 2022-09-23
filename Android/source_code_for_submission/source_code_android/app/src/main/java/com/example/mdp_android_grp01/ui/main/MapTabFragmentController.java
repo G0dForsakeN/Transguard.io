@@ -252,12 +252,12 @@ public class MapTabFragmentController extends Fragment {
             public void onClick(View view) {
                 if (toggleDirection.getText().equals("toggleDirection")) {
                         gridMapViewDescriptor.setChangeDirection(true);
-                        toggleDirection.setText(getResources().getString(R.string.off));
+                        toggleDirection.setText(getResources().getString(R.string.off1));
                     showToast("CHANGING DIRECTION");
                 }
                 else if (toggleDirection.getText().equals("off")) {
                         gridMapViewDescriptor.setChangeDirection(false);
-                        toggleDirection.setText(getResources().getString(R.string.toggledirection));
+                        toggleDirection.setText(getResources().getString(R.string.toggleDirection));
                     showToast("OFF");
                 }
             }
