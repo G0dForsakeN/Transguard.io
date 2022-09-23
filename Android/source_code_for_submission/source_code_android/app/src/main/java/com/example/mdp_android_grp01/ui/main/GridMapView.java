@@ -687,7 +687,7 @@ public class GridMapView extends View {
                                 int cols = Integer.valueOf(this.getObstacleDirectionCoord().get(i)[0]);
                                 int rows = Integer.valueOf(this.getObstacleDirectionCoord().get(i)[1]);
                                 String targetid = this.directionOfObstacleCoordinates.get(i)[3];
-                                MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle coordinates %s %d,%d",targetid,cols-1,19- rows));
+                                MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle Direction id:%s direction:%d %d,%d",targetid, obstacleDirection,cols-1,19- rows));
                             }
                             clickedCell = new String[]{temp[0], temp[1], temp[2], temp[3], temp[4], String.valueOf(i)};
                             handler.postDelayed(mLongPressed, ViewConfiguration.getLongPressTimeout());
