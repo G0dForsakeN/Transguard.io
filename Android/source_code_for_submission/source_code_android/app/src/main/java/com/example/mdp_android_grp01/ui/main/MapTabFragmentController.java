@@ -49,6 +49,7 @@ public class MapTabFragmentController extends Fragment {
     ToggleButton startPointButton;
     ToggleButton wayPointButton;
     Switch switchManualOrAuto;
+    Switch toggleDirection;
     GridMapView gridMapViewDescriptor;
     private static boolean updateAuto = false;
     public static boolean isUpdateRequestManual = false;
@@ -98,6 +99,7 @@ public class MapTabFragmentController extends Fragment {
         obstacleButton = root.findViewById(R.id.addobstaclebtn);
         clearButton = root.findViewById(R.id.clearbtn);
         switchManualOrAuto = root.findViewById(R.id.manualAutoBtn);
+        toggleDirection = root.findViewById(R.id.ChangeDirectionBtn);
         updateButton = root.findViewById(R.id.updateButton);
         setEastObstacleDirectionButton = root.findViewById(R.id.eastObstacleBTN);
         setEastObstacleDirectionButton.setBackgroundResource(R.drawable.eastobstaclebtn);
@@ -245,7 +247,21 @@ public class MapTabFragmentController extends Fragment {
             }
         });
 
-
+        toggleDirection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (toggleDirection.getText().equals("toggleDirection")) {
+                        gridMapViewDescriptor.setChangeDirection(true);
+                        toggleDirection.setText(getResources().getString(R.string.off));
+                    showToast("CHANGING DIRECTION");
+                }
+                else if (toggleDirection.getText().equals("off")) {
+                        gridMapViewDescriptor.setChangeDirection(false);
+                        toggleDirection.setText(getResources().getString(R.string.toggledirection));
+                    showToast("OFF");
+                }
+            }
+        });
 
 
         setNorthObstacleDirectionButton.setOnTouchListener(new View.OnTouchListener() {
@@ -270,7 +286,7 @@ public class MapTabFragmentController extends Fragment {
                     v.startDrag(dragData, shadow, null, 0);
                     if(isViewInBounds(gridMapViewDescriptor, x, y)) {
                         showLog("dragging setNorthObstacleDirectionButton");
-                        gridMapViewDescriptor.dispatchTouchEvent(e);
+//                        gridMapViewDescriptor.dispatchTouchEvent(e);
                     }
                 }
                 showLog("Exiting setNorthObstacleDirectionButton");
@@ -356,7 +372,7 @@ public class MapTabFragmentController extends Fragment {
                     v.startDrag(dragData, shadow, null, 0);
                     if(isViewInBounds(gridMapViewDescriptor, x, y)) {
                         showLog("dragging setSouthObstacleDirectionButton");
-                        gridMapViewDescriptor.dispatchTouchEvent(e);
+//                        gridMapViewDescriptor.dispatchTouchEvent(e);
                     }
                 }
                 showLog("Exiting setSouthObstacleDirectionButton");
@@ -443,7 +459,7 @@ public class MapTabFragmentController extends Fragment {
                     v.startDrag(dragData, shadow, null, 0);
                     if(isViewInBounds(gridMapViewDescriptor, x, y)) {
                         showLog("dragging setWestObstacleDirectionButton");
-                        gridMapViewDescriptor.dispatchTouchEvent(e);
+//                        gridMapViewDescriptor.dispatchTouchEvent(e);
                     }
                 }
                 showLog("Exiting setWestObstacleDirectionButton");
@@ -530,7 +546,7 @@ public class MapTabFragmentController extends Fragment {
                 v.startDrag(dragData, shadow, null, 0);
                 if(isViewInBounds(gridMapViewDescriptor, x, y)) {
                     showLog("dragging setEastObstacleDirectionButton");
-                    gridMapViewDescriptor.dispatchTouchEvent(e);
+//                    gridMapViewDescriptor.dispatchTouchEvent(e);
                 }
             }
             showLog("Exiting setEastObstacleDirectionButton");

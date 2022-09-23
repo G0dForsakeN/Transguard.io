@@ -1885,6 +1885,7 @@
     <string name="tilt_off">TILT OFF</string>
     <string name="tilt_on">TILT ON</string>
     <string name="time00">00:00</string>
+    <string name="toggledirection">TOGGLEDIRECTION</string>
     <string name="unavail">unavailable</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

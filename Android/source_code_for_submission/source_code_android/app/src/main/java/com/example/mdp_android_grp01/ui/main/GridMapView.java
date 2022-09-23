@@ -85,6 +85,7 @@ public class GridMapView extends View {
     public static String obstacleDirection = "";
     public static boolean isAddObstacle = false;
     private static boolean isLongpress=false;
+    private static boolean isChangeDirection=false;
 
     private static final String TAG = "GridMap";
     private static final int Column = 20;
@@ -242,6 +243,10 @@ public class GridMapView extends View {
 
     public String getRobotDirection() {
         return robotDirection;
+    }
+
+    public void setChangeDirection(boolean state){
+        isChangeDirection = state;
     }
 
     public void setAutomatedUpdate(boolean autoUpdate) throws JSONException {
@@ -560,7 +565,7 @@ public class GridMapView extends View {
             directionOfObstacleCoordinates.remove(i);
             Toast.makeText(getContext(), "Dragging obstacle!", Toast.LENGTH_SHORT).show();
             Log.i("", "Long press!");
-            MainActivity.sendMessageToBlueTooth("Updated Obstacle: ");
+//            MainActivity.sendMessageToBlueTooth("Updated Obstacle: ");
             // add shadow to drag
 //            col =(int) (startX/ sizeOfCell);
 //            row = GridMapView.convertRow((int) (startY / sizeOfCell));
@@ -657,8 +662,7 @@ public class GridMapView extends View {
                         row = this.convertRow(row);
                         cellsDetail[column][row].paint = obstacle;
                         cellsDetail[column][row].setType("obstacleDirection");
-                        MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle coordinates %d,%d",column, row));
-                        this.invalidate();
+                        MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle coordinates %s %d,%d",clickedCell[3],column-1,19- row));                        this.invalidate();
                         return true;
 
                     }
@@ -678,6 +682,13 @@ public class GridMapView extends View {
                         if (obstacleCoord.get(i)[0] == column && obstacleCoord.get(i)[1] == row) {
                             showLog("existing obstacle at position");
                             String[] temp = this.getObstacleDirectionCoord().get(i);
+                            if(isChangeDirection) {
+                                this.getObstacleDirectionCoord().get(i)[2] = obstacleDirection;
+                                int cols = Integer.valueOf(this.getObstacleDirectionCoord().get(i)[0]);
+                                int rows = Integer.valueOf(this.getObstacleDirectionCoord().get(i)[1]);
+                                String targetid = this.directionOfObstacleCoordinates.get(i)[3];
+                                MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle coordinates %s %d,%d",targetid,cols-1,19- rows));
+                            }
                             clickedCell = new String[]{temp[0], temp[1], temp[2], temp[3], temp[4], String.valueOf(i)};
                             handler.postDelayed(mLongPressed, ViewConfiguration.getLongPressTimeout());
                             this.isObstacleDirectionCoordinatesSet = false;
@@ -738,7 +749,7 @@ public class GridMapView extends View {
 
                         this.setCoordinatesOfObstacle(column, row);
                         setObstacleDirectionCoordinate(column, row, obstacleDirection);
-                        MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle coordinates %d,%d",column, convertRow(row)));
+//                        MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle coordinates %d,%d",column, convertRow(row)));
                         this.isObstacleDirectionCoordinatesSet = false;
                         isAddObstacle = true;
                         this.invalidate();

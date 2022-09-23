@@ -224,10 +224,24 @@
     </LinearLayout>
 
     <Switch
+        android:id="@+id/ChangeDirectionBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:switchPadding="20dp"
+        android:text="toggleDirection"
+        android:textAlignment="center"
+        android:textOff="toggleDirection"
+        android:textOn="off"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/manualAutoBtn"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout2" />
+
+    <Switch
         android:id="@+id/manualAutoBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="72dp"
         android:switchPadding="20dp"
         android:text="Manual"
         android:textAlignment="center"

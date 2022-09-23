@@ -2822,6 +2822,7 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id ChangeDirectionBtn
 id FUNCTION
 id META
 id NO_DEBUG
@@ -3771,6 +3772,7 @@ string tab_text_4
 string tilt_off
 string tilt_on
 string time00
+string toggledirection
 string unavail
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
