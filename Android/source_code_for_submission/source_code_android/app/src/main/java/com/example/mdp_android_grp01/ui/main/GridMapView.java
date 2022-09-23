@@ -657,6 +657,7 @@ public class GridMapView extends View {
                         row = this.convertRow(row);
                         cellsDetail[column][row].paint = obstacle;
                         cellsDetail[column][row].setType("obstacleDirection");
+                        MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle coordinates %d,%d",column, row));
                         this.invalidate();
                         return true;
 
@@ -737,6 +738,7 @@ public class GridMapView extends View {
 
                         this.setCoordinatesOfObstacle(column, row);
                         setObstacleDirectionCoordinate(column, row, obstacleDirection);
+                        MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle coordinates %d,%d",column, convertRow(row)));
                         this.isObstacleDirectionCoordinatesSet = false;
                         isAddObstacle = true;
                         this.invalidate();
