@@ -296,24 +296,36 @@ public class MainActivity extends AppCompatActivity {
                         if(isNumeric(message.substring(6,7))&&isNumeric(message.substring(8,9))) {
                             sendMessageToBlueTooth("Updating Target ID");
                             gridMapViewDescriptor.setObstacleText(message.substring(6,7), message.substring(8,9));
+                            Integer valueText = Integer.parseInt(message.substring(6,7));
+                            valueText = valueText + 1;
+                            roboStatusTextView.setText("Looking for Target " + valueText);
                         }
                     }
                     if (message.length()==11){
                         if(isNumeric(message.substring(6,8))&&isNumeric(message.substring(9,11))) {
                             sendMessageToBlueTooth("Updating Target ID");
                             gridMapViewDescriptor.setObstacleText(message.substring(6,8), message.substring(9,11));
+                            Integer valueText = Integer.parseInt(message.substring(6,8));
+                            valueText = valueText + 1;
+                            roboStatusTextView.setText("Looking for Target " + valueText);
                         }
                     }
                     if (message.length()==10){
                         if(isNumeric(message.substring(6,8))&&isNumeric(message.substring(9,10))) {
                             sendMessageToBlueTooth("Updating Target ID");
                             gridMapViewDescriptor.setObstacleText(message.substring(6,8), message.substring(9,10));
+                            Integer valueText = Integer.parseInt(message.substring(6,8));
+                            valueText = valueText + 1;
+                            roboStatusTextView.setText("Looking for Target " + valueText);
                         }
                     }
                     if (message.length()==10){
                         if(isNumeric(message.substring(6,7))&&isNumeric(message.substring(8,10))) {
                             sendMessageToBlueTooth("Updating Target ID");
                             gridMapViewDescriptor.setObstacleText(message.substring(6,7), message.substring(8,10));
+                            Integer valueText = Integer.parseInt(message.substring(6,7));
+                            valueText = valueText + 1;
+                            roboStatusTextView.setText("Looking for Target " + valueText);
                         }
                     }
                 }
@@ -347,6 +359,18 @@ public class MainActivity extends AppCompatActivity {
                             int y1 = Integer.parseInt(message.substring(8,9));
                             if (x1>1 && y1>1 && x1<20 && y1<20){
                                 gridMapViewDescriptor.setCurrentCoordinates(x1,y1,direction);
+                                String text123 = gridMapViewDescriptor.getRobotStatus();
+                                roboStatusTextView.setText("Updating Position");
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                // your code here
+                                                roboStatusTextView.setText(text123);
+                                            }
+                                        },
+                                        2500
+                                );
                             }
                         }
                     }
@@ -357,6 +381,18 @@ public class MainActivity extends AppCompatActivity {
                             int y1 = Integer.parseInt(message.substring(9,11));
                             if (x1>1 && y1>1 && x1<20 && y1<20){
                                 gridMapViewDescriptor.setCurrentCoordinates(x1,y1,direction);
+                                String text123 = gridMapViewDescriptor.getRobotStatus();
+                                roboStatusTextView.setText("Updating Position");
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                // your code here
+                                                roboStatusTextView.setText(text123);
+                                            }
+                                        },
+                                        2500
+                                );
                             }
                         }
                     }
@@ -367,6 +403,18 @@ public class MainActivity extends AppCompatActivity {
                             int y1 = Integer.parseInt(message.substring(8,10));
                             if (x1>1 && y1>1 && x1<20 && y1<20){
                                 gridMapViewDescriptor.setCurrentCoordinates(x1,y1,direction);
+                                String text123 = gridMapViewDescriptor.getRobotStatus();
+                                roboStatusTextView.setText("Updating Position");
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                // your code here
+                                                roboStatusTextView.setText(text123);
+                                            }
+                                        },
+                                        2500
+                                );
                             }
                         }
                     }
@@ -377,6 +425,18 @@ public class MainActivity extends AppCompatActivity {
                             int y1 = Integer.parseInt(message.substring(9,10));
                             if (x1>1 && y1>1 && x1<20 && y1<20){
                                 gridMapViewDescriptor.setCurrentCoordinates(x1,y1,direction);
+                                String text123 = gridMapViewDescriptor.getRobotStatus();
+                                roboStatusTextView.setText("Updating Position");
+                                new java.util.Timer().schedule(
+                                        new java.util.TimerTask() {
+                                            @Override
+                                            public void run() {
+                                                // your code here
+                                                roboStatusTextView.setText(text123);
+                                            }
+                                        },
+                                        2500
+                                );
                             }
                         }
                     }
