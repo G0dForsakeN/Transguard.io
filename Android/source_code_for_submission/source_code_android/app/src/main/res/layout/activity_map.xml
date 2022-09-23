@@ -232,7 +232,7 @@
         android:textAlignment="center"
         android:textOff="off"
         android:textOn="toggleDirection"
-        android:textSize="24sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/manualAutoBtn"
         app:layout_constraintStart_toEndOf="@+id/linearLayout2" />
