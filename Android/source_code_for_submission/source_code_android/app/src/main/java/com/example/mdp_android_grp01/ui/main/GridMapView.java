@@ -530,6 +530,7 @@ public class GridMapView extends View {
                 int action = MotionEvent.ACTION_DOWN;
                 MotionEvent e  = MotionEvent.obtain(downTime, eventTime, MotionEvent.ACTION_DOWN, event.getX(), event.getY(),0);
                 this.dispatchTouchEvent(e);
+                handler.removeCallbacks(mLongPressed);
                 return true;
 
             case DragEvent.ACTION_DRAG_ENDED:
@@ -687,7 +688,7 @@ public class GridMapView extends View {
                                 int cols = Integer.valueOf(this.getObstacleDirectionCoord().get(i)[0]);
                                 int rows = Integer.valueOf(this.getObstacleDirectionCoord().get(i)[1]);
                                 String targetid = this.directionOfObstacleCoordinates.get(i)[3];
-                                MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle Direction id:%s direction:%d %d,%d",targetid, obstacleDirection,cols-1,19- rows));
+                                MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle Direction id:%s direction:%d %d,%d",targetid, Integer.valueOf(obstacleDirection),cols-1,19- rows));
                             }
                             clickedCell = new String[]{temp[0], temp[1], temp[2], temp[3], temp[4], String.valueOf(i)};
                             handler.postDelayed(mLongPressed, ViewConfiguration.getLongPressTimeout());
@@ -812,11 +813,11 @@ public class GridMapView extends View {
                 this.setStartCoordStatus(false);
                 startButton.toggle();
             }
-        if (!buttonName.equals("wayPointButton"))
-            if (waypointButton.isChecked()) {
-                this.setWayPointStatus(false);
-                waypointButton.toggle();
-            }
+//        if (!buttonName.equals("wayPointButton"))
+//            if (waypointButton.isChecked()) {
+//                this.setWayPointStatus(false);
+//                waypointButton.toggle();
+//            }
 
         if (!buttonName.equals("addObstacleButton"))
         {
@@ -843,11 +844,11 @@ public class GridMapView extends View {
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
 
-        if (manualAutoToggleBtn.isChecked()) {
-            manualAutoToggleBtn.toggle();
-            manualAutoToggleBtn.setText(getResources().getString(R.string.manual));
-
-        }
+//        if (manualAutoToggleBtn.isChecked()) {
+//            manualAutoToggleBtn.toggle();
+//            manualAutoToggleBtn.setText(getResources().getString(R.string.manual));
+//
+//        }
         this.toggleCheckedBtn("None");
 
         if (phoneTiltSwitch.isChecked()) {
@@ -1202,23 +1203,6 @@ public class GridMapView extends View {
         return false;
     }
 
-    private Paint selectFontType(String[] obstacleDirectionCoord){
-        Paint white = new Paint();
-        white.setColor(Color.WHITE);
-        white.setTextAlign(Paint.Align.CENTER);
-        if(obstacleDirectionCoord[4].equals("T")){
-            white.setTextSize(30);
-            white.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD));
-        }
-        else if(obstacleDirectionCoord[4].equals("F")){
-            white.setTextSize(20);
-        }
-        else{
-            white.setTextSize(30);
-        }
-        return white;
-    }
-
     private void drawObstacleWithDirection(Canvas canvas,ArrayList<String[]> obstacleDirectionCoord){
         showLog("Entering drawObstacleWithDirection");
         RectF rect;
@@ -1226,11 +1210,25 @@ public class GridMapView extends View {
 
         for(int i =0; i<obstacleDirectionCoord.size(); i++){
             arrayIndex=i;
-            String text = obstacleDirectionCoord.get(i)[3];
+            String text;
             int x= Integer.parseInt(obstacleDirectionCoord.get(i)[0]);
             int y= convertRow(Integer.parseInt(obstacleDirectionCoord.get(i)[1]));
             rect = new RectF(x * sizeOfCell, y * sizeOfCell, (x+1) * sizeOfCell, (y+1) * sizeOfCell);
-            Paint white = selectFontType(obstacleDirectionCoord.get(i));
+            Paint white = new Paint();
+            white.setColor(Color.WHITE);
+            white.setTextAlign(Paint.Align.CENTER);
+            if(obstacleDirectionCoord.get(i)[4].equals("T")){
+                white.setTextSize(20);
+                white.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD));
+                text = obstacleDirectionCoord.get(i)[3];
+            }
+            else{
+                white.setTextSize(10);
+                if (obstacleDirectionCoord.get(i)[3] != String.valueOf(i)) {
+                    obstacleDirectionCoord.get(i)[3] = String.valueOf(i);
+                }
+                text = String.valueOf(i);
+            }
             switch(obstacleDirectionCoord.get(i)[2]){
                 case "0":
                     obstacleDirectionBitmap = BitmapFactory.decodeResource(getResources(),R.drawable.north_obstacle);

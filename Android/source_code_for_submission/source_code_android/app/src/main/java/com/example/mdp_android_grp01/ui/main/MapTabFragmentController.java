@@ -38,7 +38,7 @@ public class MapTabFragmentController extends Fragment {
     private ViewModel1 viewModel1;
 
     Button resetButton;
-    Button updateButton;
+//    Button updateButton;
     ImageButton changeDirectionButton;
     ImageButton setNorthObstacleDirectionButton;
     ImageButton setSouthObstacleDirectionButton;
@@ -47,8 +47,8 @@ public class MapTabFragmentController extends Fragment {
     ToggleButton obstacleButton;
     ImageButton clearButton;
     ToggleButton startPointButton;
-    ToggleButton wayPointButton;
-    Switch switchManualOrAuto;
+//    ToggleButton wayPointButton;
+//    Switch switchManualOrAuto;
     Switch toggleDirection;
     GridMapView gridMapViewDescriptor;
     private static boolean updateAuto = false;
@@ -93,14 +93,14 @@ public class MapTabFragmentController extends Fragment {
 
         resetButton = root.findViewById(R.id.resetMapBtn);
         startPointButton = root.findViewById(R.id.startpointbtn);
-        wayPointButton = root.findViewById(R.id.waypointbtn);
+//        wayPointButton = root.findViewById(R.id.waypointbtn);
         changeDirectionButton = root.findViewById(R.id.directionBTN);
 
         obstacleButton = root.findViewById(R.id.addobstaclebtn);
         clearButton = root.findViewById(R.id.clearbtn);
-        switchManualOrAuto = root.findViewById(R.id.manualAutoBtn);
+//        switchManualOrAuto = root.findViewById(R.id.manualAutoBtn);
         toggleDirection = root.findViewById(R.id.ChangeDirectionBtn);
-        updateButton = root.findViewById(R.id.updateButton);
+//        updateButton = root.findViewById(R.id.updateButton);
         setEastObstacleDirectionButton = root.findViewById(R.id.eastObstacleBTN);
         setEastObstacleDirectionButton.setBackgroundResource(R.drawable.eastobstaclebtn);
         setNorthObstacleDirectionButton = root.findViewById(R.id.northObstacleBTN);
@@ -115,7 +115,7 @@ public class MapTabFragmentController extends Fragment {
             public void onClick(View view) {
                 showToast("Reset map");
                 gridMapViewDescriptor.resetMap();
-                updateButton.setTextColor(Color.WHITE);
+//                updateButton.setTextColor(Color.WHITE);
                 setEastObstacleDirectionButton.setVisibility(View.GONE);
                 setNorthObstacleDirectionButton.setVisibility(View.GONE);
                 setSouthObstacleDirectionButton.setVisibility(View.GONE);
@@ -134,28 +134,29 @@ public class MapTabFragmentController extends Fragment {
                     showToast("Please select starting point");
                     gridMapViewDescriptor.setStartCoordStatus(true);
                     gridMapViewDescriptor.toggleCheckedBtn("startButton");
-                } else
-                    showToast("Please select manual mode");
+                }
+//                else
+//                    showToast("Please select manual mode");
                 showLog("Exiting startbtn");
             }
         });
 
-        wayPointButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showLog("Clicked wayPointButton");
-                if (wayPointButton.getText().equals("WAYPOINT"))
-                    showToast("Cancelled selecting waypoint");
-                else if (wayPointButton.getText().equals("CANCEL")) {
-                    showToast("Please select waypoint");
-                    gridMapViewDescriptor.setWayPointStatus(true);
-                    gridMapViewDescriptor.toggleCheckedBtn("wayPointButton");
-                }
-                else
-                    showToast("Please select manual mode");
-                showLog("Exiting wayPointButton");
-            }
-        });
+//        wayPointButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                showLog("Clicked wayPointButton");
+//                if (wayPointButton.getText().equals("WAYPOINT"))
+//                    showToast("Cancelled selecting waypoint");
+//                else if (wayPointButton.getText().equals("CANCEL")) {
+//                    showToast("Please select waypoint");
+//                    gridMapViewDescriptor.setWayPointStatus(true);
+//                    gridMapViewDescriptor.toggleCheckedBtn("wayPointButton");
+//                }
+//                else
+//                    showToast("Please select manual mode");
+//                showLog("Exiting wayPointButton");
+//            }
+//        });
 
         changeDirectionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -211,41 +212,41 @@ public class MapTabFragmentController extends Fragment {
             }
         });
 
-        switchManualOrAuto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (switchManualOrAuto.getText().equals("MANUAL")) {
-                    try {
-                        gridMapViewDescriptor.setAutomatedUpdate(true);
-                        updateAuto = true;
-                        gridMapViewDescriptor.toggleCheckedBtn("None");
-                        updateButton.setClickable(false);
-                        updateButton.setTextColor(Color.GRAY);
-                        ManualFragmentController.getCalibrateButton().setClickable(false);
-                        ManualFragmentController.getCalibrateButton().setTextColor(Color.GRAY);
-                        switchManualOrAuto.setText(getResources().getString(R.string.auto));
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showToast("AUTO mode");
-                }
-                else if (switchManualOrAuto.getText().equals("AUTO")) {
-                    try {
-                        gridMapViewDescriptor.setAutomatedUpdate(false);
-                        updateAuto = false;
-                        gridMapViewDescriptor.toggleCheckedBtn("None");
-                        updateButton.setClickable(true);
-                        ManualFragmentController.getCalibrateButton().setClickable(true);
-                        updateButton.setTextColor(Color.WHITE);
-                        ManualFragmentController.getCalibrateButton().setTextColor(Color.BLACK);
-                        switchManualOrAuto.setText(getResources().getString(R.string.manual));
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    showToast("MANUAL mode");
-                }
-            }
-        });
+//        switchManualOrAuto.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (switchManualOrAuto.getText().equals("MANUAL")) {
+//                    try {
+//                        gridMapViewDescriptor.setAutomatedUpdate(true);
+//                        updateAuto = true;
+//                        gridMapViewDescriptor.toggleCheckedBtn("None");
+//                        updateButton.setClickable(false);
+//                        updateButton.setTextColor(Color.GRAY);
+//                        ManualFragmentController.getCalibrateButton().setClickable(false);
+//                        ManualFragmentController.getCalibrateButton().setTextColor(Color.GRAY);
+//                        switchManualOrAuto.setText(getResources().getString(R.string.auto));
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
+//                    showToast("AUTO mode");
+//                }
+//                else if (switchManualOrAuto.getText().equals("AUTO")) {
+//                    try {
+//                        gridMapViewDescriptor.setAutomatedUpdate(false);
+//                        updateAuto = false;
+//                        gridMapViewDescriptor.toggleCheckedBtn("None");
+//                        updateButton.setClickable(true);
+//                        ManualFragmentController.getCalibrateButton().setClickable(true);
+//                        updateButton.setTextColor(Color.WHITE);
+//                        ManualFragmentController.getCalibrateButton().setTextColor(Color.BLACK);
+//                        switchManualOrAuto.setText(getResources().getString(R.string.manual));
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
+//                    showToast("MANUAL mode");
+//                }
+//            }
+//        });
 
         toggleDirection.setOnClickListener(new View.OnClickListener() {
             @Override
