@@ -61,40 +61,42 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/c_status"
         android:drawableLeft="@drawable/reset_image"
-        android:drawablePadding="-15dp"
+        android:drawablePadding="-20dp"
         android:includeFontPadding="false"
-        android:paddingLeft="10dp"
-        android:paddingBottom="7dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="8dp"
         android:text="Reset Map"
         android:textAlignment="center"
         android:textColor="@color/colorWhite"
-        android:textSize="16sp"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/addobstaclebtn"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toEndOf="@+id/startpointbtn"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
+    <Button
         android:id="@+id/clearbtn"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:background="@drawable/control_background"
-        android:src="@drawable/remove_image"
-        app:layout_constraintStart_toEndOf="@+id/directionBTN"
-        app:layout_constraintTop_toTopOf="@+id/directionBTN" />
-
-    <ImageButton
-        android:id="@+id/directionBTN"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/control_background"
-        android:src="@drawable/change_direction_image"
-        app:layout_constraintStart_toStartOf="@+id/addobstaclebtn"
-        app:layout_constraintTop_toBottomOf="@+id/addobstaclebtn" />
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/c_status"
+        android:drawableLeft="@drawable/remove_image"
+        android:drawablePadding="-30dp"
+        android:includeFontPadding="false"
+        android:paddingLeft="15dp"
+        android:paddingBottom="10dp"
+        android:text="Remove "
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.99"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.331" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -121,7 +123,6 @@
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/button_background"
                 android:scaleType="fitCenter"
-                android:tint="@color/colorBlack"
                 android:visibility="gone" />
         </LinearLayout>
 
@@ -137,7 +138,6 @@
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/button_background"
                 android:scaleType="fitCenter"
-                android:tint="@color/colorBlack"
                 android:visibility="gone" />
 
 
@@ -155,7 +155,6 @@
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/button_background"
                 android:scaleType="fitCenter"
-                android:tint="@color/colorBlack"
                 android:visibility="gone" />
 
         </LinearLayout>
@@ -172,7 +171,6 @@
                 android:layout_gravity="center_vertical"
                 android:background="@drawable/button_background"
                 android:scaleType="fitCenter"
-                android:tint="@color/colorBlack"
                 android:visibility="gone" />
 
         </LinearLayout>
@@ -182,18 +180,22 @@
 
     <Switch
         android:id="@+id/ChangeDirectionBtn"
-        android:layout_width="210dp"
-        android:layout_height="51dp"
+        android:layout_width="116dp"
+        android:layout_height="53dp"
         android:layout_marginTop="84dp"
         android:switchPadding="20dp"
-        android:text="toggleDirection"
+        android:text="Dir"
         android:textAlignment="center"
-        android:textOff="off"
-        android:textOn="toggleDirection"
+        android:textOff="Off"
+        android:textOn="Dir"
         android:textSize="20sp"
         android:textStyle="bold"
 
-        app:layout_constraintEnd_toEndOf="@+id/clearbtn"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.976"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.681" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
