@@ -232,16 +232,16 @@
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\drawable\\border_white_background.xml"
     },
     {
-        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/layout_activity_main.xml.flat",
-        "source": "com.example.mdp_android_grp01.app-main-34:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable_ic_arrow_left.png.flat",
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\drawable\\ic_arrow_left.png"
     },
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/layout_activity_map.xml.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/layout/activity_map.xml"
     },
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\layout_fragment_main.xml.flat",
