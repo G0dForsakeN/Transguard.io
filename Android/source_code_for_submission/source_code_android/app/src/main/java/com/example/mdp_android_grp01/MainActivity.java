@@ -139,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
         directionTextView = findViewById(R.id.directionAxisTextView);
 
         roboStatusTextView = findViewById(R.id.robotStatusTextView);
+
         progressDialogBox = new ProgressDialog(MainActivity.this);
         progressDialogBox.setMessage("Reconnecting");
         progressDialogBox.setCancelable(false);
@@ -537,6 +538,17 @@ public class MainActivity extends AppCompatActivity {
 
             } catch (Exception e) {
                 showLog("Adding Image Failed");
+            }
+
+            if (gridMapViewDescriptor.getAutomatedUpdate() || MapTabFragmentController.isUpdateRequestManual) {
+                try {
+                    gridMapViewDescriptor.setReceivedJsonObject(new JSONObject(message));
+                    gridMapViewDescriptor.updateMap();
+                    MapTabFragmentController.isUpdateRequestManual = false;
+                    showLog("Decode successful");
+                } catch (JSONException e) {
+                    showLog("Decode unsuccessful");
+                }
             }
             sharedPreferences();
             String receivedText = sharedPreferencesInterface.getString("message", "") + "\n" + message;

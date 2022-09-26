@@ -181,12 +181,12 @@ public class BluetoothPopUpView extends AppCompatActivity {
         Button backBtn = findViewById(R.id.backBtn);
 
         textView1 = (TextView) findViewById(R.id.TextView1);
-        String connStatus = "Status: Disconnected";
+        String connStatus = "Disconnected";
         sharedPreferencesInterface = getApplicationContext().getSharedPreferences("Shared Preferences", Context.MODE_PRIVATE);
         if (sharedPreferencesInterface.contains("connStatus"))
             connStatus = sharedPreferencesInterface.getString("connStatus", "");
 
-        textView1.setText("Status: Disconnected");
+        textView1.setText(connStatus);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -347,9 +347,9 @@ public class BluetoothPopUpView extends AppCompatActivity {
 
                 sharedPreferencesInterface = getApplicationContext().getSharedPreferences("Shared Preferences", Context.MODE_PRIVATE);
                 editorSharedPreferencesInterface = sharedPreferencesInterface.edit();
-                editorSharedPreferencesInterface.putString("connStatus", "Status: Disconnected");
+                editorSharedPreferencesInterface.putString("connStatus", "Disconnected");
                 TextView TextView1 = findViewById(R.id.TextView1);
-                TextView1.setText("Status: Disconnected");
+                TextView1.setText("Disconnected");
                 editorSharedPreferencesInterface.apply();
 
                 try {
