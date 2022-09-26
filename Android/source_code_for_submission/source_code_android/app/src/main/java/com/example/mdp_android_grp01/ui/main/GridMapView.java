@@ -762,6 +762,7 @@ public class GridMapView extends View {
     public void resetMap() {
         showLog("Entering resetMap");
         TextView robotStatusTextView = ((Activity) this.getContext()).findViewById(R.id.robotStatusTextView);
+<<<<<<< HEAD
         TextView xaxisTextView = ((Activity) this.getContext()).findViewById(R.id.xAxisTextView);
         TextView yaxisTextView = ((Activity) this.getContext()).findViewById(R.id.yAxisTextView);
         TextView dirTextView = ((Activity) this.getContext()).findViewById(R.id.directionAxisTextView);
@@ -780,6 +781,13 @@ public class GridMapView extends View {
                 },
                 2500
         );
+=======
+        Switch manualAutoToggleBtn = ((Activity) this.getContext()).findViewById(R.id.manualAutoBtn);
+        Switch phoneTiltSwitch = ((Activity) this.getContext()).findViewById(R.id.phoneTiltSwitch);
+
+        updateAxisOfRobot(1, 1, "None");
+        robotStatusTextView.setText(getResources().getString(R.string.unavail));
+>>>>>>> parent of 20f9d4e (TextBox Updates)
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
 
@@ -1031,7 +1039,7 @@ public class GridMapView extends View {
                 text = obstacleDirectionCoord.get(i)[3];
             }
             else{
-                white.setTextSize(20);
+                white.setTextSize(10);
                 if (obstacleDirectionCoord.get(i)[3] != String.valueOf(i)) {
                     obstacleDirectionCoord.get(i)[3] = String.valueOf(i);
                 }
