@@ -122,7 +122,8 @@
                 android:background="@drawable/button_background"
                 android:scaleType="fitCenter"
                 android:tint="@color/colorBlack"
-                android:visibility="gone" />
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_arrow_up" />
         </LinearLayout>
 
         <LinearLayout
@@ -138,7 +139,9 @@
                 android:background="@drawable/button_background"
                 android:scaleType="fitCenter"
                 android:tint="@color/colorBlack"
-                android:visibility="gone" />
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_arrow_right" />
+            <!--app:layout_constraintTop_toBottomOf="@+id/waypointbtn"-->
 
 
         </LinearLayout>
@@ -156,7 +159,8 @@
                 android:background="@drawable/button_background"
                 android:scaleType="fitCenter"
                 android:tint="@color/colorBlack"
-                android:visibility="gone" />
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_arrow_down" />
 
         </LinearLayout>
 
@@ -173,7 +177,8 @@
                 android:background="@drawable/button_background"
                 android:scaleType="fitCenter"
                 android:tint="@color/colorBlack"
-                android:visibility="gone" />
+                android:visibility="gone"
+                app:srcCompat="@drawable/ic_arrow_left" />
 
         </LinearLayout>
 
