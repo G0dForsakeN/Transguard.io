@@ -45,7 +45,7 @@ public class MapTabFragmentController extends Fragment {
     ImageButton setWestObstacleDirectionButton;
     ImageButton setEastObstacleDirectionButton;
     ToggleButton obstacleButton;
-    Button clearButton;
+    ImageButton clearButton;
     ToggleButton startPointButton;
 //    ToggleButton wayPointButton;
 //    Switch switchManualOrAuto;
@@ -94,7 +94,7 @@ public class MapTabFragmentController extends Fragment {
         resetButton = root.findViewById(R.id.resetMapBtn);
         startPointButton = root.findViewById(R.id.startpointbtn);
 //        wayPointButton = root.findViewById(R.id.waypointbtn);
-
+        changeDirectionButton = root.findViewById(R.id.directionBTN);
 
         obstacleButton = root.findViewById(R.id.addobstaclebtn);
         clearButton = root.findViewById(R.id.clearbtn);
@@ -158,7 +158,14 @@ public class MapTabFragmentController extends Fragment {
 //            }
 //        });
 
-
+        changeDirectionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showLog("Clicked directionChangeImageBtn");
+                mapDirectionFragmentView.show(getActivity().getFragmentManager(), "Direction Fragment");
+                showLog("Exiting directionChangeImageBtn");
+            }
+        });
 
 
         obstacleButton.setOnClickListener(new View.OnClickListener() {
