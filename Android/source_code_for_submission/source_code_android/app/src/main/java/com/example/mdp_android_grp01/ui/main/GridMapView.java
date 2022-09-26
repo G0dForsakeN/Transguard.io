@@ -836,26 +836,11 @@ public class GridMapView extends View {
     public void resetMap() {
         showLog("Entering resetMap");
         TextView robotStatusTextView = ((Activity) this.getContext()).findViewById(R.id.robotStatusTextView);
-        TextView xaxisTextView = ((Activity) this.getContext()).findViewById(R.id.xAxisTextView);
-        TextView yaxisTextView = ((Activity) this.getContext()).findViewById(R.id.yAxisTextView);
-        TextView dirTextView = ((Activity) this.getContext()).findViewById(R.id.directionAxisTextView);
         Switch manualAutoToggleBtn = ((Activity) this.getContext()).findViewById(R.id.manualAutoBtn);
         Switch phoneTiltSwitch = ((Activity) this.getContext()).findViewById(R.id.phoneTiltSwitch);
 
-        xaxisTextView.setText("-");
-        yaxisTextView.setText("-");
-        dirTextView.setText("-");
-        robotStatusTextView.setText("Resetting Map");
-        new java.util.Timer().schedule(
-                new java.util.TimerTask() {
-                    @Override
-                    public void run() {
-                        // your code here
-                        robotStatusTextView.setText("Ready To Start");
-                    }
-                },
-                2500
-        );
+        updateAxisOfRobot(1, 1, "None");
+        robotStatusTextView.setText(getResources().getString(R.string.unavail));
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
 
@@ -1238,7 +1223,7 @@ public class GridMapView extends View {
                 text = obstacleDirectionCoord.get(i)[3];
             }
             else{
-                white.setTextSize(20);
+                white.setTextSize(10);
                 if (obstacleDirectionCoord.get(i)[3] != String.valueOf(i)) {
                     obstacleDirectionCoord.get(i)[3] = String.valueOf(i);
                 }
