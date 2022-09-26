@@ -142,9 +142,9 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/jingyen/.gradle/cach
 	android:label
 		ADDED from /Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:23:9-41
 	android:roundIcon
-		ADDED from /Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:24:9-54
+		ADDED from /Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:24:9-52
 	android:icon
-		ADDED from /Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:22:9-43
+		ADDED from /Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:22:9-41
 	android:allowBackup
 		ADDED from /Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:21:9-35
 	android:theme

@@ -3581,8 +3581,12 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout shapes
 layout support_simple_spinner_dropdown_item
+mipmap finish_line_icon
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap robo_icon
+mipmap robo_icon_round
+mipmap robocar_icon
 plurals mtrl_badge_content_description
 string Reconfiguration
 string abc_action_bar_home_description

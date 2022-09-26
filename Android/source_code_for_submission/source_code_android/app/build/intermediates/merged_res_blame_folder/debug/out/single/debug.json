@@ -4,6 +4,10 @@
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v25/pin_image.xml"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-hdpi_finish_line_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-hdpi/finish_line_icon.png"
+    },
+    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-hdpi_ic_baseline_arrow_downward_24.png.flat",
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-hdpi/ic_baseline_arrow_downward_24.png"
     },
@@ -76,8 +80,16 @@
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v25/tab_comm_image.xml"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xhdpi_robocar_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xhdpi/robocar_icon.png"
+    },
+    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxhdpi_ic_baseline_arrow_upward_24.png.flat",
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-xxhdpi/ic_baseline_arrow_upward_24.png"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xxhdpi_finish_line_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xxhdpi/finish_line_icon.png"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-ldpi_ic_map_info.png.flat",
@@ -100,12 +112,12 @@
         "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-mdpi_ic_baseline_arrow_downward_24.png.flat",
-        "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-mdpi/ic_baseline_arrow_downward_24.png"
-    },
-    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxhdpi_ic_baseline_arrow_forward_24.png.flat",
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-xxhdpi/ic_baseline_arrow_forward_24.png"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-mdpi_ic_baseline_arrow_downward_24.png.flat",
+        "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-mdpi/ic_baseline_arrow_downward_24.png"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_dailytasks.png.flat",
@@ -118,6 +130,10 @@
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-ldpi_ic_baseline_arrow_downward_24.png.flat",
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-ldpi/ic_baseline_arrow_downward_24.png"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xhdpi_robo_icon_round.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xhdpi/robo_icon_round.png"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-xhdpi_ic_baseline_update_24.png.flat",
@@ -136,6 +152,10 @@
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-xxxhdpi/ic_baseline_bluetooth_24.png"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xhdpi_robo_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xhdpi/robo_icon.png"
+    },
+    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_c_command_image.png.flat",
         "source": "com.example.mdp_android_grp01.app-main-34:/drawable-v25/c_command_image.png"
     },
@@ -146,6 +166,10 @@
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/layout_activity_main.xml.flat",
         "source": "com.example.mdp_android_grp01.app-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xxhdpi_robo_icon_round.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xxhdpi/robo_icon_round.png"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_c_direction.png.flat",
@@ -176,6 +200,10 @@
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-hdpi/ic_baseline_arrow_upward_24.png"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xxxhdpi_robo_icon_round.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xxxhdpi/robo_icon_round.png"
+    },
+    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxhdpi_ic_map_info.png.flat",
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-xxhdpi/ic_map_info.png"
     },
@@ -198,6 +226,10 @@
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-hdpi_ic_baseline_compass_calibration_24.png.flat",
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-hdpi/ic_baseline_compass_calibration_24.png"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xxhdpi_robo_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xxhdpi/robo_icon.png"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-anydpi-v25_tab_bluetooth_image.xml.flat",
@@ -236,6 +268,10 @@
         "source": "com.example.mdp_android_grp01.app-main-34:/layout/bluetooth_pop_up_window.xml"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xhdpi_finish_line_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xhdpi/finish_line_icon.png"
+    },
+    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable_eastobstaclebtn.jpeg.flat",
         "source": "com.example.mdp_android_grp01.app-main-34:/drawable/eastobstaclebtn.jpeg"
     },
@@ -250,6 +286,10 @@
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-mdpi_ic_baseline_update_24.png.flat",
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-mdpi/ic_baseline_update_24.png"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-mdpi_robocar_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-mdpi/robocar_icon.png"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-xhdpi_ic_map_info.png.flat",
@@ -284,8 +324,16 @@
         "source": "com.example.mdp_android_grp01.app-main-34:/drawable-v24/bottom_line.xml"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xxxhdpi_robo_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xxxhdpi/robo_icon.png"
+    },
+    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable_east_obstacle.png.flat",
         "source": "com.example.mdp_android_grp01.app-main-34:/drawable/east_obstacle.png"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-anydpi-v26_robo_icon.xml.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-anydpi-v26/robo_icon.xml"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_c_daily_tasks_bubble.png.flat",
@@ -436,6 +484,10 @@
         "source": "com.example.mdp_android_grp01.app-main-34:/drawable/south_obstacle.png"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-hdpi_robo_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-hdpi/robo_icon.png"
+    },
+    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-anydpi-v25_ic_right_arrow.xml.flat",
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v25/ic_right_arrow.xml"
     },
@@ -446,6 +498,10 @@
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_ic_baseline_map_24.png.flat",
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-xxxhdpi/ic_baseline_map_24.png"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-mdpi_robo_icon_round.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-mdpi/robo_icon_round.png"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_c_position2.png.flat",
@@ -476,16 +532,20 @@
         "source": "com.example.mdp_android_grp01.app-main-34:/drawable-v25/rect21.png"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xxxhdpi_finish_line_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xxxhdpi/finish_line_icon.png"
+    },
+    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-mdpi_ic_launcher.png.flat",
         "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-anydpi-v21_ic_baseline_settings_24.xml.flat",
-        "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v21/ic_baseline_settings_24.xml"
-    },
-    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-v24_paireddev.png.flat",
         "source": "com.example.mdp_android_grp01.app-main-34:/drawable-v24/paireddev.png"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-anydpi-v21_ic_baseline_settings_24.xml.flat",
+        "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v21/ic_baseline_settings_24.xml"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_c_position1.png.flat",
@@ -538,6 +598,10 @@
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable_control_background.xml.flat",
         "source": "com.example.mdp_android_grp01.app-main-34:/drawable/control_background.xml"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-mdpi_finish_line_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-mdpi/finish_line_icon.png"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/layout_device_adapter_view.xml.flat",
@@ -632,12 +696,20 @@
         "source": "com.example.mdp_android_grp01.app-main-34:/drawable/ic_send.png"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-anydpi-v26_robo_icon_round.xml.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-anydpi-v26/robo_icon_round.xml"
+    },
+    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-mdpi_ic_baseline_bluetooth_24.png.flat",
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-mdpi/ic_baseline_bluetooth_24.png"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_automation_image.png.flat",
         "source": "com.example.mdp_android_grp01.app-main-34:/drawable-v25/automation_image.png"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-hdpi_robocar_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-hdpi/robocar_icon.png"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable_north_obstacle.png.flat",
@@ -692,6 +764,10 @@
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-ldpi/ic_baseline_add_location_24.png"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xxxhdpi_robocar_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xxxhdpi/robocar_icon.png"
+    },
+    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable_ic_clear.png.flat",
         "source": "com.example.mdp_android_grp01.app-main-34:/drawable/ic_clear.png"
     },
@@ -724,6 +800,14 @@
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-hdpi/ic_baseline_add_location_24.png"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-mdpi_robo_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-mdpi/robo_icon.png"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xxhdpi_robocar_icon.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-xxhdpi/robocar_icon.png"
+    },
+    {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-v24_bluetoothsymbol.png.flat",
         "source": "com.example.mdp_android_grp01.app-main-34:/drawable-v24/bluetoothsymbol.png"
     },
@@ -754,6 +838,10 @@
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-anydpi-v21_ic_baseline_compass_calibration_24.xml.flat",
         "source": "com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v21/ic_baseline_compass_calibration_24.xml"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/mipmap-hdpi_robo_icon_round.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/mipmap-hdpi/robo_icon_round.png"
     },
     {
         "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-hdpi_ic_baseline_arrow_forward_24.png.flat",
