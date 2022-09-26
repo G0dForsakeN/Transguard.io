@@ -1220,10 +1220,13 @@ public class GridMapView extends View {
             }
             else{
                 white.setTextSize(15);
-                if (obstacleDirectionCoord.get(i)[3] != String.valueOf(i)) {
-                    obstacleDirectionCoord.get(i)[3] = String.valueOf(i);
+                if (obstacleDrag) {
+                    text = obstacleDirectionCoord.get(i)[3];
                 }
-                text = String.valueOf(i);
+                else {
+                    obstacleDirectionCoord.get(i)[3] = String.valueOf(i);
+                    text = String.valueOf(i);
+                }
             }
             switch(obstacleDirectionCoord.get(i)[2]){
                 case "0":
