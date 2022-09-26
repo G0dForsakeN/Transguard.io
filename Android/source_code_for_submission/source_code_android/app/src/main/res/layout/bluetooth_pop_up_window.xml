@@ -31,55 +31,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ListView
         android:id="@+id/pairedDevicesListView"
         android:layout_width="393dp"
         android:layout_height="146dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/dailytasks"
         android:gravity="bottom"
         android:listSelector="#bdb9b9"
+        android:padding="20dp"
         android:scrollbars="vertical"
         android:text=""
         android:textColor="@color/colorBlack"
         android:textSize="14sp"
-        android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pairedDevicesTitleTextView" />
 
     <TextView
         android:id="@+id/TextView1"
-        android:layout_width="233dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:foregroundGravity="center"
         android:gravity="center"
-        android:text="Disconnected"
+        android:text="Status: Disconnected"
         android:textAllCaps="true"
         android:textColor="#1B1A1A"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/searchBtn"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHorizontal_bias="0.923"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166" />
-
-    <TextView
-        android:id="@+id/bluetoothTitleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/pairingstatus"
-        android:gravity="center"
-        app:layout_constraintEnd_toStartOf="@+id/bluetoothSwitch"
-        app:layout_constraintHorizontal_bias="0.608"
-        app:layout_constraintStart_toEndOf="@+id/backBtn"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.095" />
 
     <Button
         android:id="@+id/searchBtn"
@@ -88,28 +77,28 @@
         android:background="@drawable/control_background"
         android:drawableLeft="@drawable/search_icon"
         android:drawablePadding="-15dp"
-        android:text="search"
-        android:textColor="@color/colorWhite"
         android:elevation="10dp"
         android:onClick="toggleButtonScan"
         android:paddingLeft="10dp"
+        android:text="search"
+        android:textColor="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161"
+        app:layout_constraintVertical_bias="0.174"
         tools:ignore="MissingConstraints" />
 
     <Switch
         android:id="@+id/bluetoothSwitch"
         android:layout_width="86dp"
         android:layout_height="40dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:splitTrack="false"
         android:text="OFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.916"
+        app:layout_constraintHorizontal_bias="0.935"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -132,7 +121,7 @@
         android:layout_height="321dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/dailytasks"
+        android:background="@drawable/devicesfoundbubble"
         android:gravity="bottom"
         android:scrollbars="vertical"
         android:text=""
@@ -167,11 +156,11 @@
         android:id="@+id/pairedDevicesTitleTextView"
         android:layout_width="177dp"
         android:layout_height="21dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
 
         android:background="@drawable/paireddev"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextView1" />
 

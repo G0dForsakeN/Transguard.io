@@ -8,16 +8,20 @@
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-xhdpi\\tab_automation_image.png"
     },
     {
-        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-xhdpi_ic_baseline_add_location_24.png.flat",
-        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-xhdpi\\ic_baseline_add_location_24.png"
-    },
-    {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-xxxhdpi_ic_baseline_arrow_back_24.png.flat",
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-xxxhdpi\\ic_baseline_arrow_back_24.png"
     },
     {
+        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-xhdpi_ic_baseline_add_location_24.png.flat",
+        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-xhdpi\\ic_baseline_add_location_24.png"
+    },
+    {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-hdpi_ic_baseline_map_24.png.flat",
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-hdpi\\ic_baseline_map_24.png"
+    },
+    {
+        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable_devicesfoundbubble.png.flat",
+        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\drawable\\devicesfoundbubble.png"
     },
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-xxhdpi_ic_baseline_settings_24.png.flat",
@@ -88,16 +92,16 @@
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-ldpi\\ic_baseline_arrow_upward_24.png"
     },
     {
-        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\layout_bluetooth_pop_up_window.xml.flat",
-        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\layout\\bluetooth_pop_up_window.xml"
+        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\layout_map_page.xml.flat",
+        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\layout\\map_page.xml"
     },
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-xhdpi_ic_baseline_restore_24.png.flat",
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-xhdpi\\ic_baseline_restore_24.png"
     },
     {
-        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\layout_map_page.xml.flat",
-        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\layout\\map_page.xml"
+        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\layout_bluetooth_pop_up_window.xml.flat",
+        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\layout\\bluetooth_pop_up_window.xml"
     },
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-anydpi-v21_ic_baseline_arrow_back_24.xml.flat",
@@ -156,12 +160,12 @@
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-xhdpi\\ic_baseline_arrow_forward_24.png"
     },
     {
-        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-hdpi_ic_baseline_add_location_24.png.flat",
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-hdpi\\ic_baseline_add_location_24.png"
+    },
+    {
+        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-mdpi_ic_baseline_update_24.png.flat",
@@ -180,12 +184,12 @@
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-xxhdpi\\ic_baseline_search_24.png"
     },
     {
-        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-anydpi-v25_search_icon.xml.flat",
-        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-anydpi-v25\\search_icon.xml"
-    },
-    {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-xxxhdpi_tab_automation_image.png.flat",
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-xxxhdpi\\tab_automation_image.png"
+    },
+    {
+        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-anydpi-v25_search_icon.xml.flat",
+        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-anydpi-v25\\search_icon.xml"
     },
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-mdpi_ic_baseline_restore_24.png.flat",
@@ -238,10 +242,6 @@
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/layout_activity_map.xml.flat",
-        "source": "com.example.mdp_android_grp01.app-main-34:/layout/activity_map.xml"
     },
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\layout_fragment_main.xml.flat",
@@ -304,16 +304,16 @@
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\layout\\activity_control.xml"
     },
     {
-        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-anydpi-v21_ic_baseline_arrow_forward_24.xml.flat",
-        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-anydpi-v21\\ic_baseline_arrow_forward_24.xml"
+        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\layout_main_page.xml.flat",
+        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\layout\\main_page.xml"
     },
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-v25_c_position1.png.flat",
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\drawable-v25\\c_position1.png"
     },
     {
-        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\layout_main_page.xml.flat",
-        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\layout\\main_page.xml"
+        "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-anydpi-v21_ic_baseline_arrow_forward_24.xml.flat",
+        "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-pngs-27:\\drawable-anydpi-v21\\ic_baseline_arrow_forward_24.xml"
     },
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-v25_connecttextpage.png.flat",
@@ -338,6 +338,10 @@
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-main-34:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/layout_bluetooth_pop_up_window.xml.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/layout/bluetooth_pop_up_window.xml"
     },
     {
         "merged": "C:\\Users\\dhruv\\.gradle\\daemon\\7.5.1\\com.example.mdp_android_grp01.app-merged_res-32:\\drawable-xxhdpi_ic_baseline_arrow_downward_24.png.flat",

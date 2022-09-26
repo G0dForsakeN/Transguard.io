@@ -2675,6 +2675,7 @@ int drawable design_ic_visibility_off 0x7f0800b4
 int drawable design_password_eye 0x7f0800b5
 int drawable design_snackbar_background 0x7f0800b6
 int drawable devicesfound 0x7f0800b7
+int drawable devicesfoundbubble 0x7f080146
 int drawable east_obstacle 0x7f0800b8
 int drawable eastobstaclebtn 0x7f0800b9
 int drawable googleg_disabled_color_18 0x7f0800ba
@@ -2920,7 +2921,6 @@ int id bestChoice 0x7f090063
 int id blocking 0x7f090064
 int id bluetoothButton 0x7f090065
 int id bluetoothSwitch 0x7f090066
-int id bluetoothTitleTextView 0x7f090067
 int id bottom 0x7f090068
 int id bounce 0x7f090069
 int id bounceBoth 0x7f09006a
