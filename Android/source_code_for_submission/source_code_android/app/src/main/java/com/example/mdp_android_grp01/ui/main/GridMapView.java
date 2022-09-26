@@ -1,6 +1,8 @@
 package com.example.mdp_android_grp01.ui.main;
 
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipDescription;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -8,6 +10,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.os.SystemClock;
@@ -16,7 +19,8 @@ import android.util.Log;
 import android.view.DragEvent;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -802,7 +806,7 @@ public class GridMapView extends View {
         ToggleButton waypointButton = ((Activity) this.getContext()).findViewById(R.id.waypointbtn);
         ToggleButton addObstacleButton = ((Activity) this.getContext()).findViewById(R.id.addobstaclebtn);
 
-        Button clearButton = ((Activity) this.getContext()).findViewById(R.id.clearbtn);
+        ImageButton clearButton = ((Activity) this.getContext()).findViewById(R.id.clearbtn);
 
         if (!buttonName.equals("startButton"))
             if (startButton.isChecked()) {
@@ -835,6 +839,7 @@ public class GridMapView extends View {
         TextView xaxisTextView = ((Activity) this.getContext()).findViewById(R.id.xAxisTextView);
         TextView yaxisTextView = ((Activity) this.getContext()).findViewById(R.id.yAxisTextView);
         TextView dirTextView = ((Activity) this.getContext()).findViewById(R.id.directionAxisTextView);
+        Switch manualAutoToggleBtn = ((Activity) this.getContext()).findViewById(R.id.manualAutoBtn);
         Switch phoneTiltSwitch = ((Activity) this.getContext()).findViewById(R.id.phoneTiltSwitch);
 
         xaxisTextView.setText("-");
@@ -854,6 +859,11 @@ public class GridMapView extends View {
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
 
+//        if (manualAutoToggleBtn.isChecked()) {
+//            manualAutoToggleBtn.toggle();
+//            manualAutoToggleBtn.setText(getResources().getString(R.string.manual));
+//
+//        }
         this.toggleCheckedBtn("None");
 
         if (phoneTiltSwitch.isChecked()) {
