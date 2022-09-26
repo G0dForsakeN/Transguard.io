@@ -84,7 +84,7 @@ public class GridMapView extends View {
     private static boolean isPositionValid = false;
     public static String obstacleDirection = "";
     public static boolean isAddObstacle = false;
-    private static boolean isLongpress=false;
+    private static boolean obstacleDrag=false;
     private static boolean isChangeDirection=false;
 
     private static final String TAG = "GridMap";
@@ -530,7 +530,7 @@ public class GridMapView extends View {
                 int action = MotionEvent.ACTION_DOWN;
                 MotionEvent e  = MotionEvent.obtain(downTime, eventTime, MotionEvent.ACTION_DOWN, event.getX(), event.getY(),0);
                 this.dispatchTouchEvent(e);
-                handler.removeCallbacks(mLongPressed);
+//                handler.removeCallbacks(mLongPressed);
                 return true;
 
             case DragEvent.ACTION_DRAG_ENDED:
@@ -553,36 +553,22 @@ public class GridMapView extends View {
 //        }
 //    }
 
-    final Handler handler = new Handler();
-    Runnable mLongPressed = new Runnable() {
-        public void run() {
-            //remove long clicked cell
-            int col = Integer.valueOf(clickedCell[0]), row = Integer.valueOf(clickedCell[1]);
-            int i = Integer.valueOf(clickedCell[5]);
-            cellsDetail[col][20 - row].setType("unexplored");
-            cellsDetail[col][20 - row].paint = unExplored;
-            isLongpress = true;
-            obstacleCoordinates.remove(i);
-            directionOfObstacleCoordinates.remove(i);
-            Toast.makeText(getContext(), "Dragging obstacle!", Toast.LENGTH_SHORT).show();
-            Log.i("", "Long press!");
-//            MainActivity.sendMessageToBlueTooth("Updated Obstacle: ");
-            // add shadow to drag
-//            col =(int) (startX/ sizeOfCell);
-//            row = GridMapView.convertRow((int) (startY / sizeOfCell));
-//            String[] celldata = new String[]{clickedCell[0], clickedCell[1], clickedCell[2], "drag",clickedCell[4]};
-//            GridMapView.obstacleCoordinates.add(new int[]{col, row});
-//            directionOfObstacleCoordinates.add(celldata);
+//    final Handler handler = new Handler();
+//    Runnable mLongPressed = new Runnable() {
+//        public void run() {
+//            if (isCellUnSet) return;
+//            //remove long clicked cell
+//            int col = Integer.valueOf(clickedCell[0]), row = Integer.valueOf(clickedCell[1]);
+//            int i = Integer.valueOf(clickedCell[5]);
+//            cellsDetail[col][20 - row].setType("unexplored");
+//            cellsDetail[col][20 - row].paint = unExplored;
+//            obstacleDrag = true;
+//            obstacleCoordinates.remove(i);
+//            directionOfObstacleCoordinates.remove(i);
+//            Toast.makeText(getContext(), "Dragging obstacle!", Toast.LENGTH_SHORT).show();
 //            Log.i("", "Long press!");
-        }
-    };
-
-//    private void removeDragShadow(){
-//        showLog(String.valueOf(obstacleCoordinates.size()));
-//        int len = obstacleCoordinates.size();
-//        obstacleCoordinates.remove(len-1);
-//        directionOfObstacleCoordinates.remove(len-1);
-//    }
+//        }
+//    };
 
     public boolean isPositionInGrid( int x, int y, boolean isStartPoint){
         float left,bottom,right,top;
@@ -608,29 +594,21 @@ public class GridMapView extends View {
         if (!this.getAutomatedUpdate()) {
             switch (event.getAction()) {
                 case MotionEvent.ACTION_CANCEL:
-                    handler.removeCallbacks(mLongPressed);
+//                    handler.removeCallbacks(mLongPressed);
                     break;
                 case MotionEvent.ACTION_MOVE:
-                    handler.removeCallbacks(mLongPressed);
+//                    handler.removeCallbacks(mLongPressed);
                     // update shadow position
                     positionX = event.getX() - sizeOfCell/2;
                     positionY = event.getY() - sizeOfCell/2;
-
-//                    if(isLongpress && !isDragInGrid((int) event.getRawX(), (int) event.getRawY())){
-//                        removeDragShadow();
-//                        isLongpress=false;
-//                        Toast.makeText(getContext(), "Obstacle removed!", Toast.LENGTH_SHORT).show();
-//                    }
-
                     break;
                 case MotionEvent.ACTION_UP:
-                    handler.removeCallbacks(mLongPressed);
-                    if(isLongpress){
-                        isLongpress=false;
+//                    handler.removeCallbacks(mLongPressed);
+                    if(obstacleDrag){
+                        obstacleDrag=false;
                         //check if cell is occupied
 //                        removeDragShadow();
                         if (!isPositionInGrid((int) event.getX(), (int) event.getY(), false)) {
-                            isLongpress = false;
                             this.invalidate();
                             Toast.makeText(getContext(), "Obstacle removed!", Toast.LENGTH_SHORT).show();
                             return true;
@@ -689,12 +667,30 @@ public class GridMapView extends View {
                                 int rows = Integer.valueOf(this.getObstacleDirectionCoord().get(i)[1]);
                                 String targetid = this.directionOfObstacleCoordinates.get(i)[3];
                                 MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle Direction id:%s direction:%d %d,%d",targetid, Integer.valueOf(obstacleDirection),cols-1,19- rows));
+                                this.isObstacleDirectionCoordinatesSet = false;
+                                this.invalidate();
+                                break;
                             }
-                            clickedCell = new String[]{temp[0], temp[1], temp[2], temp[3], temp[4], String.valueOf(i)};
-                            handler.postDelayed(mLongPressed, ViewConfiguration.getLongPressTimeout());
-                            this.isObstacleDirectionCoordinatesSet = false;
-                            this.invalidate();
-                            break;
+                            else if(isCellUnSet) break;
+                            else{
+                                clickedCell = new String[]{temp[0], temp[1], temp[2], temp[3], temp[4], String.valueOf(i)};
+                                cellsDetail[column][20 - row].setType("unexplored");
+                                cellsDetail[column][20 - row].paint = unExplored;
+                                obstacleDrag = true;
+                                obstacleCoordinates.remove(i);
+                                directionOfObstacleCoordinates.remove(i);
+                                Toast.makeText(getContext(), "Dragging obstacle!", Toast.LENGTH_SHORT).show();
+                                this.isObstacleDirectionCoordinatesSet = false;
+                                this.invalidate();
+                                return true;
+                            }
+//                            if(!isCellUnSet){
+//
+//                                handler.postDelayed(mLongPressed, ViewConfiguration.getLongPressTimeout());
+//                            }
+//                            this.isObstacleDirectionCoordinatesSet = false;
+//                            this.invalidate();
+//                            break;
                         }
 
                     //MainActivity.sendMessageToBlueTooth("X"+Integer.toString(row));
@@ -1218,12 +1214,12 @@ public class GridMapView extends View {
             white.setColor(Color.WHITE);
             white.setTextAlign(Paint.Align.CENTER);
             if(obstacleDirectionCoord.get(i)[4].equals("T")){
-                white.setTextSize(20);
+                white.setTextSize(25);
                 white.setTypeface(Typeface.create(Typeface.DEFAULT,Typeface.BOLD));
                 text = obstacleDirectionCoord.get(i)[3];
             }
             else{
-                white.setTextSize(10);
+                white.setTextSize(15);
                 if (obstacleDirectionCoord.get(i)[3] != String.valueOf(i)) {
                     obstacleDirectionCoord.get(i)[3] = String.valueOf(i);
                 }
