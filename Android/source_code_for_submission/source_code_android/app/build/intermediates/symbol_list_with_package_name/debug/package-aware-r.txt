@@ -2676,7 +2676,6 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable devicesfound
-drawable devicesfoundbubble
 drawable east_obstacle
 drawable eastobstaclebtn
 drawable googleg_disabled_color_18
@@ -2922,6 +2921,7 @@ id bestChoice
 id blocking
 id bluetoothButton
 id bluetoothSwitch
+id bluetoothTitleTextView
 id bottom
 id bounce
 id bounceBoth
