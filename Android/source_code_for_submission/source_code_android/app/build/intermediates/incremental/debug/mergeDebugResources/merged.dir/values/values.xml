@@ -632,8 +632,8 @@
     <color name="cardview_shadow_start_color">#37000000</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorBlack">#636363</color>
-    <color name="colorPrimary">#039BE5</color>
-    <color name="colorPrimaryDark">#1E88E5</color>
+    <color name="colorPrimary">#F9ECE3</color>
+    <color name="colorPrimaryDark">#BF7B71</color>
     <color name="colorRed">#FF0000</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
@@ -1718,7 +1718,7 @@
     <string name="abc_shareactionprovider_share_with_application">Share with <ns2:g example="Mail" id="application_name">%s</ns2:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
-    <string name="app_name">Android MDP - Grp 01</string>
+    <string name="app_name">Android MDP - Grp 21</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="auto">AUTO</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>

@@ -3580,8 +3580,12 @@ int layout select_dialog_multichoice_material 0x7f0c0070
 int layout select_dialog_singlechoice_material 0x7f0c0071
 int layout shapes 0x7f0c0072
 int layout support_simple_spinner_dropdown_item 0x7f0c0073
-int mipmap ic_launcher 0x7f0e0000
-int mipmap ic_launcher_round 0x7f0e0001
+int mipmap finish_line_icon 0x7f0e0000
+int mipmap ic_launcher 0x7f0e0001
+int mipmap ic_launcher_round 0x7f0e0002
+int mipmap robo_icon 0x7f0e0003
+int mipmap robo_icon_round 0x7f0e0004
+int mipmap robocar_icon 0x7f0e0005
 int plurals mtrl_badge_content_description 0x7f0f0000
 int string Reconfiguration 0x7f100000
 int string abc_action_bar_home_description 0x7f100001
