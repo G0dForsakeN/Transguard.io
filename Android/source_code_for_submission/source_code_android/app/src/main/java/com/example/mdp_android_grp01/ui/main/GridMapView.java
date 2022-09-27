@@ -1260,16 +1260,13 @@ public class GridMapView extends View {
                     break;
 
             }
-//            if (obstacleDirectionCoord.get(i)[4].equals("drag")){
-//                canvas.drawText(text, positionX + sizeOfCell/ 2, positionY+sizeOfCell + sizeOfCell/4, white);
-//                canvas.drawBitmap(obstacleDirectionBitmap,null,rect,null);
-//            }
+
             canvas.drawText(text, (cellsDetail[x][y].startX + cellsDetail[x][y].endX) / 2, cellsDetail[x][y].endY + (cellsDetail[x][y].startY - cellsDetail[x][y].endY) / 4, white);
             canvas.drawBitmap(obstacleDirectionBitmap, null, rect, null);
             showLog("Exiting drawObstacleWithDirection");
         }
         if(!obstacleDirectionCoord.isEmpty() && isAddObstacle == true){
-            MainActivity.sendMessageToBlueTooth("ALG|obstacle"+ "(" +(Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[0])-1) + "," +(Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[1]) - 1)   + "," + Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[2] )+ ")");}
+            MainActivity.sendMessageToBlueTooth("OBSTACLE: "+ "(" +(Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[0])-1) + "," +(Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[1]) - 1)   + "," + Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[2])+ ","+ Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[3])+")");}
         isAddObstacle = false;
     }
 }

@@ -142,15 +142,9 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\dhruv\.gradle\cach
 	android:label
 		ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:23:9-41
 	android:roundIcon
-<<<<<<< HEAD
-		ADDED from /Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:24:9-52
+		ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:24:9-52
 	android:icon
-		ADDED from /Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:22:9-41
-=======
-		ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:24:9-54
-	android:icon
-		ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:22:9-43
->>>>>>> parent of 325091a (Revert "TextBox Updates")
+		ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:22:9-41
 	android:allowBackup
 		ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:21:9-35
 	android:theme

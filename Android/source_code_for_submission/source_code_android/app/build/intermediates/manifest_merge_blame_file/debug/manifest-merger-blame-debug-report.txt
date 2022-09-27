@@ -76,21 +76,12 @@
 42        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 42-->[androidx.core:core:1.8.0] C:\Users\dhruv\.gradle\caches\transforms-3\663e836d9efcdc8e609cda38c1cd8a15\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
 43        android:debuggable="true"
-<<<<<<< HEAD
 44        android:icon="@mipmap/robo_icon"
-44-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:22:9-41
-45        android:label="@string/app_name"
-45-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:23:9-41
-46        android:roundIcon="@mipmap/robo_icon_round"
-46-->/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/src/main/AndroidManifest.xml:24:9-52
-=======
-44        android:icon="@mipmap/ic_launcher"
-44-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:22:9-43
+44-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:22:9-41
 45        android:label="@string/app_name"
 45-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:23:9-41
-46        android:roundIcon="@mipmap/ic_launcher_round"
-46-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:24:9-54
->>>>>>> parent of 325091a (Revert "TextBox Updates")
+46        android:roundIcon="@mipmap/robo_icon_round"
+46-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:24:9-52
 47        android:supportsRtl="true"
 47-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:25:9-35
 48        android:testOnly="true"

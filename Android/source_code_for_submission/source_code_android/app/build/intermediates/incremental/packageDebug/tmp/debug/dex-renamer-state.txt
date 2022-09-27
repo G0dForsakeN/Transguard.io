@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-#Tue Sep 27 01:48:24 SGT 2022
-base.0=/Users/jingyen/Documents/NTU/MDP/MDP Projects.nosync/github_ver/Untitled/Android/source_code_for_submission/source_code_android/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
-=======
-#Sat Sep 24 23:28:23 SGT 2022
+#Tue Sep 27 14:45:12 SGT 2022
 base.0=C\:\\Users\\dhruv\\Documents\\GitHub\\MDP_Project_21\\Android\\source_code_for_submission\\source_code_android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
->>>>>>> parent of 325091a (Revert "TextBox Updates")
 renamed.0=classes.dex
 path.0=classes.dex
