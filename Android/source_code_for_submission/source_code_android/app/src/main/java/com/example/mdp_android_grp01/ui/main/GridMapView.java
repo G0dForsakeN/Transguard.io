@@ -1234,7 +1234,6 @@ public class GridMapView extends View {
                 text = obstacleDirectionCoord.get(i)[3];
             }
             else{
-<<<<<<< HEAD
                 white.setTextSize(15);
                 if (obstacleDrag) {
                     text = obstacleDirectionCoord.get(i)[3];
@@ -1242,11 +1241,6 @@ public class GridMapView extends View {
                 else {
                     obstacleDirectionCoord.get(i)[3] = String.valueOf(i);
                     text = String.valueOf(i);
-=======
-                white.setTextSize(20);
-                if (obstacleDirectionCoord.get(i)[3] != String.valueOf(i)) {
-                    obstacleDirectionCoord.get(i)[3] = String.valueOf(i);
->>>>>>> parent of 325091a (Revert "TextBox Updates")
                 }
             }
             switch(obstacleDirectionCoord.get(i)[2]){
