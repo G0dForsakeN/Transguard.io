@@ -327,10 +327,6 @@ public class GridMapView extends View {
         showLog("Exiting createGridCell");
     }
 
-//    public String getCellTypeFromCoordinates(float x, float y){
-//
-//    }
-
     public void setStartCoordinates(int col, int row) {
         showLog("Entering setStartCoordinates");
         startPoint[0] = col;
@@ -1265,8 +1261,24 @@ public class GridMapView extends View {
             canvas.drawBitmap(obstacleDirectionBitmap, null, rect, null);
             showLog("Exiting drawObstacleWithDirection");
         }
-        if(!obstacleDirectionCoord.isEmpty() && isAddObstacle == true){
-            MainActivity.sendMessageToBlueTooth("OBSTACLE: "+ "(" +(Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[0])-1) + "," +(Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[1]) - 1)   + "," + Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[2])+ ","+ Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[3])+")");}
+        if(!obstacleDirectionCoord.isEmpty() && isAddObstacle == true) {
+            switch (Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[2])) {
+                case 0:
+                    MainActivity.sendMessageToBlueTooth("OBSTACLE: " + "(" + (Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[0]) - 1) + "," + (Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[1]) - 1) + "," + Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[2]) + "," + Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[3]) + ")");
+                    break;
+                case 1:
+                    MainActivity.sendMessageToBlueTooth("OBSTACLE: " + "(" + (Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[0]) - 1) + "," + (Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[1]) - 1) + "," + Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[2]) + "," + Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[3]) + ")");
+                    break;
+                case 2:
+                    MainActivity.sendMessageToBlueTooth("OBSTACLE: " + "(" + (Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[0]) - 1) + "," + (Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[1]) - 1) + "," + (Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[2]) + 1) + "," + Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[3]) + ")");
+                    break;
+                case 3:
+                    MainActivity.sendMessageToBlueTooth("OBSTACLE: " + "(" + (Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[0]) - 1) + "," + (Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[1]) - 1) + "," + (Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[2]) - 1) + "," + Integer.parseInt(obstacleDirectionCoord.get(arrayIndex)[3]) + ")");
+                    break;
+                default:
+                    break;
+            }
+        }
         isAddObstacle = false;
     }
 }
