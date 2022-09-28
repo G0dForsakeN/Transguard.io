@@ -727,7 +727,7 @@ public class GridMapView extends View {
                                     directionInt = 2;
                                     break;
                             }
-                            MainActivity.sendMessageToBlueTooth("starting " + "(" + (column - 1) + "," + (row - 1) + "," + directionInt + ")");
+                            MainActivity.sendMessageToBlueTooth("OBSTACLESTOP");
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
