@@ -285,10 +285,52 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
+    private void moveRobot(GridMapView robot, int steps, boolean forward){
+        String dir;
+        if (forward)
+            dir = "forward";
+        else
+            dir = "back";
+
+        for (int i=0; i<steps;i+=10){
+            robot.moveRobot(dir);
+        }
+    }
+
     BroadcastReceiver messageReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             String message = intent.getStringExtra("receivedMessage");
+            showLog("MESSAGEMESSAGE "+message);
+            GridMapView gridMapView = MainActivity.getGridMapDescriptor();
+            if (gridMapView.getCanDrawRobot()){
+                int steps;
+                switch(message.charAt(0)){
+                    case 'Q': //left
+                        steps = Integer.valueOf(message.substring(1,3));
+                        moveRobot(gridMapView, 30,true);
+                        gridMapView.moveRobot("left");
+                        moveRobot(gridMapView, 30,true);
+                        break;
+                    case 'E':// right
+                        steps = Integer.valueOf(message.substring(1,3));
+                        moveRobot(gridMapView, 30,true);
+                        gridMapView.moveRobot("right");
+                        moveRobot(gridMapView, 30,true);
+                        break;
+                    case 'W':// forward
+                        steps = Integer.valueOf(message.substring(1,3));
+                        gridMapView.moveRobot("forward");
+                        moveRobot(gridMapView, steps,true);
+                        break;
+                    case 'S':// back
+                        steps = Integer.valueOf(message.substring(1,3));
+                        gridMapView.moveRobot("back");
+                        moveRobot(gridMapView, steps,false);
+                        break;
+                    default:break;
+                }
+            }
             // From AMDTOOL
             try{
                 if (message.substring(0,5).equals("ROBOT")){

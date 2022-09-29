@@ -1184,7 +1184,7 @@ public class GridMapView extends View {
         directionCoord[0] = String.valueOf(col);
         directionCoord[1] = String.valueOf(row);
         directionCoord[2] = obstacleDirection;
-        directionCoord[3] = String.valueOf(this.getObstacleDirectionCoord().size());
+        directionCoord[3] = String.valueOf(this.getObstacleDirectionCoord().size()+1);
         directionCoord[4] = "F";
         this.getObstacleDirectionCoord().add(directionCoord);
 
@@ -1235,8 +1235,8 @@ public class GridMapView extends View {
                     text = obstacleDirectionCoord.get(i)[3];
                 }
                 else {
-                    obstacleDirectionCoord.get(i)[3] = String.valueOf(i);
-                    text = String.valueOf(i);
+                    obstacleDirectionCoord.get(i)[3] = String.valueOf(i+1);
+                    text = String.valueOf(i+1);
                 }
             }
             switch(obstacleDirectionCoord.get(i)[2]){
