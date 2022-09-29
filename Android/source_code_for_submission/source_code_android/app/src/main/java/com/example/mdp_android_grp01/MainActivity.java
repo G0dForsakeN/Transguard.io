@@ -306,28 +306,32 @@ public class MainActivity extends AppCompatActivity {
             if (gridMapView.getCanDrawRobot()){
                 int steps;
                 switch(message.charAt(0)){
-                    case 'Q': //left
-                        steps = Integer.valueOf(message.substring(1,3));
-                        moveRobot(gridMapView, 30,true);
+                    case 'q': //left
+                        moveRobot(gridMapView, 20,true);
                         gridMapView.moveRobot("left");
-                        moveRobot(gridMapView, 30,true);
+                        moveRobot(gridMapView, 40,true);
                         break;
-                    case 'E':// right
-                        steps = Integer.valueOf(message.substring(1,3));
-                        moveRobot(gridMapView, 30,true);
+                    case 'e':// right
+                        moveRobot(gridMapView, 20,true);
                         gridMapView.moveRobot("right");
-                        moveRobot(gridMapView, 30,true);
+                        moveRobot(gridMapView, 40,true);
                         break;
-                    case 'W':// forward
-                        steps = Integer.valueOf(message.substring(1,3));
-                        gridMapView.moveRobot("forward");
+                    case 'w':// forward
+                        steps = Integer.valueOf(message.substring(2,4));
                         moveRobot(gridMapView, steps,true);
                         break;
-                    case 'S':// back
-                        steps = Integer.valueOf(message.substring(1,3));
-                        gridMapView.moveRobot("back");
+                    case 's':// back
+                        steps = Integer.valueOf(message.substring(2,4));
                         moveRobot(gridMapView, steps,false);
                         break;
+                    case 'd': //reverse right
+                        moveRobot(gridMapView, 40,false);
+                        gridMapView.moveRobot("left");
+                        moveRobot(gridMapView, 30,false);
+                    case 'a': //reverse right
+                        moveRobot(gridMapView, 40,false);
+                        gridMapView.moveRobot("right");
+                        moveRobot(gridMapView, 20,false);
                     default:break;
                 }
             }
