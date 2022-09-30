@@ -317,11 +317,11 @@ public class MainActivity extends AppCompatActivity {
                         moveRobot(gridMapView, 40,true);
                         break;
                     case 'w':// forward
-                        steps = Integer.valueOf(message.substring(2,4));
+                        steps = Integer.valueOf(message.substring(1,4));
                         moveRobot(gridMapView, steps,true);
                         break;
                     case 's':// back
-                        steps = Integer.valueOf(message.substring(2,4));
+                        steps = Integer.valueOf(message.substring(1,4));
                         moveRobot(gridMapView, steps,false);
                         break;
                     case 'd': //reverse right
@@ -331,7 +331,7 @@ public class MainActivity extends AppCompatActivity {
                     case 'a': //reverse right
                         moveRobot(gridMapView, 40,false);
                         gridMapView.moveRobot("right");
-                        moveRobot(gridMapView, 20,false);
+                        moveRobot(gridMapView, 30,false);
                     default:break;
                 }
             }
