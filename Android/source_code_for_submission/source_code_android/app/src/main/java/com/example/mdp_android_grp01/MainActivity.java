@@ -307,12 +307,12 @@ public class MainActivity extends AppCompatActivity {
                 int steps;
                 switch(message.charAt(0)){
                     case 'q': //left
-                        moveRobot(gridMapView, 20,true);
+                        moveRobot(gridMapView, 30,true);
                         gridMapView.moveRobot("left");
                         moveRobot(gridMapView, 40,true);
                         break;
                     case 'e':// right
-                        moveRobot(gridMapView, 20,true);
+                        moveRobot(gridMapView, 30,true);
                         gridMapView.moveRobot("right");
                         moveRobot(gridMapView, 40,true);
                         break;
@@ -326,12 +326,14 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 'd': //reverse right
                         moveRobot(gridMapView, 40,false);
-                        gridMapView.moveRobot("right");
-                        moveRobot(gridMapView, 30,false);
-                    case 'a': //reverse right
-                        moveRobot(gridMapView, 40,false);
                         gridMapView.moveRobot("left");
                         moveRobot(gridMapView, 30,false);
+                        break;
+                    case 'a': //reverse right
+                        moveRobot(gridMapView, 40,false);
+                        gridMapView.moveRobot("right");
+                        moveRobot(gridMapView, 30,false);
+                        break;
                     default:break;
                 }
             }
