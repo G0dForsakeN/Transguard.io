@@ -326,11 +326,11 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 'd': //reverse right
                         moveRobot(gridMapView, 40,false);
-                        gridMapView.moveRobot("left");
+                        gridMapView.moveRobot("right");
                         moveRobot(gridMapView, 30,false);
                     case 'a': //reverse right
                         moveRobot(gridMapView, 40,false);
-                        gridMapView.moveRobot("right");
+                        gridMapView.moveRobot("left");
                         moveRobot(gridMapView, 30,false);
                     default:break;
                 }
