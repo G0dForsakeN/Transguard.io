@@ -358,7 +358,7 @@ public class MapTabFragmentController extends Fragment {
                 showLog("Clicked setSouthObstacleDirectionButton");
                 GridMapView.isObstacleDirectionCoordinatesSet = true;
                 // GridMap.isAddObstacle = true;
-                GridMapView.obstacleDirection = "2";
+                GridMapView.obstacleDirection = "3";
                 int x =  (int) e.getRawX();
                 int y = (int) e.getRawY();
                 if(e.getAction() == MotionEvent.ACTION_DOWN){
@@ -445,7 +445,7 @@ public class MapTabFragmentController extends Fragment {
                 showLog("Clicked setWestObstacleDirectionButton");
                 GridMapView.isObstacleDirectionCoordinatesSet = true;
                 // GridMap.isAddObstacle = true;
-                GridMapView.obstacleDirection = "3";
+                GridMapView.obstacleDirection = "2";
                 int x =  (int) e.getRawX();
                 int y = (int) e.getRawY();
                 if(e.getAction() == MotionEvent.ACTION_DOWN){
@@ -555,7 +555,7 @@ public class MapTabFragmentController extends Fragment {
         }
     });
 
-        setWestObstacleDirectionButton.setOnDragListener(new View.OnDragListener() {
+        setEastObstacleDirectionButton.setOnDragListener(new View.OnDragListener() {
         @Override
         public boolean onDrag(View v, DragEvent event) {
             switch (event.getAction()){

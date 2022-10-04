@@ -307,14 +307,14 @@ public class MainActivity extends AppCompatActivity {
                 int steps;
                 switch(message.charAt(0)){
                     case 'q': //left
-                        moveRobot(gridMapView, 30,true);
+                        moveRobot(gridMapView, 20,true);
                         gridMapView.moveRobot("left");
-                        moveRobot(gridMapView, 40,true);
+                        moveRobot(gridMapView, 30,true);
                         break;
                     case 'e':// right
-                        moveRobot(gridMapView, 30,true);
+                        moveRobot(gridMapView, 20,true);
                         gridMapView.moveRobot("right");
-                        moveRobot(gridMapView, 40,true);
+                        moveRobot(gridMapView, 30,true);
                         break;
                     case 'w':// forward
                         steps = Integer.valueOf(message.substring(1,4));
@@ -325,14 +325,14 @@ public class MainActivity extends AppCompatActivity {
                         moveRobot(gridMapView, steps,false);
                         break;
                     case 'd': //reverse right
-                        moveRobot(gridMapView, 40,false);
-                        gridMapView.moveRobot("left");
                         moveRobot(gridMapView, 30,false);
+                        gridMapView.moveRobot("left");
+                        moveRobot(gridMapView, 20,false);
                         break;
                     case 'a': //reverse right
-                        moveRobot(gridMapView, 40,false);
-                        gridMapView.moveRobot("right");
                         moveRobot(gridMapView, 30,false);
+                        gridMapView.moveRobot("right");
+                        moveRobot(gridMapView, 20,false);
                         break;
                     default:break;
                 }
