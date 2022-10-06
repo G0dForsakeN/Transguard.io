@@ -753,7 +753,7 @@ public class GridMapView extends View {
                                     directionInt = 2;
                                     break;
                             }
-                            MainActivity.sendMessageToBlueTooth("OBSTACLESTOP");
+                            MainActivity.sendMessageToBlueTooth("STARTRUN");
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
