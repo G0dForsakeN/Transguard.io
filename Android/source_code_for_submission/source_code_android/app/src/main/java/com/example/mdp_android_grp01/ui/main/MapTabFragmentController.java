@@ -39,7 +39,7 @@ public class MapTabFragmentController extends Fragment {
 
     Button resetButton;
 //    Button updateButton;
-    ImageButton changeDirectionButton;
+//    ImageButton changeDirectionButton;
     ImageButton setNorthObstacleDirectionButton;
     ImageButton setSouthObstacleDirectionButton;
     ImageButton setWestObstacleDirectionButton;
@@ -49,7 +49,7 @@ public class MapTabFragmentController extends Fragment {
     ToggleButton startPointButton;
 //    ToggleButton wayPointButton;
 //    Switch switchManualOrAuto;
-    Switch toggleDirection;
+    ToggleButton toggleDirection;
     GridMapView gridMapViewDescriptor;
     private static boolean updateAuto = false;
     public static boolean isUpdateRequestManual = false;
@@ -94,7 +94,7 @@ public class MapTabFragmentController extends Fragment {
         resetButton = root.findViewById(R.id.resetMapBtn);
         startPointButton = root.findViewById(R.id.startpointbtn);
 //        wayPointButton = root.findViewById(R.id.waypointbtn);
-        changeDirectionButton = root.findViewById(R.id.directionBTN);
+//        changeDirectionButton = root.findViewById(R.id.directionBTN);
 
         obstacleButton = root.findViewById(R.id.addobstaclebtn);
         clearButton = root.findViewById(R.id.clearbtn);
@@ -158,14 +158,14 @@ public class MapTabFragmentController extends Fragment {
 //            }
 //        });
 
-        changeDirectionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showLog("Clicked directionChangeImageBtn");
-                mapDirectionFragmentView.show(getActivity().getFragmentManager(), "Direction Fragment");
-                showLog("Exiting directionChangeImageBtn");
-            }
-        });
+//        changeDirectionButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                showLog("Clicked directionChangeImageBtn");
+//                mapDirectionFragmentView.show(getActivity().getFragmentManager(), "Direction Fragment");
+//                showLog("Exiting directionChangeImageBtn");
+//            }
+//        });
 
 
         obstacleButton.setOnClickListener(new View.OnClickListener() {
@@ -248,15 +248,18 @@ public class MapTabFragmentController extends Fragment {
 //            }
 //        });
 
+        toggleDirection.setBackground(getResources().getDrawable(R.drawable.change_dir_on));
         toggleDirection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (toggleDirection.getText().equals("toggleDirection")) {
+                if (toggleDirection.getText().equals("y")) {
+                        toggleDirection.setBackground(getResources().getDrawable(R.drawable.change_dir_off));
                         gridMapViewDescriptor.setChangeDirection(true);
                         toggleDirection.setText(getResources().getString(R.string.off1));
                     showToast("CHANGING DIRECTION");
                 }
-                else if (toggleDirection.getText().equals("off")) {
+                else if (toggleDirection.getText().equals("n")) {
+                        toggleDirection.setBackground(getResources().getDrawable(R.drawable.change_dir_on));
                         gridMapViewDescriptor.setChangeDirection(false);
                         toggleDirection.setText(getResources().getString(R.string.toggleDirection));
                     showToast("OFF");

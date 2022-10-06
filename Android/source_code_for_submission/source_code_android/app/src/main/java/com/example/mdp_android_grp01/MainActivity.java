@@ -11,6 +11,8 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private static SharedPreferences sharedPreferencesInterface;
     private static SharedPreferences.Editor editorSharedPreferences;
     private static Context context;
+    private static ImageView raceCar;
 
     BluetoothDevice btDevice;
     ProgressDialog progressDialogBox;
@@ -131,9 +134,10 @@ public class MainActivity extends AppCompatActivity {
         editorSharedPreferences.putString("direction","None");
         editorSharedPreferences.putString("connStatus", "Disconnected");
         editorSharedPreferences.commit();
-
         gridMapViewDescriptor = new GridMapView(this);
         gridMapViewDescriptor = findViewById(R.id.mapView);
+        raceCar = findViewById(R.id.racecar);
+        raceCar.setVisibility(View.INVISIBLE);
         xAxisTextView = findViewById(R.id.xAxisTextView);
         yAxisTextView = findViewById(R.id.yAxisTextView);
         directionTextView = findViewById(R.id.directionAxisTextView);
@@ -169,6 +173,23 @@ public class MainActivity extends AppCompatActivity {
     public static void sharedPreferences() {
         sharedPreferencesInterface = MainActivity.getSharedPreferences(MainActivity.context);
         editorSharedPreferences = sharedPreferencesInterface.edit();
+    }
+
+    public static ImageView getRaceCar(){return raceCar;}
+
+    public static void updateRaceCar(int col, int row,String direction){
+        float sizeOfCell = gridMapViewDescriptor.getCellSize();
+        float dir;
+        switch(direction){
+            case "up": dir=0;
+                raceCar.animate().x((col-1) * sizeOfCell).y((float) (row-1 ) * sizeOfCell).rotation(dir).start();
+            break;
+            case "down": dir=180;
+                raceCar.animate().x((col-1) * sizeOfCell).y((float) (row-1 ) * sizeOfCell).rotation(dir).start();break;
+            case"left": dir=270;    break;
+            case "right": dir=90;   break;
+            default: dir = 0;
+        }
     }
 
     // Send message to bluetooth

@@ -28,6 +28,10 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxxhdpi/ic_launcher_background.png"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_mdpcar.png.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/drawable-v25/mdpcar.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable_west_obstacle.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable/west_obstacle.png"
     },
@@ -48,12 +52,12 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable-v24/paireddev.png"
     },
     {
-        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_c_position1.png.flat",
-        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable-v25/c_position1.png"
-    },
-    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_ic_baseline_update_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxxhdpi/ic_baseline_update_24.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_c_position1.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable-v25/c_position1.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxhdpi_ic_launcher_background.png.flat",
@@ -100,6 +104,10 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-mdpi_change_dir_off.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-mdpi/change_dir_off.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/layout_activity_main.xml.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/layout/activity_main.xml"
     },
@@ -132,6 +140,10 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable/northobstaclebtn.jpeg"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-hdpi_change_dir_off.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-hdpi/change_dir_off.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxhdpi_ic_baseline_bluetooth_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxhdpi/ic_baseline_bluetooth_24.png"
     },
@@ -156,6 +168,14 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v21/ic_launcher_background.xml"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-mdpi_x.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-mdpi/x.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-mdpi_racecar_foreground.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/mipmap-mdpi/racecar_foreground.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxhdpi_ic_baseline_arrow_back_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxhdpi/ic_baseline_arrow_back_24.png"
     },
@@ -168,12 +188,20 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable/border_black_background.xml"
     },
     {
+        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/layout_activity_main.xml.flat",
+        "source": "com.example.mdp_android_grp01.app-main-34:/layout/activity_main.xml"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_ic_baseline_arrow_forward_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxxhdpi/ic_baseline_arrow_forward_24.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxhdpi_ic_baseline_map_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxhdpi/ic_baseline_map_24.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-anydpi-v21_change_dir_off.xml.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v21/change_dir_off.xml"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-mdpi_ic_baseline_arrow_downward_24.png.flat",
@@ -186,10 +214,6 @@
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_ic_baseline_arrow_back_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxxhdpi/ic_baseline_arrow_back_24.png"
-    },
-    {
-        "merged": "com.example.mdp_android_grp01.app-merged_res-32:/layout_activity_map.xml.flat",
-        "source": "com.example.mdp_android_grp01.app-main-34:/layout/activity_map.xml"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-hdpi_robocar_icon.png.flat",
@@ -212,6 +236,10 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable/button_normal.xml"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-anydpi-v21_x.xml.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v21/x.xml"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable_button_normal2.xml.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable/button_normal2.xml"
     },
@@ -222,6 +250,10 @@
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xxhdpi_robocar_icon.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/mipmap-xxhdpi/robocar_icon.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_change_dir_off.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxxhdpi/change_dir_off.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable_southobstaclebtn.jpeg.flat",
@@ -274,6 +306,10 @@
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable_pairingstatus.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable/pairingstatus.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-hdpi_x.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-hdpi/x.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_ic_baseline_bluetooth_24.png.flat",
@@ -336,6 +372,10 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xhdpi/ic_baseline_restore_24.png"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xhdpi_x.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xhdpi/x.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xhdpi_ic_baseline_info_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xhdpi/ic_baseline_info_24.png"
     },
@@ -344,8 +384,16 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/mipmap-xxhdpi/robo_icon.png"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-hdpi_change_dir_on.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-hdpi/change_dir_on.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-v24_group1.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable-v24/group1.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xhdpi_racecar_foreground.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/mipmap-xhdpi/racecar_foreground.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_rect21.png.flat",
@@ -354,6 +402,10 @@
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable_ic_arrow_right.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable/ic_arrow_right.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-ldpi_x.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-ldpi/x.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxhdpi_ic_baseline_compass_calibration_24.png.flat",
@@ -376,6 +428,10 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable-v24/bottom_line.xml"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxhdpi_change_dir_on.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxhdpi/change_dir_on.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xhdpi_ic_baseline_compass_calibration_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xhdpi/ic_baseline_compass_calibration_24.png"
     },
@@ -394,6 +450,10 @@
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_control_background.xml.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable-v25/control_background.xml"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xxhdpi_racecar_foreground.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/mipmap-xxhdpi/racecar_foreground.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxhdpi_ic_baseline_search_24.png.flat",
@@ -416,6 +476,10 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxhdpi/ic_baseline_info_24.png"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xhdpi_change_dir_off.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xhdpi/change_dir_off.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable_ic_send.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable/ic_send.png"
     },
@@ -428,8 +492,8 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable/east_obstacle.png"
     },
     {
-        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable_control_background.xml.flat",
-        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable/control_background.xml"
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_x.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxxhdpi/x.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xhdpi_ic_launcher_round.png.flat",
@@ -456,8 +520,16 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-hdpi/ic_launcher_background.png"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable_mdp_racecar.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable/mdp_racecar.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_ic_baseline_compass_calibration_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxxhdpi/ic_baseline_compass_calibration_24.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable_dir_button_on.xml.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable/dir_button_on.xml"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_ic_baseline_info_24.png.flat",
@@ -478,6 +550,10 @@
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-mdpi_ic_baseline_map_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-mdpi/ic_baseline_map_24.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-ldpi_change_dir_on.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-ldpi/change_dir_on.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-mdpi_ic_baseline_arrow_forward_24.png.flat",
@@ -536,12 +612,20 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/mipmap-hdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xxxhdpi_racecar_foreground.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/mipmap-xxxhdpi/racecar_foreground.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/layout_bluetooth_pop_up_window.xml.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/layout/bluetooth_pop_up_window.xml"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_devicesfound.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable-v25/devicesfound.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-widecg_mdp_racecar.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable-widecg/mdp_racecar.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_ic_baseline_map_24.png.flat",
@@ -624,6 +708,10 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v21/ic_baseline_map_24.xml"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_toronto.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable-v25/toronto.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-anydpi-v25_tab_bluetooth_image.xml.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v25/tab_bluetooth_image.xml"
     },
@@ -642,6 +730,10 @@
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_ic_baseline_arrow_upward_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxxhdpi/ic_baseline_arrow_upward_24.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_change_dir_on.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxxhdpi/change_dir_on.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-mdpi_tab_automation_image.png.flat",
@@ -716,8 +808,16 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable-v25/command_text_background.xml"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-hdpi_racecar_foreground.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/mipmap-hdpi/racecar_foreground.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xhdpi_ic_baseline_add_location_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xhdpi/ic_baseline_add_location_24.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-mdpi_change_dir_on.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-mdpi/change_dir_on.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-anydpi-v25_tab_automation_selected.xml.flat",
@@ -730,6 +830,10 @@
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_c_command_image.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable-v25/c_command_image.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxhdpi_change_dir_off.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxhdpi/change_dir_off.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-hdpi_ic_baseline_restore_24.png.flat",
@@ -746,6 +850,10 @@
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-anydpi-v25_remove_image.xml.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v25/remove_image.xml"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-ldpi_change_dir_off.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-ldpi/change_dir_off.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-mdpi_ic_baseline_bluetooth_24.png.flat",
@@ -808,6 +916,10 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-ldpi/ic_baseline_compass_calibration_24.png"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xhdpi_change_dir_on.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xhdpi/change_dir_on.png"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxxhdpi_ic_baseline_search_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxxhdpi/ic_baseline_search_24.png"
     },
@@ -854,6 +966,10 @@
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-v25_bluetooth_list.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/drawable-v25/bluetooth_list.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-mdpi_robo_icon_round.png.flat",
@@ -928,16 +1044,20 @@
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xhdpi/ic_baseline_settings_24.png"
     },
     {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-anydpi-v21_change_dir_on.xml.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-anydpi-v21/change_dir_on.xml"
+    },
+    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xhdpi_ic_launcher_background.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xhdpi/ic_launcher_background.png"
     },
     {
-        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/mipmap-mdpi/ic_launcher.png"
-    },
-    {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-hdpi_ic_baseline_compass_calibration_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-hdpi/ic_baseline_compass_calibration_24.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-main-34:/mipmap-mdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/mipmap-mdpi_robo_icon.png.flat",
@@ -962,6 +1082,10 @@
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-hdpi_ic_baseline_arrow_downward_24.png.flat",
         "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-hdpi/ic_baseline_arrow_downward_24.png"
+    },
+    {
+        "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-xxhdpi_x.png.flat",
+        "source": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-pngs-27:/drawable-xxhdpi/x.png"
     },
     {
         "merged": "/Users/jingyen/.gradle/daemon/7.5.1/com.example.mdp_android_grp01.app-merged_res-32:/drawable-anydpi-v21_tab_automation_image.xml.flat",

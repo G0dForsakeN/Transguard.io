@@ -25,8 +25,8 @@
     <string name="auto">AUTO</string>
     <string name="on">ON</string>
     <string name="off">OFF</string>
-    <string name="off1">off</string>
-    <string name="toggleDirection">toggleDirection</string>
+    <string name="off1">y</string>
+    <string name="toggleDirection">n</string>
     <string name="unavail">unavailable</string>
     <string name="tilt_off">TILT OFF</string>
     <string name="tilt_on">TILT ON</string>

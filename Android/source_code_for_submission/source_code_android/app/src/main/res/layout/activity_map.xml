@@ -63,7 +63,7 @@
         android:drawableLeft="@drawable/reset_image"
         android:drawablePadding="-15dp"
         android:includeFontPadding="false"
-        android:paddingLeft="10dp"
+        android:paddingLeft="15dp"
         android:paddingBottom="7dp"
         android:text="Reset Map"
         android:textAlignment="center"
@@ -75,24 +75,31 @@
         app:layout_constraintStart_toEndOf="@+id/startpointbtn"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ImageButton
         android:id="@+id/clearbtn"
         android:layout_width="52dp"
         android:layout_height="52dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/control_background"
         android:src="@drawable/remove_image"
-        app:layout_constraintStart_toEndOf="@+id/directionBTN"
-        app:layout_constraintTop_toTopOf="@+id/directionBTN" />
+        app:layout_constraintStart_toStartOf="@+id/addobstaclebtn"
+        app:layout_constraintTop_toBottomOf="@+id/addobstaclebtn" />
 
-    <ImageButton
-        android:id="@+id/directionBTN"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/control_background"
+    <ToggleButton
+        android:id="@+id/ChangeDirectionBtn"
+        android:layout_width="66dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:paddingLeft="10dp"
         android:src="@drawable/change_direction_image"
+        android:text="n"
+        android:textColor="@color/brown"
+        android:textOff="n"
+        android:textOn="y"
+        android:textSize="1dp"
         app:layout_constraintStart_toStartOf="@+id/addobstaclebtn"
         app:layout_constraintTop_toBottomOf="@+id/addobstaclebtn" />
 
@@ -185,20 +192,5 @@
 
     </LinearLayout>
 
-    <Switch
-        android:id="@+id/ChangeDirectionBtn"
-        android:layout_width="210dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="84dp"
-        android:switchPadding="20dp"
-        android:text="toggleDirection"
-        android:textAlignment="center"
-        android:textOff="off"
-        android:textOn="toggleDirection"
-        android:textSize="20sp"
-        android:textStyle="bold"
-
-        app:layout_constraintEnd_toEndOf="@+id/clearbtn"
-        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

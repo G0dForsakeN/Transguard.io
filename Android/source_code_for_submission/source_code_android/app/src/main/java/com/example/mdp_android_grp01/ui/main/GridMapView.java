@@ -23,6 +23,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 import android.os.Handler;
@@ -51,7 +52,7 @@ public class GridMapView extends View {
     }
 
     SharedPreferences sharedPreferences;
-
+    ImageView raceCar = findViewById(R.id.racecar);
     private Paint black = new Paint();
     private Paint obstacle = new Paint();
     private Paint robot = new Paint();
@@ -104,7 +105,7 @@ public class GridMapView extends View {
         initMap();
         black.setStyle(Paint.Style.FILL_AND_STROKE);
         obstacle.setColor(Color.BLACK);
-        robot.setColor(Color.GREEN);
+        robot.setColor(Color.WHITE);
         //end.setColor(Color.RED);
         start.setColor(Color.CYAN);
         waypoint.setColor(Color.YELLOW);
@@ -335,8 +336,12 @@ public class GridMapView extends View {
         if (direction.equals("None")) {
             direction = "up";
         }
+        ImageView racecar = MainActivity.getRaceCar();
+
         if (this.getStartCoordStatus())
             this.setCurrentCoordinates(col, row, direction);
+        racecar.setX((col-1) * sizeOfCell);
+        racecar.setY((convertRow(row)-1 ) * sizeOfCell);
         showLog("Exiting setStartCoordinates");
     }
 
@@ -352,6 +357,7 @@ public class GridMapView extends View {
         this.updateAxisOfRobot(col, row, direction);
 
         row = this.convertRow(row);
+        MainActivity.updateRaceCar(col,row,direction);
         for (int x = col - 1; x <= col + 1; x++)
             for (int y = row - 1; y <= row + 1; y++)
                 cellsDetail[x][y].setType("robot");
@@ -375,7 +381,7 @@ public class GridMapView extends View {
         GridMapView.sizeOfCell = cellSize;
     }
 
-    private float getCellSize() {
+    public float getCellSize() {
         return sizeOfCell;
     }
 
@@ -700,6 +706,7 @@ public class GridMapView extends View {
                             Toast.makeText(getContext(), "invalid position for start point!", Toast.LENGTH_SHORT).show();
                             return true;
                         }
+                        MainActivity.getRaceCar().setVisibility(View.VISIBLE);
                         if (isRobotDrawable) {
                             int[] startCoord = this.getStartCoordinates();
                             if (startCoord[0] >= 2 && startCoord[1] >= 2) {
@@ -835,7 +842,7 @@ public class GridMapView extends View {
         TextView dirTextView = ((Activity) this.getContext()).findViewById(R.id.directionAxisTextView);
         Switch manualAutoToggleBtn = ((Activity) this.getContext()).findViewById(R.id.manualAutoBtn);
         Switch phoneTiltSwitch = ((Activity) this.getContext()).findViewById(R.id.phoneTiltSwitch);
-
+        MainActivity.getRaceCar().setVisibility(View.INVISIBLE);
         MainActivity.sendMessageToBlueTooth("OBSTACLECLEAR");
         xaxisTextView.setText("-");
         yaxisTextView.setText("-");

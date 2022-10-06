@@ -2612,6 +2612,7 @@ drawable avd_show_password
 drawable backtext
 drawable bad_send
 drawable bluetooth_image
+drawable bluetooth_list
 drawable bluetooth_search_button
 drawable bluetoothbuttonrectangle
 drawable bluetoothsymbol
@@ -2643,6 +2644,8 @@ drawable c_position2
 drawable c_send_control_background
 drawable c_status
 drawable calibrate_image
+drawable change_dir_off
+drawable change_dir_on
 drawable change_direction
 drawable change_direction_image
 drawable command_input_background
@@ -2676,6 +2679,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable devicesfound
+drawable dir_button_on
 drawable east_obstacle
 drawable eastobstaclebtn
 drawable googleg_disabled_color_18
@@ -2738,6 +2742,8 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable mdp_racecar
+drawable mdpcar
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -2815,9 +2821,11 @@ drawable textborder
 drawable timer_box
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable toronto
 drawable update_image
 drawable west_obstacle
 drawable westobstaclebtn
+drawable x
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3205,6 +3213,7 @@ id postLayout
 id pressed
 id progress_circular
 id progress_horizontal
+id racecar
 id radio
 id ratio
 id rectangles
@@ -3584,6 +3593,7 @@ layout support_simple_spinner_dropdown_item
 mipmap finish_line_icon
 mipmap ic_launcher
 mipmap ic_launcher_round
+mipmap racecar_foreground
 mipmap robo_icon
 mipmap robo_icon_round
 mipmap robocar_icon
