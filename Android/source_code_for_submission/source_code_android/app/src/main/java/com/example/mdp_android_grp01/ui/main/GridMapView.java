@@ -109,8 +109,8 @@ public class GridMapView extends View {
         //end.setColor(Color.RED);
         start.setColor(Color.CYAN);
         waypoint.setColor(Color.YELLOW);
-        unExplored.setColor(Color.LTGRAY);
-        explored.setColor(Color.WHITE);
+        unExplored.setColor(getResources().getColor(R.color.lt_beige));
+        explored.setColor(getResources().getColor(R.color.brown));
         sharedPreferences = getContext().getSharedPreferences("Shared Preferences", Context.MODE_PRIVATE);
     }
 
@@ -217,27 +217,27 @@ public class GridMapView extends View {
             x++;
         }
 
-        switch (this.getRobotDirection()) {
-            case "up":
-                canvas.drawLine(cellsDetail[curCoord[0] - 1][rowCoordinates + 1].startX, cellsDetail[curCoord[0] - 1][rowCoordinates + 1].endY, (cellsDetail[curCoord[0]][rowCoordinates - 1].startX + cellsDetail[curCoord[0]][rowCoordinates - 1].endX) / 2, cellsDetail[curCoord[0]][rowCoordinates - 1].startY, black);
-                canvas.drawLine((cellsDetail[curCoord[0]][rowCoordinates - 1].startX + cellsDetail[curCoord[0]][rowCoordinates - 1].endX) / 2, cellsDetail[curCoord[0]][rowCoordinates - 1].startY, cellsDetail[curCoord[0] + 1][rowCoordinates + 1].endX, cellsDetail[curCoord[0] + 1][rowCoordinates + 1].endY, black);
-                break;
-            case "down":
-                canvas.drawLine(cellsDetail[curCoord[0] - 1][rowCoordinates - 1].startX, cellsDetail[curCoord[0] - 1][rowCoordinates - 1].startY, (cellsDetail[curCoord[0]][rowCoordinates + 1].startX + cellsDetail[curCoord[0]][rowCoordinates + 1].endX) / 2, cellsDetail[curCoord[0]][rowCoordinates + 1].endY, black);
-                canvas.drawLine((cellsDetail[curCoord[0]][rowCoordinates + 1].startX + cellsDetail[curCoord[0]][rowCoordinates + 1].endX) / 2, cellsDetail[curCoord[0]][rowCoordinates + 1].endY, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endX, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].startY, black);
-                break;
-            case "right":
-                canvas.drawLine(cellsDetail[curCoord[0] - 1][rowCoordinates - 1].startX, cellsDetail[curCoord[0] - 1][rowCoordinates - 1].startY, cellsDetail[curCoord[0] + 1][rowCoordinates].endX, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endY + (cellsDetail[curCoord[0] + 1][rowCoordinates].endY - cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endY) / 2, black);
-                canvas.drawLine(cellsDetail[curCoord[0] + 1][rowCoordinates].endX, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endY + (cellsDetail[curCoord[0] + 1][rowCoordinates].endY - cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endY) / 2, cellsDetail[curCoord[0] - 1][rowCoordinates + 1].startX, cellsDetail[curCoord[0] - 1][rowCoordinates + 1].endY, black);
-                break;
-            case "left":
-                canvas.drawLine(cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endX, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].startY, cellsDetail[curCoord[0] - 1][rowCoordinates].startX, cellsDetail[curCoord[0] - 1][rowCoordinates - 1].endY + (cellsDetail[curCoord[0] - 1][rowCoordinates].endY - cellsDetail[curCoord[0] - 1][rowCoordinates - 1].endY) / 2, black);
-                canvas.drawLine(cellsDetail[curCoord[0] - 1][rowCoordinates].startX, cellsDetail[curCoord[0] - 1][rowCoordinates - 1].endY + (cellsDetail[curCoord[0] - 1][rowCoordinates].endY - cellsDetail[curCoord[0] - 1][rowCoordinates - 1].endY) / 2, cellsDetail[curCoord[0] + 1][rowCoordinates + 1].endX, cellsDetail[curCoord[0] + 1][rowCoordinates + 1].endY, black);
-                break;
-            default:
-                Toast.makeText(this.getContext(), "Error with drawing robot (unknown direction)", Toast.LENGTH_LONG).show();
-                break;
-        }
+//        switch (this.getRobotDirection()) {
+//            case "up":
+//                canvas.drawLine(cellsDetail[curCoord[0] - 1][rowCoordinates + 1].startX, cellsDetail[curCoord[0] - 1][rowCoordinates + 1].endY, (cellsDetail[curCoord[0]][rowCoordinates - 1].startX + cellsDetail[curCoord[0]][rowCoordinates - 1].endX) / 2, cellsDetail[curCoord[0]][rowCoordinates - 1].startY, black);
+//                canvas.drawLine((cellsDetail[curCoord[0]][rowCoordinates - 1].startX + cellsDetail[curCoord[0]][rowCoordinates - 1].endX) / 2, cellsDetail[curCoord[0]][rowCoordinates - 1].startY, cellsDetail[curCoord[0] + 1][rowCoordinates + 1].endX, cellsDetail[curCoord[0] + 1][rowCoordinates + 1].endY, black);
+//                break;
+//            case "down":
+//                canvas.drawLine(cellsDetail[curCoord[0] - 1][rowCoordinates - 1].startX, cellsDetail[curCoord[0] - 1][rowCoordinates - 1].startY, (cellsDetail[curCoord[0]][rowCoordinates + 1].startX + cellsDetail[curCoord[0]][rowCoordinates + 1].endX) / 2, cellsDetail[curCoord[0]][rowCoordinates + 1].endY, black);
+//                canvas.drawLine((cellsDetail[curCoord[0]][rowCoordinates + 1].startX + cellsDetail[curCoord[0]][rowCoordinates + 1].endX) / 2, cellsDetail[curCoord[0]][rowCoordinates + 1].endY, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endX, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].startY, black);
+//                break;
+//            case "right":
+//                canvas.drawLine(cellsDetail[curCoord[0] - 1][rowCoordinates - 1].startX, cellsDetail[curCoord[0] - 1][rowCoordinates - 1].startY, cellsDetail[curCoord[0] + 1][rowCoordinates].endX, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endY + (cellsDetail[curCoord[0] + 1][rowCoordinates].endY - cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endY) / 2, black);
+//                canvas.drawLine(cellsDetail[curCoord[0] + 1][rowCoordinates].endX, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endY + (cellsDetail[curCoord[0] + 1][rowCoordinates].endY - cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endY) / 2, cellsDetail[curCoord[0] - 1][rowCoordinates + 1].startX, cellsDetail[curCoord[0] - 1][rowCoordinates + 1].endY, black);
+//                break;
+//            case "left":
+//                canvas.drawLine(cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endX, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].startY, cellsDetail[curCoord[0] - 1][rowCoordinates].startX, cellsDetail[curCoord[0] - 1][rowCoordinates - 1].endY + (cellsDetail[curCoord[0] - 1][rowCoordinates].endY - cellsDetail[curCoord[0] - 1][rowCoordinates - 1].endY) / 2, black);
+//                canvas.drawLine(cellsDetail[curCoord[0] - 1][rowCoordinates].startX, cellsDetail[curCoord[0] - 1][rowCoordinates - 1].endY + (cellsDetail[curCoord[0] - 1][rowCoordinates].endY - cellsDetail[curCoord[0] - 1][rowCoordinates - 1].endY) / 2, cellsDetail[curCoord[0] + 1][rowCoordinates + 1].endX, cellsDetail[curCoord[0] + 1][rowCoordinates + 1].endY, black);
+//                break;
+//            default:
+//                Toast.makeText(this.getContext(), "Error with drawing robot (unknown direction)", Toast.LENGTH_LONG).show();
+//                break;
+//        }
         showLog("Exiting displayRobotOnGrid");
     }
 

@@ -179,16 +179,20 @@ public class MainActivity extends AppCompatActivity {
 
     public static void updateRaceCar(int col, int row,String direction){
         float sizeOfCell = gridMapViewDescriptor.getCellSize();
-        float dir;
         switch(direction){
-            case "up": dir=0;
-                raceCar.animate().x((col-1) * sizeOfCell).y((float) (row-1 ) * sizeOfCell).rotation(dir).start();
-            break;
-            case "down": dir=180;
-                raceCar.animate().x((col-1) * sizeOfCell).y((float) (row-1 ) * sizeOfCell).rotation(dir).start();break;
-            case"left": dir=270;    break;
-            case "right": dir=90;   break;
-            default: dir = 0;
+            case "up":
+                raceCar.animate().x((col-1) * sizeOfCell).y((float) (row-1 ) * sizeOfCell).rotation(0).start();
+                break;
+            case "down":
+                raceCar.animate().x((col-1) * sizeOfCell).y((float) (row-1 ) * sizeOfCell).rotation(180).start();
+                break;
+            case"left":
+                raceCar.animate().x((col-1) * sizeOfCell).y((float) (row-1 ) * sizeOfCell).rotation(270).start();
+                break;
+            case "right":
+                raceCar.animate().x((col-1) * sizeOfCell).y((float) (row-1 ) * sizeOfCell).rotation(-270).start();
+                break;
+            default: raceCar.animate().x((col-1) * sizeOfCell).y((float) (row-1 ) * sizeOfCell).rotation(0).start();;
         }
     }
 
