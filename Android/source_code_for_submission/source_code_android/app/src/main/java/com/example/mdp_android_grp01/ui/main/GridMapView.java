@@ -589,6 +589,23 @@ public class GridMapView extends View {
         return false;
     }
 
+    public void addObstacleViaText(int x,int y){
+        //MainActivity.sendMessageToBlueTooth("Y"+Integer.toString(column));
+        ArrayList<int[]> obstacleCoord = this.getCoordinatesOfObstacle();
+        for (int i = 0; i < obstacleCoord.size(); i++){
+            if (obstacleCoord.get(i)[0] == x && obstacleCoord.get(i)[1] == y) {
+                showLog("existing obstacle at position");
+                return;
+            }
+        }
+        this.setCoordinatesOfObstacle(x, y);
+        setObstacleDirectionCoordinate(x, y, obstacleDirection);
+//                        MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle coordinates %d,%d",column, convertRow(row)));
+        this.isObstacleDirectionCoordinatesSet = false;
+        isAddObstacle = true;
+        this.invalidate();
+    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 

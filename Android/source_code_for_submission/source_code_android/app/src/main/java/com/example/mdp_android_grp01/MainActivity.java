@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_main);
         SectionsStateAdapterController SectionsStateAdapterController = new SectionsStateAdapterController(this, getSupportFragmentManager(), getLifecycle());
         ViewPager2 viewPager = findViewById(R.id.view_pager);
@@ -137,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         gridMapViewDescriptor = new GridMapView(this);
         gridMapViewDescriptor = findViewById(R.id.mapView);
         raceCar = findViewById(R.id.racecar);
-        raceCar.setVisibility(View.INVISIBLE);
+        raceCar.setVisibility(View.GONE);
         xAxisTextView = findViewById(R.id.xAxisTextView);
         yAxisTextView = findViewById(R.id.yAxisTextView);
         directionTextView = findViewById(R.id.directionAxisTextView);

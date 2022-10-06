@@ -27,6 +27,8 @@ anim design_bottom_sheet_slide_in
 anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
+anim fadein
+anim fadeout
 anim fragment_fast_out_extra_slow_in
 anim linear_indeterminate_line1_head_interpolator
 anim linear_indeterminate_line1_tail_interpolator
@@ -3187,6 +3189,7 @@ id northObstacleBTN
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id obstaclebtn
 id off
 id on
 id onInterceptTouchReturnSwipe
@@ -3379,7 +3382,9 @@ id wrap_content_constrained
 id xAxisTextView
 id x_left
 id x_right
+id xcoord
 id yAxisTextView
+id ycoord
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer app_bar_elevation_anim_duration

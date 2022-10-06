@@ -103,12 +103,13 @@
         app:layout_constraintStart_toStartOf="@+id/addobstaclebtn"
         app:layout_constraintTop_toBottomOf="@+id/addobstaclebtn" />
 
+
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="440dp"
+        android:layout_width="540dp"
         android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="104dp"
         android:gravity="center_horizontal"
         android:paddingLeft="25dp"
         android:paddingTop="10dp"
@@ -188,9 +189,37 @@
                 app:srcCompat="@drawable/ic_arrow_left" />
 
         </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <EditText
+            android:id="@+id/xcoord"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="X"
+            tools:layout_editor_absoluteX="68dp"
+            tools:layout_editor_absoluteY="196dp" />
 
-
+        <EditText
+            android:id="@+id/ycoord"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="Y"
+            tools:layout_editor_absoluteX="140dp"
+            tools:layout_editor_absoluteY="196dp" />
+        <Button
+            android:id="@+id/obstaclebtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/control_background"
+            android:foreground="@drawable/send_button"
+           />
     </LinearLayout>
-
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

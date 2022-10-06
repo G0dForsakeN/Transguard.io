@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Switch;
+import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 import android.content.ClipData;
@@ -44,6 +45,9 @@ public class MapTabFragmentController extends Fragment {
     ImageButton setSouthObstacleDirectionButton;
     ImageButton setWestObstacleDirectionButton;
     ImageButton setEastObstacleDirectionButton;
+    EditText xcoord;
+    EditText ycoord;
+    Button addObstacle;
     ToggleButton obstacleButton;
     ImageButton clearButton;
     ToggleButton startPointButton;
@@ -75,6 +79,7 @@ public class MapTabFragmentController extends Fragment {
         super.onCreate(savedInstanceState);
         viewModel1 = ViewModelProviders.of(this).get(ViewModel1.class);
         int index = 1;
+        GridMapView.obstacleDirection = "0";
         if (getArguments() != null) {
             index = getArguments().getInt(ARG_SECTION_NUMBER);
         }
@@ -96,6 +101,12 @@ public class MapTabFragmentController extends Fragment {
 //        wayPointButton = root.findViewById(R.id.waypointbtn);
 //        changeDirectionButton = root.findViewById(R.id.directionBTN);
 
+        xcoord = root.findViewById(R.id.xcoord);
+        xcoord.setVisibility(View.GONE);
+        ycoord = root.findViewById(R.id.ycoord);
+        ycoord.setVisibility(View.GONE);
+        addObstacle = root.findViewById(R.id.obstaclebtn);
+        addObstacle.setVisibility(View.GONE);
         obstacleButton = root.findViewById(R.id.addobstaclebtn);
         clearButton = root.findViewById(R.id.clearbtn);
 //        switchManualOrAuto = root.findViewById(R.id.manualAutoBtn);
@@ -120,7 +131,9 @@ public class MapTabFragmentController extends Fragment {
                 setNorthObstacleDirectionButton.setVisibility(View.GONE);
                 setSouthObstacleDirectionButton.setVisibility(View.GONE);
                 setWestObstacleDirectionButton.setVisibility(View.GONE);
-
+                xcoord.setVisibility(View.GONE);
+                ycoord.setVisibility(View.GONE);
+                addObstacle.setVisibility(View.GONE);
             }
         });
 
@@ -178,6 +191,9 @@ public class MapTabFragmentController extends Fragment {
                     setNorthObstacleDirectionButton.setVisibility(View.VISIBLE);
                     setSouthObstacleDirectionButton.setVisibility(View.VISIBLE);
                     setWestObstacleDirectionButton.setVisibility(View.VISIBLE);
+                    xcoord.setVisibility(View.VISIBLE);
+                    ycoord.setVisibility(View.VISIBLE);
+                    addObstacle.setVisibility(View.VISIBLE);
                 }
                 else if (gridMapViewDescriptor.getSetObstacleStatus()) {
                     gridMapViewDescriptor.setSetObstacleStatus(false);
@@ -186,7 +202,30 @@ public class MapTabFragmentController extends Fragment {
                     setNorthObstacleDirectionButton.setVisibility(View.GONE);
                     setSouthObstacleDirectionButton.setVisibility(View.GONE);
                     setWestObstacleDirectionButton.setVisibility(View.GONE);
+                    xcoord.setVisibility(View.GONE);
+                    ycoord.setVisibility(View.GONE);
+                    addObstacle.setVisibility(View.GONE);
                 }
+            }
+        });
+
+        addObstacle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(xcoord.getText().equals("") || ycoord.getText().equals("")){
+                    showToast("No input for X and Y");
+                    return;
+                }
+                int x = Integer.valueOf(xcoord.getText().toString());
+                int y = Integer.valueOf(ycoord.getText().toString());
+
+                if(x>=0 && x<= 19 && y>=0 && y<=19) {
+                    x = x + 1;
+                    y = y + 1;
+                    gridMapViewDescriptor.addObstacleViaText(x, y);
+                }
+                xcoord.setText("");
+                ycoord.setText("");
             }
         });
 
