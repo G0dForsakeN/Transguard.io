@@ -105,7 +105,7 @@ public class GridMapView extends View {
         initMap();
         black.setStyle(Paint.Style.FILL_AND_STROKE);
         obstacle.setColor(Color.BLACK);
-        robot.setColor(Color.WHITE);
+        robot.setColor(getResources().getColor(R.color.brown));
         //end.setColor(Color.RED);
         start.setColor(Color.CYAN);
         waypoint.setColor(Color.YELLOW);
@@ -743,7 +743,6 @@ public class GridMapView extends View {
                         updateAxisOfRobot(column, row, direction);
                         if (startbtn.isChecked())
                             startbtn.toggle();
-                        printRobotStatus("Looking for Target 0");
                         this.invalidate();
                         return true;
                     }

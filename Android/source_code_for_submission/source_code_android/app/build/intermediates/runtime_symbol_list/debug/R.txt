@@ -2681,6 +2681,7 @@ int drawable devicesfound 0x7f0800ba
 int drawable dir_button_on 0x7f0800bb
 int drawable east_obstacle 0x7f0800bc
 int drawable eastobstaclebtn 0x7f0800bd
+int drawable framefordevicesfound 0x7f08014e
 int drawable googleg_disabled_color_18 0x7f0800be
 int drawable googleg_standard_color_18 0x7f0800bf
 int drawable group1 0x7f0800c0

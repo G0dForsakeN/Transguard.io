@@ -2682,6 +2682,7 @@ drawable devicesfound
 drawable dir_button_on
 drawable east_obstacle
 drawable eastobstaclebtn
+drawable framefordevicesfound
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable group1

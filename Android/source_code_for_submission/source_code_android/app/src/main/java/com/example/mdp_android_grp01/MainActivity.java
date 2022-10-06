@@ -362,43 +362,45 @@ public class MainActivity extends AppCompatActivity {
                     default:break;
                 }
             }
+            try {
+                if (message.substring(0,18).equals("STATUS LOOKINGFOR ")){
+                    roboStatusTextView.setText("Looking For Target "+message.substring(18,19));
+                }
+            } catch (Exception e){
+                e.printStackTrace();
+            }
             // From AMDTOOL
+            try{
+               if (message.substring(0,6).equals("ENDRUN")){
+                   roboStatusTextView.setText("Run Ended");
+               }
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
             try{
                 if (message.substring(0,5).equals("ROBOT")){
                     if (message.length()==9){
                         if(isNumeric(message.substring(6,7))&&isNumeric(message.substring(8,9))) {
                             sendMessageToBlueTooth("Updating Target ID");
                             gridMapViewDescriptor.setObstacleText(message.substring(6,7), message.substring(8,9));
-                            Integer valueText = Integer.parseInt(message.substring(6,7));
-                            valueText = valueText + 1;
-                            roboStatusTextView.setText("Looking for Target " + valueText);
                         }
                     }
                     if (message.length()==11){
                         if(isNumeric(message.substring(6,8))&&isNumeric(message.substring(9,11))) {
                             sendMessageToBlueTooth("Updating Target ID");
                             gridMapViewDescriptor.setObstacleText(message.substring(6,8), message.substring(9,11));
-                            Integer valueText = Integer.parseInt(message.substring(6,8));
-                            valueText = valueText + 1;
-                            roboStatusTextView.setText("Looking for Target " + valueText);
                         }
                     }
                     if (message.length()==10){
                         if(isNumeric(message.substring(6,8))&&isNumeric(message.substring(9,10))) {
                             sendMessageToBlueTooth("Updating Target ID");
                             gridMapViewDescriptor.setObstacleText(message.substring(6,8), message.substring(9,10));
-                            Integer valueText = Integer.parseInt(message.substring(6,8));
-                            valueText = valueText + 1;
-                            roboStatusTextView.setText("Looking for Target " + valueText);
                         }
                     }
                     if (message.length()==10){
                         if(isNumeric(message.substring(6,7))&&isNumeric(message.substring(8,10))) {
                             sendMessageToBlueTooth("Updating Target ID");
-                            gridMapViewDescriptor.setObstacleText(message.substring(6,7), message.substring(8,10));
-                            Integer valueText = Integer.parseInt(message.substring(6,7));
-                            valueText = valueText + 1;
-                            roboStatusTextView.setText("Looking for Target " + valueText);
+                            gridMapViewDescriptor.setObstacleText(message.substring(6,7), message.substring(8,10));;
                         }
                     }
                 }
