@@ -1,5 +1,6 @@
 package com.example.mdp_android_grp01;
 
+import java.util.concurrent.TimeUnit;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.bluetooth.BluetoothDevice;
@@ -320,6 +321,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i=0; i<steps;i+=10){
             robot.moveRobot(dir);
+            TimeUnit.SECONDS.sleep(0.5);
         }
     }
 
