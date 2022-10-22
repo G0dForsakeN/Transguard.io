@@ -39,8 +39,6 @@ public class MapTabFragmentController extends Fragment {
     private ViewModel1 viewModel1;
 
     Button resetButton;
-//    Button updateButton;
-//    ImageButton changeDirectionButton;
     ImageButton setNorthObstacleDirectionButton;
     ImageButton setSouthObstacleDirectionButton;
     ImageButton setWestObstacleDirectionButton;
@@ -51,8 +49,6 @@ public class MapTabFragmentController extends Fragment {
     ToggleButton obstacleButton;
     ImageButton clearButton;
     ToggleButton startPointButton;
-//    ToggleButton wayPointButton;
-//    Switch switchManualOrAuto;
     ToggleButton toggleDirection;
     GridMapView gridMapViewDescriptor;
     private static boolean updateAuto = false;
@@ -94,13 +90,9 @@ public class MapTabFragmentController extends Fragment {
         View root = inflater.inflate(R.layout.activity_map, container, false);
         View main = inflater.inflate(R.layout.activity_main, container, false);
         gridMapViewDescriptor = MainActivity.getGridMapDescriptor();
-        final MapDirectionFragmentView mapDirectionFragmentView = new MapDirectionFragmentView();
 
         resetButton = root.findViewById(R.id.resetMapBtn);
         startPointButton = root.findViewById(R.id.startpointbtn);
-//        wayPointButton = root.findViewById(R.id.waypointbtn);
-//        changeDirectionButton = root.findViewById(R.id.directionBTN);
-
         xcoord = root.findViewById(R.id.xcoord);
         xcoord.setVisibility(View.GONE);
         ycoord = root.findViewById(R.id.ycoord);
@@ -109,9 +101,7 @@ public class MapTabFragmentController extends Fragment {
         addObstacle.setVisibility(View.GONE);
         obstacleButton = root.findViewById(R.id.addobstaclebtn);
         clearButton = root.findViewById(R.id.clearbtn);
-//        switchManualOrAuto = root.findViewById(R.id.manualAutoBtn);
         toggleDirection = root.findViewById(R.id.ChangeDirectionBtn);
-//        updateButton = root.findViewById(R.id.updateButton);
         setEastObstacleDirectionButton = root.findViewById(R.id.eastObstacleBTN);
         setEastObstacleDirectionButton.setBackgroundResource(R.drawable.eastobstaclebtn);
         setNorthObstacleDirectionButton = root.findViewById(R.id.northObstacleBTN);
@@ -126,7 +116,6 @@ public class MapTabFragmentController extends Fragment {
             public void onClick(View view) {
                 showToast("Reset map");
                 gridMapViewDescriptor.resetMap();
-//                updateButton.setTextColor(Color.WHITE);
                 setEastObstacleDirectionButton.setVisibility(View.GONE);
                 setNorthObstacleDirectionButton.setVisibility(View.GONE);
                 setSouthObstacleDirectionButton.setVisibility(View.GONE);
@@ -143,42 +132,15 @@ public class MapTabFragmentController extends Fragment {
                 showLog("Clicked startbtn");
                 if (startPointButton.getText().equals("STARTING POINT"))
                     showToast("Cancelled selecting starting point");
-                else if (startPointButton.getText().equals("CANCEL") && !gridMapViewDescriptor.getAutomatedUpdate()) {
+                else if (startPointButton.getText().equals("CANCEL")) {
                     showToast("Please select starting point");
                     gridMapViewDescriptor.setStartCoordStatus(true);
                     gridMapViewDescriptor.toggleCheckedBtn("startButton");
                 }
-//                else
-//                    showToast("Please select manual mode");
                 showLog("Exiting startbtn");
             }
         });
 
-//        wayPointButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                showLog("Clicked wayPointButton");
-//                if (wayPointButton.getText().equals("WAYPOINT"))
-//                    showToast("Cancelled selecting waypoint");
-//                else if (wayPointButton.getText().equals("CANCEL")) {
-//                    showToast("Please select waypoint");
-//                    gridMapViewDescriptor.setWayPointStatus(true);
-//                    gridMapViewDescriptor.toggleCheckedBtn("wayPointButton");
-//                }
-//                else
-//                    showToast("Please select manual mode");
-//                showLog("Exiting wayPointButton");
-//            }
-//        });
-
-//        changeDirectionButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                showLog("Clicked directionChangeImageBtn");
-//                mapDirectionFragmentView.show(getActivity().getFragmentManager(), "Direction Fragment");
-//                showLog("Exiting directionChangeImageBtn");
-//            }
-//        });
 
 
         obstacleButton.setOnClickListener(new View.OnClickListener() {
@@ -251,51 +213,20 @@ public class MapTabFragmentController extends Fragment {
             }
         });
 
-//        switchManualOrAuto.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                if (switchManualOrAuto.getText().equals("MANUAL")) {
-//                    try {
-//                        gridMapViewDescriptor.setAutomatedUpdate(true);
-//                        updateAuto = true;
-//                        gridMapViewDescriptor.toggleCheckedBtn("None");
-//                        updateButton.setClickable(false);
-//                        updateButton.setTextColor(Color.GRAY);
-//                        ManualFragmentController.getCalibrateButton().setClickable(false);
-//                        ManualFragmentController.getCalibrateButton().setTextColor(Color.GRAY);
-//                        switchManualOrAuto.setText(getResources().getString(R.string.auto));
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//                    showToast("AUTO mode");
-//                }
-//                else if (switchManualOrAuto.getText().equals("AUTO")) {
-//                    try {
-//                        gridMapViewDescriptor.setAutomatedUpdate(false);
-//                        updateAuto = false;
-//                        gridMapViewDescriptor.toggleCheckedBtn("None");
-//                        updateButton.setClickable(true);
-//                        ManualFragmentController.getCalibrateButton().setClickable(true);
-//                        updateButton.setTextColor(Color.WHITE);
-//                        ManualFragmentController.getCalibrateButton().setTextColor(Color.BLACK);
-//                        switchManualOrAuto.setText(getResources().getString(R.string.manual));
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    }
-//                    showToast("MANUAL mode");
-//                }
-//            }
-//        });
-
         toggleDirection.setBackground(getResources().getDrawable(R.drawable.change_dir_on));
         toggleDirection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (toggleDirection.getText().equals("y")) {
-                        toggleDirection.setBackground(getResources().getDrawable(R.drawable.change_dir_off));
-                        gridMapViewDescriptor.setChangeDirection(true);
-                        toggleDirection.setText(getResources().getString(R.string.off1));
+                    toggleDirection.setBackground(getResources().getDrawable(R.drawable.change_dir_off));
+                    gridMapViewDescriptor.setChangeDirection(true);
+                    toggleDirection.setText(getResources().getString(R.string.off1));
+                    gridMapViewDescriptor.toggleCheckedBtn("ChangeDirectionBtn");
                     showToast("CHANGING DIRECTION");
+                    setEastObstacleDirectionButton.setVisibility(View.VISIBLE);
+                    setNorthObstacleDirectionButton.setVisibility(View.VISIBLE);
+                    setSouthObstacleDirectionButton.setVisibility(View.VISIBLE);
+                    setWestObstacleDirectionButton.setVisibility(View.VISIBLE);
                 }
                 else if (toggleDirection.getText().equals("n")) {
                         toggleDirection.setBackground(getResources().getDrawable(R.drawable.change_dir_on));

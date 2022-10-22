@@ -193,21 +193,12 @@ public class GridMapView extends View {
     private void displayRobotOnGrid(Canvas canvas, int[] curCoord) {
         showLog("Entering displayRobotOnGrid");
         int rowCoordinates = this.convertRow(curCoord[1]);
-        /*
-        for (int y = rowCoordinates; y <= rowCoordinates + 1; y++)
-            canvas.drawLine(cellsDetail[curCoord[0] - 1][y].startX, cellsDetail[curCoord[0] - 1][y].startY - (sizeOfCell / 30), cellsDetail[curCoord[0] + 1][y].endX, cellsDetail[curCoord[0] + 1][y].startY - (sizeOfCell / 30), robot);
-        */
         int y = rowCoordinates;
         while(y<=rowCoordinates+1)
         {
             canvas.drawLine(cellsDetail[curCoord[0] - 1][y].startX, cellsDetail[curCoord[0] - 1][y].startY - (sizeOfCell / 30), cellsDetail[curCoord[0] + 1][y].endX, cellsDetail[curCoord[0] + 1][y].startY - (sizeOfCell / 30), robot);
             y++;
         }
-
-        /*
-        for (int x = curCoord[0] - 1; x < curCoord[0] + 1; x++)
-            canvas.drawLine(cellsDetail[x][rowCoordinates - 1].startX - (sizeOfCell / 30) + sizeOfCell, cellsDetail[x][rowCoordinates - 1].startY, cellsDetail[x][rowCoordinates + 1].startX - (sizeOfCell / 30) + sizeOfCell, cellsDetail[x][rowCoordinates + 1].endY, robot);
-        */
 
         int x = curCoord[0] - 1;
 
@@ -217,27 +208,6 @@ public class GridMapView extends View {
             x++;
         }
 
-//        switch (this.getRobotDirection()) {
-//            case "up":
-//                canvas.drawLine(cellsDetail[curCoord[0] - 1][rowCoordinates + 1].startX, cellsDetail[curCoord[0] - 1][rowCoordinates + 1].endY, (cellsDetail[curCoord[0]][rowCoordinates - 1].startX + cellsDetail[curCoord[0]][rowCoordinates - 1].endX) / 2, cellsDetail[curCoord[0]][rowCoordinates - 1].startY, black);
-//                canvas.drawLine((cellsDetail[curCoord[0]][rowCoordinates - 1].startX + cellsDetail[curCoord[0]][rowCoordinates - 1].endX) / 2, cellsDetail[curCoord[0]][rowCoordinates - 1].startY, cellsDetail[curCoord[0] + 1][rowCoordinates + 1].endX, cellsDetail[curCoord[0] + 1][rowCoordinates + 1].endY, black);
-//                break;
-//            case "down":
-//                canvas.drawLine(cellsDetail[curCoord[0] - 1][rowCoordinates - 1].startX, cellsDetail[curCoord[0] - 1][rowCoordinates - 1].startY, (cellsDetail[curCoord[0]][rowCoordinates + 1].startX + cellsDetail[curCoord[0]][rowCoordinates + 1].endX) / 2, cellsDetail[curCoord[0]][rowCoordinates + 1].endY, black);
-//                canvas.drawLine((cellsDetail[curCoord[0]][rowCoordinates + 1].startX + cellsDetail[curCoord[0]][rowCoordinates + 1].endX) / 2, cellsDetail[curCoord[0]][rowCoordinates + 1].endY, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endX, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].startY, black);
-//                break;
-//            case "right":
-//                canvas.drawLine(cellsDetail[curCoord[0] - 1][rowCoordinates - 1].startX, cellsDetail[curCoord[0] - 1][rowCoordinates - 1].startY, cellsDetail[curCoord[0] + 1][rowCoordinates].endX, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endY + (cellsDetail[curCoord[0] + 1][rowCoordinates].endY - cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endY) / 2, black);
-//                canvas.drawLine(cellsDetail[curCoord[0] + 1][rowCoordinates].endX, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endY + (cellsDetail[curCoord[0] + 1][rowCoordinates].endY - cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endY) / 2, cellsDetail[curCoord[0] - 1][rowCoordinates + 1].startX, cellsDetail[curCoord[0] - 1][rowCoordinates + 1].endY, black);
-//                break;
-//            case "left":
-//                canvas.drawLine(cellsDetail[curCoord[0] + 1][rowCoordinates - 1].endX, cellsDetail[curCoord[0] + 1][rowCoordinates - 1].startY, cellsDetail[curCoord[0] - 1][rowCoordinates].startX, cellsDetail[curCoord[0] - 1][rowCoordinates - 1].endY + (cellsDetail[curCoord[0] - 1][rowCoordinates].endY - cellsDetail[curCoord[0] - 1][rowCoordinates - 1].endY) / 2, black);
-//                canvas.drawLine(cellsDetail[curCoord[0] - 1][rowCoordinates].startX, cellsDetail[curCoord[0] - 1][rowCoordinates - 1].endY + (cellsDetail[curCoord[0] - 1][rowCoordinates].endY - cellsDetail[curCoord[0] - 1][rowCoordinates - 1].endY) / 2, cellsDetail[curCoord[0] + 1][rowCoordinates + 1].endX, cellsDetail[curCoord[0] + 1][rowCoordinates + 1].endY, black);
-//                break;
-//            default:
-//                Toast.makeText(this.getContext(), "Error with drawing robot (unknown direction)", Toast.LENGTH_LONG).show();
-//                break;
-//        }
         showLog("Exiting displayRobotOnGrid");
     }
 
@@ -250,17 +220,6 @@ public class GridMapView extends View {
         isChangeDirection = state;
     }
 
-    public void setAutomatedUpdate(boolean autoUpdate) throws JSONException {
-        showLog(String.valueOf(bpMapInfo));
-        if (!autoUpdate)
-            bpMapInfo = this.getJsonObjectReceived();
-        else {
-            setReceivedJsonObject(bpMapInfo);
-            bpMapInfo = null;
-            this.updateMap();
-        }
-        GridMapView.isAutoUpdateSet = autoUpdate;
-    }
 
     public JSONObject getJsonObjectReceived() {
         return receivedJsonObject;
@@ -272,9 +231,6 @@ public class GridMapView extends View {
         bpMapInfo = receivedJsonObject;
     }
 
-    public boolean getAutomatedUpdate() {
-        return isAutoUpdateSet;
-    }
 
     private void setValidPosition(boolean status) {
         isPositionValid = status;
@@ -308,9 +264,6 @@ public class GridMapView extends View {
         return isStartCoordinatesSet;
     }
 
-    public void setWayPointStatus(boolean status) {
-        isWayPointSet = status;
-    }
 
     public boolean getCanDrawRobot() {
         return isRobotDrawable;
@@ -418,22 +371,6 @@ public class GridMapView extends View {
         xAxisTextView.setText(String.valueOf(col - 1));
         yAxisTextView.setText(String.valueOf(row - 1));
         directionAxisTextView.setText(direction);
-    }
-
-    private void setCoordinatesOfWaypoint(int col, int row) throws JSONException {
-        showLog("Entering setCoordinatesOfWaypoint");
-        wayCoordinates[0] = col;
-        wayCoordinates[1] = row;
-
-        row = this.convertRow(row);
-        cellsDetail[col][row].setType("waypoint");
-        // waypoint comm
-        MainActivity.sendMessageToBlueTooth("waypoint", wayCoordinates[0] - 1, wayCoordinates[1] - 1);
-        showLog("Exiting setCoordinatesOfWaypoint");
-    }
-
-    private int[] getCoordinatesOfWaypoint() {
-        return wayCoordinates;
     }
 
     private void setCoordinatesOfObstacle(int col, int row) {
@@ -544,34 +481,6 @@ public class GridMapView extends View {
         return false;
     }
 
-//    public class MyDragShadowBuilder extends View.DragShadowBuilder {
-//        public MyDragShadowBuilder(View v){
-//            super(v);
-//        }
-//        @Override
-//        public void onProvideShadowMetrics(Point outShadowSize, Point outShadowTouchPoint) {
-//            outShadowSize.set(1,1);
-//            outShadowTouchPoint.set(0,0);
-//        }
-//    }
-
-//    final Handler handler = new Handler();
-//    Runnable mLongPressed = new Runnable() {
-//        public void run() {
-//            if (isCellUnSet) return;
-//            //remove long clicked cell
-//            int col = Integer.valueOf(clickedCell[0]), row = Integer.valueOf(clickedCell[1]);
-//            int i = Integer.valueOf(clickedCell[5]);
-//            cellsDetail[col][20 - row].setType("unexplored");
-//            cellsDetail[col][20 - row].paint = unExplored;
-//            obstacleDrag = true;
-//            obstacleCoordinates.remove(i);
-//            directionOfObstacleCoordinates.remove(i);
-//            Toast.makeText(getContext(), "Dragging obstacle!", Toast.LENGTH_SHORT).show();
-//            Log.i("", "Long press!");
-//        }
-//    };
-
     public boolean isPositionInGrid( int x, int y, boolean isStartPoint){
         float left,bottom,right,top;
         if (!isStartPoint) {
@@ -589,6 +498,17 @@ public class GridMapView extends View {
         return false;
     }
 
+    public boolean validStartPosition(int x, int y){
+        ArrayList<int[]> obstacleCoord = this.getCoordinatesOfObstacle();
+        for(int i=0;i<obstacleCoord.size();i++){
+            int column = obstacleCoord.get(i)[0];
+            int row = obstacleCoord.get(i)[1];
+            if (((column-1) <= x && (column+1) >=x) && ((row-1) <= y && (row+1) >=y))
+                return false;
+        }
+        return true;
+    }
+
     public void addObstacleViaText(int x,int y){
         //MainActivity.sendMessageToBlueTooth("Y"+Integer.toString(column));
         ArrayList<int[]> obstacleCoord = this.getCoordinatesOfObstacle();
@@ -600,7 +520,6 @@ public class GridMapView extends View {
         }
         this.setCoordinatesOfObstacle(x, y);
         setObstacleDirectionCoordinate(x, y, obstacleDirection);
-//                        MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle coordinates %d,%d",column, convertRow(row)));
         this.isObstacleDirectionCoordinatesSet = false;
         isAddObstacle = true;
         this.invalidate();
@@ -610,209 +529,176 @@ public class GridMapView extends View {
     public boolean onTouchEvent(MotionEvent event) {
 
         showLog("Entering gridmapView onTouchEvent");
-        if (!this.getAutomatedUpdate()) {
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_CANCEL:
-//                    handler.removeCallbacks(mLongPressed);
-                    break;
-                case MotionEvent.ACTION_MOVE:
-//                    handler.removeCallbacks(mLongPressed);
-                    // update shadow position
-                    positionX = event.getX() - sizeOfCell/2;
-                    positionY = event.getY() - sizeOfCell/2;
-                    break;
-                case MotionEvent.ACTION_UP:
-//                    handler.removeCallbacks(mLongPressed);
-                    if(obstacleDrag){
-                        obstacleDrag=false;
-                        //check if cell is occupied
-//                        removeDragShadow();
-                        if (!isPositionInGrid((int) event.getX(), (int) event.getY(), false)) {
-                            this.invalidate();
-                            MainActivity.sendMessageToBlueTooth(String.format("OBSTACLEREMOVED:%s",clickedCell[3]));
-                            Toast.makeText(getContext(), "Obstacle removed!", Toast.LENGTH_SHORT).show();
-                            return true;
-                        }
-                        int column = (int) (event.getX()/ sizeOfCell);
-                        int row = this.convertRow((int) (event.getY()/ sizeOfCell));
-                        ArrayList<int[]> obstacleCoord = this.getCoordinatesOfObstacle();
-
-                        for (int i = 0; i < obstacleCoord.size(); i++)
-                            if (obstacleCoord.get(i)[0] == column && obstacleCoord.get(i)[1] == row) {
-                                //if occupied reject movement and move cell back
-                                Toast.makeText(getContext(), "Obstacle at position!", Toast.LENGTH_SHORT).show();
-                                String[] temp = this.getObstacleDirectionCoord().get(i);
-                                String[] celldata = new String[]{clickedCell[0], clickedCell[1], clickedCell[2], clickedCell[3], clickedCell[4]};
-                                GridMapView.obstacleCoordinates.add(Integer.valueOf(clickedCell[5]), new int[]{Integer.valueOf(celldata[0]), Integer.valueOf(celldata[1])});
-                                this.getObstacleDirectionCoord().add(Integer.valueOf(clickedCell[5]), celldata);
-                                int x = Integer.valueOf(clickedCell[0]);
-                                int y = Integer.valueOf(clickedCell[1]);
-                                y = this.convertRow(y);
-                                cellsDetail[x][y].paint = obstacle;
-                                cellsDetail[x][y].setType("obstacleDirection");
-                                this.invalidate();
-                                return true;
-                            }
-                        //add obstacle if available
-                        Toast.makeText(getContext(), "Obstacle placed!", Toast.LENGTH_SHORT).show();
-                        String[] celldata = new String[]{String.valueOf(column), String.valueOf(row), clickedCell[2], clickedCell[3], clickedCell[4]};
-                        GridMapView.obstacleCoordinates.add(Integer.valueOf(clickedCell[5]),new int[]{column, row});
-                        this.getObstacleDirectionCoord().add(Integer.valueOf(clickedCell[5]),celldata);
-                        row = this.convertRow(row);
-                        cellsDetail[column][row].paint = obstacle;
-                        cellsDetail[column][row].setType("obstacleDirection"); //obstacle no, col ,row, obstacle dir,obstacle no
-                        MainActivity.sendMessageToBlueTooth(String.format("OBSTACLECHANGE:%s (%d,%d,%s,%s)",clickedCell[3],column-1,19- row,clickedCell[2],clickedCell[3]));
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_CANCEL:
+                break;
+            case MotionEvent.ACTION_MOVE:
+                positionX = event.getX() - sizeOfCell/2;
+                positionY = event.getY() - sizeOfCell/2;
+                break;
+            case MotionEvent.ACTION_UP:
+                if(obstacleDrag){
+                    obstacleDrag=false;
+                    //check if cell is occupied
+                    if (!isPositionInGrid((int) event.getX(), (int) event.getY(), false)) {
                         this.invalidate();
-                        return true;
-
-                    }
-                    break;
-                case MotionEvent.ACTION_DOWN:
-                    float startX=event.getX(), startY=event.getY();
-                    if(!isPositionInGrid((int) event.getX(),(int) event.getY(),false)){
-                        showLog("out of grid");
-                        Toast.makeText(getContext(), "out of Grid!", Toast.LENGTH_SHORT).show();
+                        MainActivity.sendMessageToBlueTooth(String.format("OBSTACLEREMOVED:%s",clickedCell[3]));
+                        Toast.makeText(getContext(), "Obstacle removed!", Toast.LENGTH_SHORT).show();
                         return true;
                     }
                     int column = (int) (event.getX()/ sizeOfCell);
-                    //MainActivity.sendMessageToBlueTooth("Y"+Integer.toString(column));
-                    int row = this.convertRow((int) (event.getY() / sizeOfCell));
+                    int row = this.convertRow((int) (event.getY()/ sizeOfCell));
                     ArrayList<int[]> obstacleCoord = this.getCoordinatesOfObstacle();
+
                     for (int i = 0; i < obstacleCoord.size(); i++)
                         if (obstacleCoord.get(i)[0] == column && obstacleCoord.get(i)[1] == row) {
-                            showLog("existing obstacle at position");
+                            //if occupied reject movement and move cell back
+                            Toast.makeText(getContext(), "Obstacle at position!", Toast.LENGTH_SHORT).show();
                             String[] temp = this.getObstacleDirectionCoord().get(i);
-                            if(isChangeDirection) {
-                                this.getObstacleDirectionCoord().get(i)[2] = obstacleDirection;
-                                int cols = Integer.valueOf(this.getObstacleDirectionCoord().get(i)[0]);
-                                int rows = Integer.valueOf(this.getObstacleDirectionCoord().get(i)[1]);
-                                String targetid = this.directionOfObstacleCoordinates.get(i)[3];
-                                MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle Direction id:%s direction:%d %d,%d",targetid, Integer.valueOf(obstacleDirection),cols-1,19- rows));
-                                this.isObstacleDirectionCoordinatesSet = false;
-                                this.invalidate();
-                                break;
-                            }
-                            else if(isCellUnSet) break;
-                            else{
-                                clickedCell = new String[]{temp[0], temp[1], temp[2], temp[3], temp[4], String.valueOf(i)};
-                                cellsDetail[column][20 - row].setType("unexplored");
-                                cellsDetail[column][20 - row].paint = unExplored;
-                                obstacleDrag = true;
-                                obstacleCoordinates.remove(i);
-                                directionOfObstacleCoordinates.remove(i);
-                                Toast.makeText(getContext(), "Dragging obstacle!", Toast.LENGTH_SHORT).show();
-                                this.isObstacleDirectionCoordinatesSet = false;
-                                this.invalidate();
-                                return true;
-                            }
-//                            if(!isCellUnSet){
-//
-//                                handler.postDelayed(mLongPressed, ViewConfiguration.getLongPressTimeout());
-//                            }
-//                            this.isObstacleDirectionCoordinatesSet = false;
-//                            this.invalidate();
-//                            break;
-                        }
-
-                    //MainActivity.sendMessageToBlueTooth("X"+Integer.toString(row));
-                    ToggleButton startbtn = ((Activity) this.getContext()).findViewById(R.id.startpointbtn);
-                    ToggleButton waypointbtn = ((Activity) this.getContext()).findViewById(R.id.waypointbtn);
-
-                    if (isStartCoordinatesSet) {
-                        if(!isPositionInGrid((int) event.getX(),(int) event.getY(), true)){
-                            Toast.makeText(getContext(), "invalid position for start point!", Toast.LENGTH_SHORT).show();
+                            String[] celldata = new String[]{clickedCell[0], clickedCell[1], clickedCell[2], clickedCell[3], clickedCell[4]};
+                            GridMapView.obstacleCoordinates.add(Integer.valueOf(clickedCell[5]), new int[]{Integer.valueOf(celldata[0]), Integer.valueOf(celldata[1])});
+                            this.getObstacleDirectionCoord().add(Integer.valueOf(clickedCell[5]), celldata);
+                            int x = Integer.valueOf(clickedCell[0]);
+                            int y = Integer.valueOf(clickedCell[1]);
+                            y = this.convertRow(y);
+                            cellsDetail[x][y].paint = obstacle;
+                            cellsDetail[x][y].setType("obstacleDirection");
+                            this.invalidate();
                             return true;
                         }
-                        MainActivity.getRaceCar().setVisibility(View.VISIBLE);
-                        if (isRobotDrawable) {
-                            int[] startCoord = this.getStartCoordinates();
-                            if (startCoord[0] >= 2 && startCoord[1] >= 2) {
-                                startCoord[1] = this.convertRow(startCoord[1]);
-                                for (int x = startCoord[0] - 1; x <= startCoord[0] + 1; x++)
-                                    for (int y = startCoord[1] - 1; y <= startCoord[1] + 1; y++)
-                                        cellsDetail[x][y].setType("unexplored");
-                            }
-                        } else
-                            isRobotDrawable = true;
-                        this.setStartCoordinates(column, row);
-                        isStartCoordinatesSet = false;
-                        String direction = getRobotDirection();
-                        if (direction.equals("None")) {
-                            direction = "up";
-                        }
-                        try {
-                            int directionInt = 0;
-                            switch (direction) {
-                                case "left":
-                                    directionInt = 3;
-                                    break;
-                                case "right":
-                                    directionInt = 1;
-                                    break;
-                                case "down":
-                                    directionInt = 2;
-                                    break;
-                            }
-                            MainActivity.sendMessageToBlueTooth("STARTRUN");
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                        updateAxisOfRobot(column, row, direction);
-                        if (startbtn.isChecked())
-                            startbtn.toggle();
-                        this.invalidate();
-                        return true;
-                    }
-                    if (isObstacleDirectionCoordinatesSet) {
+                    //add obstacle if available
+                    Toast.makeText(getContext(), "Obstacle placed!", Toast.LENGTH_SHORT).show();
+                    String[] celldata = new String[]{String.valueOf(column), String.valueOf(row), clickedCell[2], clickedCell[3], clickedCell[4]};
+                    GridMapView.obstacleCoordinates.add(Integer.valueOf(clickedCell[5]),new int[]{column, row});
+                    this.getObstacleDirectionCoord().add(Integer.valueOf(clickedCell[5]),celldata);
+                    row = this.convertRow(row);
+                    cellsDetail[column][row].paint = obstacle;
+                    cellsDetail[column][row].setType("obstacleDirection"); //obstacle no, col ,row, obstacle dir,obstacle no
+                    MainActivity.sendMessageToBlueTooth(String.format("OBSTACLECHANGE:%s (%d,%d,%s,%s)",clickedCell[3],column-1,19- row,clickedCell[2],clickedCell[3]));
+                    this.invalidate();
+                    return true;
 
-                        this.setCoordinatesOfObstacle(column, row);
-                        setObstacleDirectionCoordinate(column, row, obstacleDirection);
-//                        MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle coordinates %d,%d",column, convertRow(row)));
-                        this.isObstacleDirectionCoordinatesSet = false;
-                        isAddObstacle = true;
-                        this.invalidate();
-                        return true;
-                    }
-                    if (isWayPointSet) {
-                        int[] waypointCoord = this.getCoordinatesOfWaypoint();
-                        if (waypointCoord[0] >= 1 && waypointCoord[1] >= 1)
-                            cellsDetail[waypointCoord[0]][this.convertRow(waypointCoord[1])].setType("unexplored");
-                        isWayPointSet = false;
-                        try {
-                            this.setCoordinatesOfWaypoint(column, row);
-                        } catch (JSONException e) {
-                            e.printStackTrace();
+                }
+                break;
+            case MotionEvent.ACTION_DOWN:
+                float startX=event.getX(), startY=event.getY();
+                if(!isPositionInGrid((int) event.getX(),(int) event.getY(),false)){
+                    showLog("out of grid");
+                    Toast.makeText(getContext(), "out of Grid!", Toast.LENGTH_SHORT).show();
+                    return true;
+                }
+                int column = (int) (event.getX()/ sizeOfCell);
+                int row = this.convertRow((int) (event.getY() / sizeOfCell));
+                ArrayList<int[]> obstacleCoord = this.getCoordinatesOfObstacle();
+                for (int i = 0; i < obstacleCoord.size(); i++)
+                    if (obstacleCoord.get(i)[0] == column && obstacleCoord.get(i)[1] == row) {
+                        showLog("existing obstacle at position");
+                        String[] temp = this.getObstacleDirectionCoord().get(i);
+                        if(isChangeDirection) {
+                            this.getObstacleDirectionCoord().get(i)[2] = obstacleDirection;
+                            int cols = Integer.valueOf(this.getObstacleDirectionCoord().get(i)[0]);
+                            int rows = Integer.valueOf(this.getObstacleDirectionCoord().get(i)[1]);
+                            String targetid = this.directionOfObstacleCoordinates.get(i)[3];
+                            MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle Direction id:%s direction:%d %d,%d",targetid, Integer.valueOf(obstacleDirection),cols-1,19- rows));
+                            this.isObstacleDirectionCoordinatesSet = false;
+                            this.invalidate();
+                            break;
                         }
-                        if (waypointbtn.isChecked())
-                            waypointbtn.toggle();
-                        this.invalidate();
+                        else if(isCellUnSet) break;
+                        else{
+                            clickedCell = new String[]{temp[0], temp[1], temp[2], temp[3], temp[4], String.valueOf(i)};
+                            cellsDetail[column][20 - row].setType("unexplored");
+                            cellsDetail[column][20 - row].paint = unExplored;
+                            obstacleDrag = true;
+                            obstacleCoordinates.remove(i);
+                            directionOfObstacleCoordinates.remove(i);
+                            Toast.makeText(getContext(), "Dragging obstacle!", Toast.LENGTH_SHORT).show();
+                            this.isObstacleDirectionCoordinatesSet = false;
+                            this.invalidate();
+                            return true;
+                        }
+                    }
+                ToggleButton startbtn = ((Activity) this.getContext()).findViewById(R.id.startpointbtn);
+
+                if (isStartCoordinatesSet) {
+                    if(!isPositionInGrid((int) event.getX(),(int) event.getY(), true) || !validStartPosition(column, row)){
+                        Toast.makeText(getContext(), "invalid position for start point!", Toast.LENGTH_SHORT).show();
                         return true;
                     }
-                    if (isObstacleSet) {
-                        //this.setCoordinatesOfObstacle(column, row);
-                        this.isObstacleDirectionCoordinatesSet = false;
-                        this.invalidate();
-                        return true;
+                    MainActivity.getRaceCar().setVisibility(View.VISIBLE);
+                    if (isRobotDrawable) {
+                        int[] startCoord = this.getStartCoordinates();
+                        if (startCoord[0] >= 2 && startCoord[1] >= 2) {
+                            startCoord[1] = this.convertRow(startCoord[1]);
+                            for (int x = startCoord[0] - 1; x <= startCoord[0] + 1; x++)
+                                for (int y = startCoord[1] - 1; y <= startCoord[1] + 1; y++)
+                                    cellsDetail[x][y].setType("unexplored");
+                        }
+                    } else
+                        isRobotDrawable = true;
+                    this.setStartCoordinates(column, row);
+                    isStartCoordinatesSet = false;
+                    String direction = getRobotDirection();
+                    if (direction.equals("None")) {
+                        direction = "up";
                     }
-                    if (isExploring) {
-                        cellsDetail[column][20 - row].setType("explored");
-                        this.invalidate();
-                        return true;
+                    try {
+                        int directionInt = 0;
+                        switch (direction) {
+                            case "left":
+                                directionInt = 3;
+                                break;
+                            case "right":
+                                directionInt = 1;
+                                break;
+                            case "down":
+                                directionInt = 2;
+                                break;
+                        }
+                        MainActivity.sendMessageToBlueTooth("STARTRUN");
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
-                    if (isCellUnSet) {
-                        //                ArrayList<int[]> obstacleCoord = this.getCoordinatesOfObstacle();
-                        cellsDetail[column][20 - row].setType("unexplored");
-                        for (int i = 0; i < obstacleCoord.size(); i++)
-                            if (obstacleCoord.get(i)[0] == column && obstacleCoord.get(i)[1] == row) {
-                                obstacleCoord.remove(i);
-                                directionOfObstacleCoordinates.remove(i);
-                            }
-                        isCellUnSet = false;
-                        this.invalidate();
-                        return true;
-                    }
-                    break;
-            }
+                    updateAxisOfRobot(column, row, direction);
+                    if (startbtn.isChecked())
+                        startbtn.toggle();
+                    this.invalidate();
+                    return true;
+                }
+                if (isObstacleDirectionCoordinatesSet) {
+
+                    this.setCoordinatesOfObstacle(column, row);
+                    setObstacleDirectionCoordinate(column, row, obstacleDirection);
+//                        MainActivity.sendMessageToBlueTooth(String.format("Updated Obstacle coordinates %d,%d",column, convertRow(row)));
+                    this.isObstacleDirectionCoordinatesSet = false;
+                    isAddObstacle = true;
+                    this.invalidate();
+                    return true;
+                }
+                if (isObstacleSet) {
+                    //this.setCoordinatesOfObstacle(column, row);
+                    this.isObstacleDirectionCoordinatesSet = false;
+                    this.invalidate();
+                    return true;
+                }
+                if (isExploring) {
+                    cellsDetail[column][20 - row].setType("explored");
+                    this.invalidate();
+                    return true;
+                }
+                if (isCellUnSet) {
+                    //                ArrayList<int[]> obstacleCoord = this.getCoordinatesOfObstacle();
+                    cellsDetail[column][20 - row].setType("unexplored");
+                    for (int i = 0; i < obstacleCoord.size(); i++)
+                        if (obstacleCoord.get(i)[0] == column && obstacleCoord.get(i)[1] == row) {
+                            obstacleCoord.remove(i);
+                            directionOfObstacleCoordinates.remove(i);
+                        }
+                    isCellUnSet = false;
+                    this.invalidate();
+                    return true;
+                }
+                break;
         }
         showLog("Exiting onTouchEvent");
         return false;
@@ -820,9 +706,8 @@ public class GridMapView extends View {
 
     public void toggleCheckedBtn(String buttonName) {
         ToggleButton startButton = ((Activity) this.getContext()).findViewById(R.id.startpointbtn);
-        ToggleButton waypointButton = ((Activity) this.getContext()).findViewById(R.id.waypointbtn);
         ToggleButton addObstacleButton = ((Activity) this.getContext()).findViewById(R.id.addobstaclebtn);
-
+        ToggleButton ChangeDirectionBtn = ((Activity) this.getContext()).findViewById(R.id.ChangeDirectionBtn);
         ImageButton clearButton = ((Activity) this.getContext()).findViewById(R.id.clearbtn);
 
         if (!buttonName.equals("startButton"))
@@ -830,17 +715,27 @@ public class GridMapView extends View {
                 this.setStartCoordStatus(false);
                 startButton.toggle();
             }
-//        if (!buttonName.equals("wayPointButton"))
-//            if (waypointButton.isChecked()) {
-//                this.setWayPointStatus(false);
-//                waypointButton.toggle();
-//            }
-
+        if (!buttonName.equals("ChangeDirectionBtn"))
+            if (ChangeDirectionBtn.isChecked()){
+                this.setChangeDirection(false);
+                ChangeDirectionBtn.toggle();
+                ChangeDirectionBtn.setBackground(getResources().getDrawable(R.drawable.change_dir_on));
+                ChangeDirectionBtn.setText(getResources().getString(R.string.toggleDirection));
+            }
         if (!buttonName.equals("addObstacleButton"))
         {
             if (addObstacleButton.isChecked()) {
                 this.setSetObstacleStatus(false);
                 addObstacleButton.toggle();
+            }
+            if (!buttonName.equals("ChangeDirectionBtn")) {
+                ((Activity) this.getContext()).findViewById(R.id.eastObstacleBTN).setVisibility(View.GONE);
+                ((Activity) this.getContext()).findViewById(R.id.northObstacleBTN).setVisibility(View.GONE);
+                ((Activity) this.getContext()).findViewById(R.id.southObstacleBTN).setVisibility(View.GONE);
+                ((Activity) this.getContext()).findViewById(R.id.westObstacleBTN).setVisibility(View.GONE);
+                ((Activity) this.getContext()).findViewById(R.id.xcoord).setVisibility(View.GONE);
+                ((Activity) this.getContext()).findViewById(R.id.ycoord).setVisibility(View.GONE);
+                ((Activity) this.getContext()).findViewById(R.id.obstaclebtn).setVisibility(View.GONE);
             }
         }
 
@@ -856,7 +751,6 @@ public class GridMapView extends View {
         TextView xaxisTextView = ((Activity) this.getContext()).findViewById(R.id.xAxisTextView);
         TextView yaxisTextView = ((Activity) this.getContext()).findViewById(R.id.yAxisTextView);
         TextView dirTextView = ((Activity) this.getContext()).findViewById(R.id.directionAxisTextView);
-        Switch manualAutoToggleBtn = ((Activity) this.getContext()).findViewById(R.id.manualAutoBtn);
         Switch phoneTiltSwitch = ((Activity) this.getContext()).findViewById(R.id.phoneTiltSwitch);
         MainActivity.getRaceCar().setVisibility(View.INVISIBLE);
         MainActivity.sendMessageToBlueTooth("OBSTACLECLEAR");
@@ -877,11 +771,6 @@ public class GridMapView extends View {
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
 
-//        if (manualAutoToggleBtn.isChecked()) {
-//            manualAutoToggleBtn.toggle();
-//            manualAutoToggleBtn.setText(getResources().getString(R.string.manual));
-//
-//        }
         this.toggleCheckedBtn("None");
 
         if (phoneTiltSwitch.isChecked()) {
@@ -895,9 +784,7 @@ public class GridMapView extends View {
         currentPoint = new int[]{-1, -1};
         previousPoint = new int[]{-1, -1};
         robotDirection = "None";
-        isAutoUpdateSet = false;
         obstacleCoordinates = new ArrayList<>();
-        wayCoordinates = new int[]{-1, -1};
         isMapDrawn = false;
         isRobotDrawable = false;
         isPositionValid = false;
@@ -908,132 +795,7 @@ public class GridMapView extends View {
         this.invalidate();
     }
 
-    public void updateMap() throws JSONException {
-        showLog("Entering updateMap");
-        JSONObject mapInformation = this.getJsonObjectReceived();
-        showLog("updateMap --- mapInformation: " + mapInformation);
-        JSONArray infoJsonArray;
-        JSONObject infoJsonObject;
-        String hex_Explored;
-        String explore_string;
-        BigInteger hexBigIntegerExplored, hexBigIntegerObstacle;
-        String hexStringExplored, hexStringObstacle, exploredString, obstacleString;
 
-        String message;
-
-        if (mapInformation == null)
-            return;
-
-        for (int i = 0; i < mapInformation.names().length(); i++) {
-            message = "updateMapInformation Default message";
-            switch (mapInformation.names().getString(i)) {
-                case "map":
-                    infoJsonArray = mapInformation.getJSONArray("map");
-                    infoJsonObject = infoJsonArray.getJSONObject(0);
-
-                    hexStringExplored = infoJsonObject.getString("explored");
-                    hexBigIntegerExplored = new BigInteger(hexStringExplored, 16);
-                    exploredString = hexBigIntegerExplored.toString(2);
-                    showLog("updateMapInformation.exploredString: " + exploredString);
-
-                    int x, y;
-                    for (int j = 0; j < exploredString.length() - 4; j++) {
-                        y = 19 - (j / 19);
-                        x = 1 + j - ((19 - y) * 19);
-                        if ((String.valueOf(exploredString.charAt(j + 2))).equals("1") && !cellsDetail[x][y].type.equals("robot"))
-                            cellsDetail[x][y].setType("explored");
-                        else if ((String.valueOf(exploredString.charAt(j + 2))).equals("0") && !cellsDetail[x][y].type.equals("robot"))
-                            cellsDetail[x][y].setType("unexplored");
-                    }
-
-                    int length = infoJsonObject.getInt("length");
-
-                    hexStringObstacle = infoJsonObject.getString("obstacle");
-                    showLog("updateMapInformation hexStringObstacle: " + hexStringObstacle);
-                    hexBigIntegerObstacle = new BigInteger(hexStringObstacle, 16);
-                    showLog("updateMapInformation hexBigIntegerObstacle: " + hexBigIntegerObstacle);
-                    obstacleString = hexBigIntegerObstacle.toString(2);
-                    while (obstacleString.length() < length) {
-                        obstacleString = "0" + obstacleString;
-                    }
-                    showLog("updateMapInformation obstacleString: " + obstacleString);
-                    setMDF_Exploration_Details(hexStringExplored);
-                    setMDF_Obstacle_Details(hexStringObstacle);
-
-                    int k = 0;
-                    for (int row = Row - 1; row >= 0; row--)
-                        for (int col = 1; col <= Column; col++)
-                            if ((cellsDetail[col][row].type.equals("explored") || (cellsDetail[col][row].type.equals("robot"))) && k < obstacleString.length()) {
-                                if ((String.valueOf(obstacleString.charAt(k))).equals("1"))
-                                    this.setCoordinatesOfObstacle(col, 20 - row);
-                                k++;
-                            }
-
-                    int[] waypointCoord = this.getCoordinatesOfWaypoint();
-                    if (waypointCoord[0] >= 1 && waypointCoord[1] >= 1)
-                        cellsDetail[waypointCoord[0]][20 - waypointCoord[1]].setType("waypoint");
-                    break;
-                case "robotPosition":
-                    if (isRobotDrawable)
-                        this.setPreviousRobotCoordinates(currentPoint[0], currentPoint[1]);
-                    infoJsonArray = mapInformation.getJSONArray("robotPosition");
-//                    infoJsonObject = infoJsonArray.getJSONObject(0);
-
-                    for (int row = Row - 1; row >= 0; row--)
-                        for (int col = 1; col <= Column; col++)
-                            cellsDetail[col][row].setType("unexplored");
-
-                    String direction;
-                    if (infoJsonArray.getInt(2) == 90) {
-                        direction = "right";
-                    } else if (infoJsonArray.getInt(2) == 180) {
-                        direction = "down";
-                    } else if (infoJsonArray.getInt(2) == 270) {
-                        direction = "left";
-                    } else {
-                        direction = "up";
-                    }
-                    this.setStartCoordinates(infoJsonArray.getInt(0), infoJsonArray.getInt(1));
-                    this.setCurrentCoordinates(infoJsonArray.getInt(0) + 2, convertRow(infoJsonArray.getInt(1)) - 1, direction);
-                    isRobotDrawable = true;
-                    break;
-                case "waypoint":
-                    infoJsonArray = mapInformation.getJSONArray("waypoint");
-                    infoJsonObject = infoJsonArray.getJSONObject(0);
-                    this.setCoordinatesOfWaypoint(infoJsonObject.getInt("x"), infoJsonObject.getInt("y"));
-                    isWayPointSet = true;
-                    break;
-                case "obstacle":
-                    infoJsonArray = mapInformation.getJSONArray("obstacle");
-                    for (int j = 0; j < infoJsonArray.length(); j++) {
-                        infoJsonObject = infoJsonArray.getJSONObject(j);
-                        this.setCoordinatesOfObstacle(infoJsonObject.getInt("x"), infoJsonObject.getInt("y"));
-                    }
-                    message = "No. of Obstacle: " + String.valueOf(infoJsonArray.length());
-                    break;
-
-                case "move":
-                    infoJsonArray = mapInformation.getJSONArray("move");
-                    infoJsonObject = infoJsonArray.getJSONObject(0);
-                    if (isRobotDrawable)
-                        moveRobot(infoJsonObject.getString("direction"));
-                    message = "moveDirection: " + infoJsonObject.getString("direction");
-                    break;
-                case "status":
-                    String msg = mapInformation.getString("status");
-                    printRobotStatus(msg);
-                    message = "status: " + msg;
-                    break;
-                default:
-                    message = "Unintended default for JSONObject";
-                    break;
-            }
-            if (!message.equals("updateMapInformation Default message"))
-                MainActivity.receiveMessage(message);
-        }
-        showLog("Exiting updateMapInformation");
-        this.invalidate();
-    }
 
     public void moveRobot(String direction) {
         showLog("Entering moveRobot");

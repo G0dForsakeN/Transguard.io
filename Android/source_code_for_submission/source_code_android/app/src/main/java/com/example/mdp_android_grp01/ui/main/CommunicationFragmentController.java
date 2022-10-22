@@ -119,9 +119,7 @@ public class CommunicationFragmentController extends Fragment implements SensorE
             @Override
             public void onClick(View view) {
                 showLog("Clicked moveForwardImageBtn");
-                if (gridMapView.getAutomatedUpdate())
-                    updaterobotStatus("Activate manual mode");
-                else if (gridMapView.getCanDrawRobot() && !gridMapView.getAutomatedUpdate()) {
+                if (gridMapView.getCanDrawRobot()) {
                     gridMapView.moveRobot("forward");
                     MainActivity.updateText();
                     if (gridMapView.getValidPosition())
@@ -140,9 +138,7 @@ public class CommunicationFragmentController extends Fragment implements SensorE
             @Override
             public void onClick(View view) {
                 showLog("Clicked turnRightImageBtn");
-                if (gridMapView.getAutomatedUpdate())
-                    updaterobotStatus("Activate manual mode");
-                else if (gridMapView.getCanDrawRobot() && !gridMapView.getAutomatedUpdate()) {
+                if (gridMapView.getCanDrawRobot()) {
                     gridMapView.moveRobot("right");
                     updaterobotStatus("turning right");
                     MainActivity.updateText();
@@ -158,9 +154,7 @@ public class CommunicationFragmentController extends Fragment implements SensorE
             @Override
             public void onClick(View view) {
                 showLog("Clicked backButton");
-                if (gridMapView.getAutomatedUpdate())
-                    updaterobotStatus("Activate manual mode");
-                else if (gridMapView.getCanDrawRobot() && !gridMapView.getAutomatedUpdate()) {
+                if (gridMapView.getCanDrawRobot()) {
                     gridMapView.moveRobot("back");
                     MainActivity.updateText();
                     if (gridMapView.getValidPosition())
@@ -179,9 +173,7 @@ public class CommunicationFragmentController extends Fragment implements SensorE
             @Override
             public void onClick(View view) {
                 showLog("Clicked turnLeftImageBtn");
-                if (gridMapView.getAutomatedUpdate())
-                    updaterobotStatus("Activate manual mode");
-                else if (gridMapView.getCanDrawRobot() && !gridMapView.getAutomatedUpdate()) {
+                if (gridMapView.getCanDrawRobot()) {
                     gridMapView.moveRobot("left");
                     MainActivity.updateText();
                     updaterobotStatus("turning left");
@@ -196,11 +188,7 @@ public class CommunicationFragmentController extends Fragment implements SensorE
         tiltSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if (gridMapView.getAutomatedUpdate()) {
-                    updaterobotStatus("Activate manual mode");
-                    tiltSwitch.setChecked(false);
-                }
-                else if (gridMapView.getCanDrawRobot() && !gridMapView.getAutomatedUpdate()) {
+                if (gridMapView.getCanDrawRobot()) {
                     if(tiltSwitch.isChecked()){
                         showToast("Tilt motion control: ON");
                         tiltSwitch.setPressed(true);

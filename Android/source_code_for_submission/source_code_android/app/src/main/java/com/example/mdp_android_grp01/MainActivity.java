@@ -529,27 +529,12 @@ public class MainActivity extends AppCompatActivity {
                      BigInteger hexBigIntegerExplored = new BigInteger(amdString, 16);
                     StringBuilder exploredString = new StringBuilder(hexBigIntegerExplored.toString(2));
 
-                    /*
-                    while (exploredString.length() < 300)
-                        exploredString.insert(0, "0");
-                    */
 
                     for(int i = exploredString.length() ; i < 300; i++)
                     {
                         exploredString.insert(0, "0");
                     }
 
-                    /*
-                    for (int i=0; i<exploredString.length(); i=i+15) {
-                        int j=0;
-                        StringBuilder subString = new StringBuilder();
-                        while (j<15) {
-                            subString.append(exploredString.charAt(j + i));
-                            j++;
-                        }
-                        resultString.insert(0, subString.toString());
-                    }
-                    */
 
                     int i = 0;
                     while(i<exploredString.length())
@@ -616,16 +601,7 @@ public class MainActivity extends AppCompatActivity {
                 showLog("Adding Image Failed");
             }
 
-            if (gridMapViewDescriptor.getAutomatedUpdate() || MapTabFragmentController.isUpdateRequestManual) {
-                try {
-                    gridMapViewDescriptor.setReceivedJsonObject(new JSONObject(message));
-                    gridMapViewDescriptor.updateMap();
-                    MapTabFragmentController.isUpdateRequestManual = false;
-                    showLog("Decode successful");
-                } catch (JSONException e) {
-                    showLog("Decode unsuccessful");
-                }
-            }
+
             sharedPreferences();
             String receivedText = sharedPreferencesInterface.getString("message", "") + "\n" + message;
             editorSharedPreferences.putString("message", receivedText);
