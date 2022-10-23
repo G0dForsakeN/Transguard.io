@@ -4,7 +4,7 @@ android {
     compileSdk 33
     buildToolsVersion '33.0.0'
     defaultConfig {
-        applicationId "com.example.mdp_android_grp01"
+        applicationId "com.example.mdp_android_grp21"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
