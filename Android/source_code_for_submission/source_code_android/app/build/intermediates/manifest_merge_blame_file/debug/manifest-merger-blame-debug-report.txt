@@ -1,7 +1,7 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    xmlns:dist="http://schemas.android.com/apk/distribution"
-4    package="com.example.mdp_android_grp01"
+4    package="com.example.mdp_android_grp21"
 5    android:versionCode="1"
 6    android:versionName="1.0" >
 7
@@ -89,7 +89,7 @@
 49-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:26:9-40
 50        <activity
 50-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:27:9-37:20
-51            android:name="com.example.mdp_android_grp01.MainActivity"
+51            android:name="com.example.mdp_android_grp21.MainActivity"
 51-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:28:13-70
 52            android:label="@string/app_name"
 52-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:29:13-45
@@ -108,7 +108,7 @@
 58-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:35:27-74
 59            </intent-filter>
 60        </activity>
-61        <activity android:name="com.example.mdp_android_grp01.ui.main.BluetoothPopUpView" />
+61        <activity android:name="com.example.mdp_android_grp21.ui.main.BluetoothPopUpView" />
 61-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:38:9-102
 61-->C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:38:19-90
 62        <!-- Needs to be explicitly declared on P+ -->
@@ -139,7 +139,7 @@
 76-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhruv\.gradle\caches\transforms-3\3b7ca7498197530ed3b226737d3e77e8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 77            android:name="androidx.startup.InitializationProvider"
 77-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhruv\.gradle\caches\transforms-3\3b7ca7498197530ed3b226737d3e77e8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-78            android:authorities="com.example.mdp_android_grp01.androidx-startup"
+78            android:authorities="com.example.mdp_android_grp21.androidx-startup"
 78-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhruv\.gradle\caches\transforms-3\3b7ca7498197530ed3b226737d3e77e8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
 79            android:exported="false" >
 79-->[androidx.emoji2:emoji2:1.2.0] C:\Users\dhruv\.gradle\caches\transforms-3\3b7ca7498197530ed3b226737d3e77e8\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37

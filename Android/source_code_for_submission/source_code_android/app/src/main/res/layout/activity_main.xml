@@ -136,7 +136,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/directionAxisTextView">
             <view
                 android:id="@+id/mapView"
-                class="com.example.mdp_android_grp01.ui.main.GridMapView"
+                class="com.example.mdp_android_grp21.ui.main.GridMapView"
                 android:layout_width="469dp"
                 android:layout_height="469dp"
                 />

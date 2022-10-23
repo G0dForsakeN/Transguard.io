@@ -149,7 +149,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\dhruv\.gradle\cach
 		ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:21:9-35
 	android:theme
 		ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:26:9-40
-activity#com.example.mdp_android_grp01.MainActivity
+activity#com.example.mdp_android_grp21.MainActivity
 ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:27:9-37:20
 	android:label
 		ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:29:13-45
@@ -169,7 +169,7 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:35:17-77
 	android:name
 		ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:35:27-74
-activity#com.example.mdp_android_grp01.ui.main.BluetoothPopUpView
+activity#com.example.mdp_android_grp21.ui.main.BluetoothPopUpView
 ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:38:9-102
 	android:name
 		ADDED from C:\Users\dhruv\Documents\GitHub\MDP_Project_21\Android\source_code_for_submission\source_code_android\app\src\main\AndroidManifest.xml:38:19-90

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mdp_android_grp01.app-mergeDebugResources-30:/values-h360dp-land-v13/values-h360dp-land-v13.xml",
+            "outputFile": "com.example.mdp_android_grp21.app-mergeDebugResources-30:/values-h360dp-land-v13/values-h360dp-land-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\dhruv\\.gradle\\caches\\transforms-3\\f07ee1d16c5fefa99abef957ae91e3c5\\transformed\\material-1.8.0-alpha01\\res\\values-h360dp-land-v13\\values-h360dp-land-v13.xml",

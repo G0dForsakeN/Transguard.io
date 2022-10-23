@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.example.mdp_android_grp01"
+    package="com.example.mdp_android_grp21"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -48,7 +48,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.mdp_android_grp01.MainActivity"
+            android:name="com.example.mdp_android_grp21.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="adjustPan" >
@@ -58,7 +58,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.mdp_android_grp01.ui.main.BluetoothPopUpView" />
+        <activity android:name="com.example.mdp_android_grp21.ui.main.BluetoothPopUpView" />
         <!-- Needs to be explicitly declared on P+ -->
         <uses-library
             android:name="org.apache.http.legacy"
@@ -75,7 +75,7 @@
 
         <provider
             android:name="androidx.startup.InitializationProvider"
-            android:authorities="com.example.mdp_android_grp01.androidx-startup"
+            android:authorities="com.example.mdp_android_grp21.androidx-startup"
             android:exported="false" >
             <meta-data
                 android:name="androidx.emoji2.text.EmojiCompatInitializer"

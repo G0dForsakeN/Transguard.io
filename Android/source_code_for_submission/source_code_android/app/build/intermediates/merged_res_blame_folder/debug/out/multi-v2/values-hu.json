@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mdp_android_grp01.app-mergeDebugResources-30:/values-hu/values-hu.xml",
+            "outputFile": "com.example.mdp_android_grp21.app-mergeDebugResources-30:/values-hu/values-hu.xml",
             "map": [
                 {
                     "source": "C:\\Users\\dhruv\\.gradle\\caches\\transforms-3\\5d9cbdf48930a41ad4c3177ea1826393\\transformed\\appcompat-1.5.0\\res\\values-hu\\values-hu.xml",

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.mdp_android_grp01.app-mergeDebugResources-30:/values-kn/values-kn.xml",
+            "outputFile": "com.example.mdp_android_grp21.app-mergeDebugResources-30:/values-kn/values-kn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\dhruv\\.gradle\\caches\\transforms-3\\e37ad56a0ed8dadde24292a3b96a8bcd\\transformed\\jetified-play-services-base-18.0.1\\res\\values-kn\\values.xml",
