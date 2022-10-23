@@ -321,7 +321,7 @@ public class MainActivity extends AppCompatActivity {
 
         for (int i=0; i<steps;i+=10){
             robot.moveRobot(dir);
-            TimeUnit.SECONDS.sleep(0.5);
+/*            TimeUnit.SECONDS.sleep((long)0.5);*/
         }
     }
 
