@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Transguard.io</string>
+    <string name="signin"><u>SIGN IN</u></string>
+    <string name="signup"><u>SIGN UP</u></string>
+    <string name="emailid">   Email ID</string>
+    <string name="phoneno">Phone No.</string>
+    <string name="password">Password</string>
+    <string name="phoneemail">Phone No./Email ID</string>
+    <string name="retypepassword">Retype Password</string>
+    <string name="apply_ride_filters">APPLY RIDE FILTERS</string>
+    <string name="track_my_ride">TRACK MY RIDE</string>
+    <string name="check_in">CHECK-IN</string>
+    <string name="driver">DHRUV H./n 4.5 STARS/n Toyata Corolla/n TN25AN1640</string>
+    <string-array name="gender">
+        <item>Select Gender...</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

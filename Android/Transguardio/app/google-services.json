@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "224381869522",
+    "project_id": "transguardio",
+    "storage_bucket": "transguardio.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:224381869522:android:56567dfb98fc546280fc0b",
+        "android_client_info": {
+          "package_name": "com.example.transguardio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "224381869522-9lq2hilcd13metu1bepm2k8f3dkp8evb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.transguardio",
+            "certificate_hash": "26133955b15add5766b4fac849392d2878889c4e"
+          }
+        },
+        {
+          "client_id": "224381869522-hoh3nmvag7mpstmmbhl86cul4k5s0kl9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWkXjTYCdJJBF3hgSfGk7tCuRNQTeC0z0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "224381869522-hoh3nmvag7mpstmmbhl86cul4k5s0kl9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
